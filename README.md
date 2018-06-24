@@ -36,7 +36,7 @@ Please also note the links listed there.
 
     - **Shaders**
 
-    - **Techniques
+    - **Techniques**
 
 ---
 
