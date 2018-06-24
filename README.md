@@ -20,9 +20,32 @@ Please also note the links listed there.
     and collect important information about the program sections.  
     It is assumed that you have understood the introduction by the author "jwrl",  
     and the introductory links listed there.  
+    
+    - **File Header**
+
+    - **Inputs**
+
+    - **Samplers**
+
+    - **Parameters**  (In particular: user effect settings)  
+      Special auto-synced parameters
  
- 
- 
+    - **Definitions and declarations**
+
+    - **Functions**
+
+    - **Shaders**
+
+    - **Techniques
+
+---
+
+### Miscellaneous:
+
+  - **Cross-platform compatibility**
+  
+  - **Swizzle operator** (.rgba and .xyzw)
+
  
  
  
