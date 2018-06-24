@@ -23,7 +23,7 @@ Please also note the links listed there.
     
     - [**File Header**](File_Header.md)
 
-    - **Inputs**
+    - [**Inputs**](Inputs.md)
 
     - **Samplers**
 
