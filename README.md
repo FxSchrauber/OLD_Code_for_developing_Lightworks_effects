@@ -7,6 +7,6 @@ Please also note the links listed there.
 
  ---  
 
-### [Template for creating effects](Template.md)
-It shows a program structure that you can complete with your Code.  
+### [Template for creating effects](Template.md)  
+ - It shows a program structure that you can complete with your Code.  
  
