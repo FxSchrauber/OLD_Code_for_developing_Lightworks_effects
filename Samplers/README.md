@@ -10,11 +10,23 @@
 ## Old documentation:
 
 #### Cross-platform compatibility:  
-   Linux and Mac: Only one Sampler can be created per texture.  
+   - Linux and Mac: Only one Sampler can be created per texture.  
  
  
 ### Sampler settings
-  - [**A code example** to create samplers for the three previously programmed Inputs](example_code.md)
+  - Example:
+     - ``` Code
+       sampler BorderSampler = sampler_state
+       {
+          Texture = <In1>;
+          AddressU = Border;
+          AddressV = Border;
+          MinFilter = Linear;
+          MagFilter = Linear;
+          MipFilter = Linear;
+       };
+       ```
+     - [Another example with several samplers](example_code.md)
   - In case the scaling is changed or the texture position is shifted  
     (sampler position is different than the original texture coordinates):  
       Please always set AddressU, AddressV, MinFilter, MagFilter and the MipFilter for each sampler. Otherwise, 
