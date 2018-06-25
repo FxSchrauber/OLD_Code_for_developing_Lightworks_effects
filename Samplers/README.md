@@ -12,14 +12,22 @@
 #### Cross-platform compatibility:  
  Linux and Mac: Only one Sampler can be created per texture.  
  
-[**A code example** to create samplers for the three previously programmed Inputs](example01.md)
-
  
- ### Sampler settings
+### Sampler settings
   In case the scaling is changed or the texture position is shifted  
  (sampler position is different than the original texture coordinates):  
    Please always set AddressU, AddressV, MinFilter, MagFilter and the MipFilter for each sampler. Otherwise, 
    undefined states can lead to unexpected results.
+   
+  - [**A code example** to create samplers for the three previously programmed Inputs](example01.md)
+  
+  
+  
+  
+  
+  
+  
+  
     
 ``` Code
  ```
