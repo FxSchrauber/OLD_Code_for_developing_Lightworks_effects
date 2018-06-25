@@ -28,5 +28,5 @@ sampler Border_U_Clamp_V_Sampler = sampler_state
 ```
 
 ### The result:
-![](images/UBorder_VClamp.png .png)  
+![](images/UBorder_VClamp.png)  
 [Just for comparison the original texture](images/Original.png)  
