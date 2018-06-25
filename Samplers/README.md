@@ -43,14 +43,17 @@
  - Examples of different **Address** settings  
    The following examples were zoomed out.
    Note that zooming is not done with the sampler settings, but is programmed in the program part "Shaders".
-    - [Border](Border.md)
-    - [Mirror](Mirror.md)
-    - [Clamp (Windows) or ClampToEdge(Linux & Mac)](Clamp.md)
-    - [Horizontal Border and vertical Clamp or ClampToEdge](Border_Clamp.md)
-    - [Wrap](Wrap.md)
-  
-  
-  
-  
-  
-  
+    - [**Border**](Border.md)
+    - [**Mirror**](Mirror.md)
+    - [**Clamp** (Windows) or **ClampToEdge** (Linux & Mac)](Clamp.md)
+    - [Horizontal **Borde**r and vertical **Clamp** or **ClampToEdge**](Border_Clamp.md)
+    - [**Wrap**](Wrap.md)
+ - Filer
+    - **`MinFilter = Linear`**  (Zoom out)  
+      **`MagFilter = Linear`**  (Zoom in)  
+      This causes the sampler to mix adjacent pixels when looking for a position between the centers of those pixels.  
+   - **`MinFilter = Point`**  (Zoom out) 
+     **`MagFilter = Point`**  (Zoom in)  
+     This setting prevents pixel interpolation.  
+   -  MipFilter (It is unclear whether this filter has any function in Lightworks effects)?
+      
