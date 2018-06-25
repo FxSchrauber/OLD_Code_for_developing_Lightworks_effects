@@ -41,10 +41,10 @@
      - There are several ways the sampler should proceed in these cases (Windows).
        ![](images/Sampler-mix.png)
  - Examples of different **Address** settings:
-    - [Border](Border-md)
+    - [Border](Border.md)
     - [Mirror](Mirror.md)
     - [Clamp or ClampToEdge](Clamp.md)
-    - [Horizontal Border and vertical Clamp or ClampToEdge](Border_Vlamp.md)
+    - [Horizontal Border and vertical Clamp or ClampToEdge](Border_Clamp.md)
     - [Wrap](Wrap.md)
   
   
