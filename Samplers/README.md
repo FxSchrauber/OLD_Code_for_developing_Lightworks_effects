@@ -43,7 +43,7 @@
  - Examples of different **Address** settings:
     - [Border](Border.md)
     - [Mirror](Mirror.md)
-    - [Clamp (Windows) or ClampToEdge](Clamp.md)
+    - [Clamp (Windows) or ClampToEdge(Linux & Mac)](Clamp.md)
     - [Horizontal Border and vertical Clamp or ClampToEdge](Border_Clamp.md)
     - [Wrap](Wrap.md)
   
