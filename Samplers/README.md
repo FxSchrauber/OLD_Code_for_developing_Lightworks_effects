@@ -40,7 +40,9 @@
        (Behavior adjustable with filter settings)
      - There are several ways the sampler should proceed in these cases (Windows).
        ![](images/Sampler-mix.png)
- - Examples of different **Address** settings:
+ - Examples of different **Address** settings  
+   The following examples were zoomed out.
+   Note that zooming is not done with the sampler settings, but is programmed in the program part "Shaders".
     - [Border](Border.md)
     - [Mirror](Mirror.md)
     - [Clamp (Windows) or ClampToEdge(Linux & Mac)](Clamp.md)
@@ -52,7 +54,3 @@
   
   
   
-  
-    
-``` Code
- ```
