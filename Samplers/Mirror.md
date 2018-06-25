@@ -14,6 +14,6 @@ sampler MirrorSampler = sampler_state
 ```
 
 ### The result:
-![](images/Clamp.png)  
+![](images/Mirror.png)  
 [Just for comparison the original texture](images/Original.png)  
 
