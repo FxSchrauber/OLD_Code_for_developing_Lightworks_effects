@@ -25,7 +25,7 @@ Please also note the links listed there.
 
     - [**Inputs**](Inputs.md)
 
-    -[**Samplers**](Samplers/README.md)
+    - [**Samplers**](Samplers/README.md)
 
     - **Parameters**  (In particular: user effect settings)  
       Special auto-synced parameters
