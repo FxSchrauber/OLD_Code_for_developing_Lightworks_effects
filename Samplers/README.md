@@ -19,7 +19,7 @@
    Please always set AddressU, AddressV, MinFilter, MagFilter and the MipFilter for each sampler. Otherwise, 
    undefined states can lead to unexpected results.
    
-  - [**A code example** to create samplers for the three previously programmed Inputs](example01.md)
+  - [**A code example** to create samplers for the three previously programmed Inputs](example_code.md)
   
   
   
