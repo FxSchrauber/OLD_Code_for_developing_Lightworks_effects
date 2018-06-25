@@ -1,6 +1,6 @@
 # Samplers
 
-## Update: There are new insights into which settings may be used for Windows, and which for Linux / Mac.  
+## There are new insights into which settings may be used for Windows, and which for Linux / Mac.  
  Details are discussed [lwks.com starting on page 12.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=165&Itemid=81#ftop)
  and [lwks.com starting on page 20.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=285&Itemid=81#ftop)
  
@@ -52,7 +52,7 @@
     - **`MinFilter = Linear`**  (Zoom out)  
       **`MagFilter = Linear`**  (Zoom in)  
       This causes the sampler to mix adjacent pixels when looking for a position between the centers of those pixels.  
-   - **`MinFilter = Point`**  (Zoom out) 
+   - **`MinFilter = Point`**  (Zoom out)  
      **`MagFilter = Point`**  (Zoom in)  
      This setting prevents pixel interpolation.  
    -  MipFilter (It is unclear whether this filter has any function in Lightworks effects)?
