@@ -20,13 +20,13 @@
       undefined states can lead to unexpected results.
   - [**A code example** to create samplers for the three previously programmed Inputs](example_code.md)
   -  If your effect moves the original position of the pixels (eg zooming), then it can happen:
-    - That the calculation results in pixel positions outside the source textures  
-      (outside the normal range from 0 to 1).  
-      (Behavior can be set with "AddressU" and "AddressV")  
-    - That pixel positions have been calculated that are not at the center of a pixel (Wndows).
-      (Behavior adjustable with filter settings)
-    - There are several ways the sampler should proceed in these cases (Windows).
-      ![](images/Sampler-mix.png )
+     - That the calculation results in pixel positions outside the source textures  
+       (outside the normal range from 0 to 1).  
+       (Behavior can be set with "AddressU" and "AddressV")  
+     - That pixel positions have been calculated that are not at the center of a pixel (Wndows).
+       (Behavior adjustable with filter settings)
+     - There are several ways the sampler should proceed in these cases (Windows).
+       ![](images/Sampler-mix.png )
   
   
   
