@@ -14,8 +14,9 @@
  
  
 ### Sampler settings
-  - Example:
-     - ``` Code
+  - Examples:
+     - Create a sampler called "BorderSample"  that uses the texture of input "In1"
+       ``` Code
        sampler BorderSampler = sampler_state
        {
           Texture = <In1>;
