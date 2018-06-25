@@ -12,44 +12,8 @@
 #### Cross-platform compatibility:  
  Linux and Mac: Only one Sampler can be created per texture.  
  
- A code example to create samplers for the three previously programmed Inputs:
- ``` Code
- //--------------------------------------------------------------//
-// Samplers
-//--------------------------------------------------------------//
+[**A code example** to create samplers for the three previously programmed Inputs](example01.md)
 
-sampler In1Sampler = sampler_state
-{
-   Texture = <In1>;
-   AddressU = Border;
-   AddressV = Border;
-   MinFilter = Linear;
-   MagFilter = Linear;
-   MipFilter = Linear;
-};
-
-
-sampler In2Sampler = sampler_state
-{
-   Texture = <In2>;
-   AddressU = Border;
-   AddressV = Border;
-   MinFilter = Linear;
-   MagFilter = Linear;
-   MipFilter = Linear;
-};
-
-
-sampler RenderedSampler = sampler_state
-{
-   Texture = <OutputFromPassOne>;
-   AddressU = Border;
-   AddressV = Border;
-   MinFilter = Linear;
-   MagFilter = Linear;
-   MipFilter = Linear;
-};
- ```
  
  ### Sampler settings
   In case the scaling is changed or the texture position is shifted  
@@ -57,3 +21,5 @@ sampler RenderedSampler = sampler_state
    Please always set AddressU, AddressV, MinFilter, MagFilter and the MipFilter for each sampler. Otherwise, 
    undefined states can lead to unexpected results.
     
+``` Code
+ ```
