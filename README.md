@@ -2,6 +2,6 @@
 Here we collect information about how to create Lightworks .fx effects.
 
 
-## [Basics](/README.md)
+## [Basics](Basics/README.md)
   
 ## This repository is still under construction!
