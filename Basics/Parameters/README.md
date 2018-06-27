@@ -2,7 +2,7 @@
     
 - **User Effect settings**
    - **Shader Parameters** (Within the effect globally available for all shaders.)  
-        - **Scalar parameters (float, int, bool)**  
+        - **Scalar parameter** (float, int, bool)
         - **Color parameters** (RGBA, float4)
          
 
