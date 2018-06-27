@@ -6,9 +6,9 @@
         - **Color parameters** (RGBA, float4)
          
 
-**Select "Technique**  
+- **Select "Technique**  
 
-**Special auto-synced parameters**
+- **Special auto-synced parameters**
 
 
 ---
