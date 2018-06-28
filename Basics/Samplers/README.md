@@ -45,8 +45,8 @@
    Note that zooming is not done with the sampler settings, but is programmed in the program part "Shaders".
     - [**Border**](Border.md)
     - [**Mirror**](Mirror.md)
-    - [**Clamp** (Windows) or **ClampToEdge** (Linux & Mac)](Clamp.md)
-    - [Horizontal **Borde**r and vertical **Clamp** or **ClampToEdge**](Border_Clamp.md)
+    - [**ClampToEdge**](Clamp.md)
+    - [Horizontal **Border** and vertical **ClampToEdge**](Border_Clamp.md)
     - [**Wrap**](Wrap.md)
  - Filer
     - **`MinFilter = Linear`**  (Zoom out)  
