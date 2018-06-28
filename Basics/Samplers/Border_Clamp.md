@@ -1,18 +1,6 @@
 # Sampler setting  
-  ## Horizontal Border and vertical Clamp or ClampToEdge
-
-### Clamp (Windows):
-``` Code
-sampler Border_U_Clamp_V_Sampler = sampler_state
-{
-   Texture = <In1>;
-   AddressU = Border;
-   AddressV = Clamp;
-   MinFilter = Linear;
-   MagFilter = Linear;
-   MipFilter = Linear;
-};
-```
+  ## Horizontal Border and vertical ClampToEdge
+   ** >= Lightworks 14.5 **
 
 ### ClampToEdge (Linux/Mac):
 ``` Code
