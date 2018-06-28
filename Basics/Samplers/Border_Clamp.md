@@ -1,8 +1,6 @@
-# Sampler setting  
-  ## Horizontal Border and vertical ClampToEdge
-   ** >= Lightworks 14.5 **
+## Sampler setting: Horizontal Border and vertical ClampToEdge 
+**>= Lightworks 14.5**
 
-### ClampToEdge (Linux/Mac):
 ``` Code
 sampler Border_U_Clamp_V_Sampler = sampler_state
 {
