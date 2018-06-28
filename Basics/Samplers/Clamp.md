@@ -1,8 +1,8 @@
 # ClampToEdge sampler setting
-
-### ClampToEdge:  
-   Usable starting from **Lightworks 14.5**  
-   Can also be used with older Lightworks versions on Linux & Mac.  
+ 
+Usable starting from **Lightworks 14.5**  
+(Can also be used with older Lightworks versions on Linux & Mac.)  
+     
 ``` Code
 sampler ClampSampler = sampler_state
 {
@@ -21,7 +21,7 @@ sampler ClampSampler = sampler_state
 
 ---
 
-# Clamp (Windows):
+#### Clamp (Windows):
 
 Great White wrote:
 > ... the root problem is in the use of "Clamp" for the sampler states AddressU/AddressV in dve1.fx. 
