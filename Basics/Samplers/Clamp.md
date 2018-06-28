@@ -1,7 +1,6 @@
 # ClampToEdge sampler setting
- 
-Usable starting from **Lightworks 14.5**  
-(Can also be used with older Lightworks versions on Linux & Mac.)  
+ **>= Lightworks 14.5**  
+(Only backwards compatible on Linux & Mac) 
      
 ``` Code
 sampler ClampSampler = sampler_state
