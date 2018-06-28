@@ -1,15 +1,8 @@
 # Samplers
 
-## There are new insights into which settings may be used for Windows, and which for Linux / Mac.  
- Details are discussed [lwks.com starting on page 12.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=165&Itemid=81#ftop)
- and [lwks.com starting on page 20.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=285&Itemid=81#ftop)
- 
----
-
-
-## Old documentation:
-
-#### Cross-platform compatibility:  
+#### Compatibility:  
+   - [lwks.com starting on page 12.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=165&Itemid=81#ftop)  
+   - [lwks.com starting on page 20.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=285&Itemid=81#ftop)
    - Linux and Mac: Only one Sampler can be created per texture.  
  
  
@@ -56,4 +49,5 @@
      **`MagFilter = Point`**  (Zoom in)  
      This setting prevents pixel interpolation.  
    -  MipFilter (It is unclear whether this filter has any function in Lightworks effects)?
+   
       
