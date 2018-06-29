@@ -25,7 +25,7 @@ float Softness
 
 ---
 
-### Automatic keyframes at the start and end position of the effect `KF0`and `KF1`:
+### Automatic keyframes at the start and end position of the effect (`KF0`and `KF1`):
 
 ``` Code
 float Amount
