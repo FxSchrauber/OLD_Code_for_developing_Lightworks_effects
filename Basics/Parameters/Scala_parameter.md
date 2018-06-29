@@ -1,6 +1,6 @@
 # Scalar parameter
 
-First, a default code from the "negative.fx" effect, as used in the introduction on [redsharknews.com](https://www.redsharknews.com/technology/item/221-how-to-write-video-effects-for-lightworks)
+First, a **default code** from the "negative.fx" effect, as used in the introduction on [redsharknews.com](https://www.redsharknews.com/technology/item/221-how-to-write-video-effects-for-lightworks)
 ``` Code
 float Level
 <
@@ -25,11 +25,26 @@ float Softness
 
 ---
 
+### Automatic keyframes at the start and end position of the effect `KF0`and `KF1`:
+
+``` Code
+float Amount
+<
+   string Description = "Amount";
+   float MinVal = 0.0;
+   float MaxVal = 1.0;
+   float KF0    = 0.0;
+   float KF1    = 1.0;
+> = 0.5;
+
+``` 
+
+
 ``` Code
 ``` 
 
 
-
-
+``` Code
+``` 
 
 
