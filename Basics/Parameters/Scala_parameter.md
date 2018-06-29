@@ -36,10 +36,10 @@ float Amount
    float KF0    = 0.0;
    float KF1    = 1.0;
 > = 0.5;
-
 ``` 
 
--- 
+---
+
 
 ### Parameter influence via moving mouse position on the viewer:
 `Flags = "SpecifiesPointX";` and `Flags = "SpecifiesPointY";`  
