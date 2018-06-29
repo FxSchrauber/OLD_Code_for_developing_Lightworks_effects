@@ -69,11 +69,3 @@ float CentreY
 
    There's also a third parameter in this group, "SpecifiesPointZ".
    To see that being used look at the position parameters in the 3D DVE effect. 
-   
---- 
-
-
-``` Code
-``` 
-
-
