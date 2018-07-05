@@ -32,7 +32,7 @@ Maybe for user effects the standard color wheel in the color picker is better su
 
 --- 
   
-#  Specifies Colour Range:
+###  Specifies Colour Range:
 ``` Code
 // ...
 string Flags   =  "SpecifiesColourRange";
