@@ -4,7 +4,7 @@
 
 ### Shader Parameters (Within the effect globally available for all shaders.)  
    - [**Scalar parameter** (float, int, bool)](Scala_parameter.md)
-   - **Color parameters** (RGBA, float4)
+   - [**Colour parameters** (RGBA, float4)](Colour_parameters.md)
 
 ---
 
