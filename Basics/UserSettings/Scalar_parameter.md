@@ -99,6 +99,6 @@ string Description = "Flip edge";
  ```
 That will show you "Heartbeat type" on the left of the settings window, and either "Single beat only" or "Regular pulse" (the default setting) on the right. The first enumerated parameter evaluates as 0, the second as 1.  
 ![](images/int.png)  
-*(Note that complex code can be more efficient to use different pixel shaders for different functions (see "[Select Technique](Select_Technique)")*
+*(Note that complex code can be more efficient to use different pixel shaders for different functions (see "[Select Technique](Select_Technique.md)")*
 
  
