@@ -6,16 +6,12 @@
    - [**Scalar parameter** (float, int, bool)](Scala_parameter.md)
    - **Color parameters** (RGBA, float4)
 
+---
 
+#### Select "Technique
+   
+   
 
-### Select "Technique
-   
-   
-   
-   
-   
-   
-- **Special auto-synced parameters**
 
 
 ---
