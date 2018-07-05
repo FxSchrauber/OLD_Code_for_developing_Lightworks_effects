@@ -38,5 +38,5 @@ Maybe for user effects the standard color wheel in the color picker is better su
 string Flags   =  "SpecifiesColourRange";
 // ...
 ```
-![](images/ColourRange.png)
+![](images/ColourRange.png)  
 You will find an example of its use in the Editshare chromakey sample code.
