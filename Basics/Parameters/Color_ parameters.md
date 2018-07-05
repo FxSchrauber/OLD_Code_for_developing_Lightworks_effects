@@ -27,5 +27,16 @@ float4 MidTintColour
 ```
 ![](images/ColourWheel.png)
  **Additional information:** the colour wheel doesn't return simple RGB values when you use that switch.
-The brightness setting ranges from 50% to 159%, but doesn't seem to permit ever reaching white.
+The brightness setting ranges from 50% to 159%, but doesn't seem to permit ever reaching white.  
+Maybe for user effects the standard color wheel in the color picker is better suited?
 
+--- 
+  
+#  Specifies Colour Range:
+``` Code
+// ...
+string Flags   =  "SpecifiesColourRange";
+// ...
+```
+![](images/ColourRange.png)
+You will find an example of its use in the Editshare chromakey sample code.
