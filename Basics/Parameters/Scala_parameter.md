@@ -69,3 +69,33 @@ float CentreY
 
    There's also a third parameter in this group, "SpecifiesPointZ".
    To see that being used look at the position parameters in the 3D DVE effect. 
+ 
+ 
+---  
+  
+  ### Example with boolean variable for program control (true / false):
+  
+  ``` Code
+bool Flip_edge
+<
+string Description = "Flip edge";
+> = true;
+  ```
+![](images/bool.png)
+  
+---
+  
+### Example with integer variables for program control:
+ ``` Code
+ int enable_cycles
+<
+   string Group = "Timeline";
+   string Description = "Heartbeat type";
+   string Enum = "Single beat only,Regular pulse";
+> = 1;
+ ```
+That will show you "Heartbeat type" on the left of the settings window, and either "Single beat only" or "Regular pulse" (the default setting) on the right. The first enumerated parameter evaluates as 0, the second as 1.  
+![](images/int.png)  
+*(Note that complex code can be more efficient to use different pixel shaders for different functions (see "Select Technique")*
+
+ 
