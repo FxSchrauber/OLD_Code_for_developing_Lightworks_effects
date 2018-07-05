@@ -1,4 +1,4 @@
-# Color parameters
+# Colour parameters
 
 ### Colour picker: 
 ``` Code
