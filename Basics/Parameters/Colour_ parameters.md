@@ -15,8 +15,8 @@ regardless of any values that you may have set in your code.
 ---  
   
 ### Colour wheel:
-> You can make colour params be represented using a colour wheel by adding the annotation "SpecifiesColourOffset";
-> For example:
+You can make colour params be represented using a colour wheel by adding the annotation "SpecifiesColourOffset";  
+For example:
 ``` Code
 float4 MidTintColour
 <
