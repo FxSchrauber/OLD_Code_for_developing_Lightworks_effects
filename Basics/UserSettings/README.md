@@ -1,4 +1,4 @@
-# Setting up the user effect settings 
+# Setting up the user settings tab
     
 
 
