@@ -26,8 +26,9 @@ Please also note the links listed there.
 
     - [**Samplers**](Samplers/README.md)
 
-    - **Parameters**  (In particular: user effect settings)  
-      Special auto-synced parameters
+    - [**Setting up the user settings tab**](UserSettings/README.md)
+    
+    - **Auto-synced parameters und Definitions, Variables, Swizzle operators** 
  
     - **Definitions and declarations**
 
@@ -42,10 +43,6 @@ Please also note the links listed there.
 ### Miscellaneous:
 
   - **Cross-platform compatibility**
-  
-  - **Swizzle operator** (.rgba and .xyzw)
-
- 
  
  
  
