@@ -1,4 +1,4 @@
-# Basic Code
+# Basics
 
 A basic introduction can be found there: [lwks.com](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&Itemid=81#143763) 
 in post # 143763 (author "jwrl").  
