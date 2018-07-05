@@ -15,6 +15,8 @@ regardless of any values that you may have set in your code.
 ---  
   
 ### Colour wheel:
+> You can make colour params be represented using a colour wheel by adding the annotation "SpecifiesColourOffset";
+> For example:
 ``` Code
 float4 MidTintColour
 <
@@ -23,4 +25,7 @@ float4 MidTintColour
    string Flags       = "SpecifiesColourOffset";
 > = ( 1.0, 1.0, 1.0, 1.0 );
 ```
-   
+![](image/ColourWheel.png)
+**Additional information:** the colour wheel doesn't return simple RGB values when you use that switch.
+The brightness setting ranges from 50% to 159%, but doesn't seem to permit ever reaching white.
+
