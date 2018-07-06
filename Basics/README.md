@@ -28,7 +28,7 @@ Please also note the links listed there.
 
     - [**Setting up the user settings tab**](UserSettings/README.md)
     
-    - **Auto-synced parameters und Definitions, Variables, Swizzle operators** 
+    - **Variables, Auto-synced parameters und Definitions, Swizzle operators** 
  
     - **Definitions and declarations**
 
