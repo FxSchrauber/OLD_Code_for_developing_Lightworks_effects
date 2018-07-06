@@ -15,7 +15,7 @@ The result for the effect "Sampler test2" then looks as follows:
 
 "texture OutputFromPassOne" ... is not visible in the routing because the video signal (texture) comes from a pixel shader within it effect.
  This is set by ": RenderColorTarget".
- From which pixel shader this internal texture comes, we programmed in the "Techniques" section (more on this later in another posts "Techniques").
+ From which pixel shader this internal texture comes, we programmed in the "Techniques" section.
 
 
 
