@@ -1,5 +1,6 @@
 # Special auto-synced parameters
 Lightworks provides the following variables, automatically updated by the CPU, for use in effects (GPU).
+These variables are declared outside the shader and are then available globally to all subsequent shaders of that effect.
 
 ### Basic variables:
 ``` Code
@@ -37,5 +38,5 @@ If, for example, _LENGTH is defined, then all variables are available, otherwise
    // Insert code
 #endif
 ```
-Discussions and ideas:
-www.lwks.com start from [page 8](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=105&Itemid=81#ftop) below of this thread and continue on the following pages.
+Discussions and ideas:  
+[www.lwks.com start from page 8](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=105&Itemid=81#ftop) below of this thread and continue on the following pages.
