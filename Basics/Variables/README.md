@@ -8,11 +8,12 @@ then the CPU may pass another value to the GPU (the effect) with the following f
 
 
 
-### Available variable types:
+### Variable types:
 - **float**  
   - The most important and native variable type.  
     Within a shader, apparently 32 bit floating point precision.  
     The precision of the shader output (RGBA values from 0 to 1) depends on the Lightworks version and the project settings.  
+  - Scalars float,  or vectors: float 2, float 3, float 4
 - int
 - bool
 
