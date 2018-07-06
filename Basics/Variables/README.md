@@ -4,8 +4,9 @@ Variables that are declared outside of shaders, functions (and possibly macros) 
 for all subsequent shaders within that effect and can not be changed by the shader.  
 If these constants come from the user effect settings, or if they are auto-synced parameters,  
 then the CPU may pass another value to the GPU (the effect) with the following frame. (e.g., keyframing).
-
-
+Formulas in global variables are not allowed.  
+Variables which are to be calculated are declared directly in the shader or the function.  
+Alternatively, we can use `#define` to define global values or create a macro for calculations.  
 
 
 ### Variable types:
