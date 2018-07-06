@@ -18,4 +18,9 @@ Alternatively, we can use `#define` to define global values or create a macro fo
 - int
 - bool
 
+---
+
+
+###  [Special auto-synced parameters and definitions](Auto_synced.md)
+
 
