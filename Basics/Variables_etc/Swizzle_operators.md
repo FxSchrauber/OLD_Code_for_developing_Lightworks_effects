@@ -35,4 +35,31 @@
 
 > [...]  
 > In the same way that referring to a position as xy.rg would be confusing, referring to an HSL value as hsl.rgba would also cause confusion.  
-> There can be no red, green or blue components of an HSL value, just hue, saturation and luma.  
+> There can be no red, green or blue components of an HSL value, just hue, saturation and luma. 
+
+---
+
+
+### Another example with rgba values, in which the xywz form is preferable.
+
+
+ Instead of: `#define BLACK   float4 (0.0, 0.0, 0.0, 1.0)`  
+
+... we can also write: `#define BLACK   float4 (0.0.xxx,1.0)`  
+
+ 0.0 is assigned to `x`  
+`.xxx` causes the `xyz` to take the value of `x`  
+ 1.0 is assigned to `w`  
+
+ We could have written `0.0.rrr`, but what could be confusing because only one value corresponds to the color red.  
+
+
+ A variant which causes the compiler to treat float2 as float4: 
+ ``` Code
+    #define BLACK   float2 (0.0,1.0).xxxy
+```
+0.0 is assigned to `x`  
+In the first step, 1.0 is still assigned to `y` (without consideration of the Swizzle operator)
+`.xxxy` causes the `xyz` to take the value of `x`, and w take the value of `y`
+
+
