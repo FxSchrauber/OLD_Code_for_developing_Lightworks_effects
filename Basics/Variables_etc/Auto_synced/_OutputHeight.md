@@ -7,9 +7,7 @@ During playback, the value of this variable is therefore only half of the total 
 When Playback is stopped, however, Lightworks internally processes the entire frame as in non-interlaced projects,  
 so in this case the number of pixels of the entire frame is output.  
 *jwrl wrote:*
-> ... Additional information: there is a problem with the way that Lightworks returns _OutputHeight  
-> that means on interlaced projects it returns half the expected value when playback is stopped.  
-> To avoid this I use the following definition.
+> ...  To avoid this I use the following definition.
 ``` Code
    #define Output_Height (_OutputWidth/_OutputAspectRatio)
 ```
