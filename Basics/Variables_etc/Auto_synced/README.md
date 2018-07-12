@@ -3,12 +3,11 @@ Lightworks provides the following variables, automatically updated by the CPU, f
 These variables are declared outside the shader and are then available globally to all subsequent shaders of that effect.
 
 ### Basic variables:
-``` Code
-float _Progress          // Relative position in effect progress 0 to 1
-float _OutputWidth       // The width of the current output format in pixels
-float _OutputHeight      // See additional information below
-float _OutputAspectRatio // The aspect-ratio of the current output format
-```
+
+`float _Progress`          Relative position in effect progress 0 to 1.  [Details](_Progress.md)  
+`float _OutputWidth`       The width of the current output format in pixels  
+`float _OutputHeight`      [Details](_OutputHeight.md)  
+`float _OutputAspectRatio` The aspect-ratio of the current output format  
 
 
 ### Starting with Lightworks 14.5 is also available: 
