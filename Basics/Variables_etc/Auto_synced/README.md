@@ -4,18 +4,18 @@ These variables are declared outside the shader and are then available globally 
 
 ### Basic variables:
 
-`float _Progress`          Relative position in effect progress 0 to 1.  [Details](_Progress.md)  
-`float _OutputWidth`       The width of the current output format in pixels  
-`float _OutputHeight`      [Details](_OutputHeight.md)  
-`float _OutputAspectRatio` The aspect-ratio of the current output format  
+`float _Progress;`          Relative position in effect progress 0 to 1.  [Details](_Progress.md)  
+`float _OutputWidth;`       The width of the current output format in pixels  
+`float _OutputHeight;`      [Details](_OutputHeight.md)  
+`float _OutputAspectRatio;` The aspect-ratio of the current output format  
 
 
 ### Starting with Lightworks 14.5 is also available: 
-``` Code
-float _OutputFPS;     // eg. 24.0, 25.0, 29.97, etc
-float _Length;        // Length of the effect in secs
-float _LengthFrames;  // Length of the effect in frames
-```
+
+`float _OutputFPS;`       eg. 24.0, 25.0, 29.97, etc  
+`float _Length;`         Length of the effect in secs.  [Details](_Length.md)  
+`float _LengthFrames;`   Length of the effect in frames [Details](_Length.md)  
+
 To avoid unexpected results when using older versions of Lightworks,  
 the availability of variables can now be checked (LW 14.5).  
 Each definition shares the same name as its associated parameter, but is in upper case:  
