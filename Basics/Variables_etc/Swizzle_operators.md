@@ -59,7 +59,12 @@
     #define BLACK   float2 (0.0,1.0).xxxy
 ```
 0.0 is assigned to `x`  
-In the first step, 1.0 is still assigned to `y` (without consideration of the Swizzle operator)
-`.xxxy` causes the `xyz` to take the value of `x`, and w take the value of `y`
+In the first step, 1.0 is still assigned to `y` (without consideration of the Swizzle operator)  
+`.xxxy` causes the `xyz` to take the value of `x`, and w take the value of `y`  
 
+---  
 
+### For more information see:
+[lwks.com Post #146013 on page 4](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=45&Itemid=81#146013)  
+
+and [lwks.com Post #148433 on page 5](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=60&Itemid=81#148433)
