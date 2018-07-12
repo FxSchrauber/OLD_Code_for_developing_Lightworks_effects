@@ -21,6 +21,10 @@ Alternatively, we can use `#define` to define global values or create a macro fo
 ---
 
 
-###  [Special auto-synced parameters and definitions](Auto_synced.md)
+### * [Special auto-synced parameters and definitions](Auto_synced.md)  
+
+---  
+
+### * [Swizzle operators](Swizzle_operators.md)
 
 
