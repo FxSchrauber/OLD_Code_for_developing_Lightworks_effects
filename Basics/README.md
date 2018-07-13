@@ -22,10 +22,10 @@ The following chapters assume that you understood the above linked introduction.
  - [**Inputs**](Inputs.md)
 
  - [**Samplers**](Samplers/README.md)
-
- - [**Setting up the user settings tab**](UserSettings/README.md)
-    
- - [**Variables, Auto-synced parameters und Definitions, Swizzle operators**](Variables_etc/README.md)
+ 
+ - *Parameters and more*
+    - [**Setting up the user settings tab**](UserSettings/README.md)
+    - [**Variables, Auto-synced parameters und Definitions, Swizzle operators**](Variables_etc/README.md)
  
  - [**Definitions and declarations**](Definitions_and_declarations.md)
 
