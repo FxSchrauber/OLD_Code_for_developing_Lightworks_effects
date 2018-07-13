@@ -1,12 +1,17 @@
 # Texture coordinates:
 
 *Quote, [redsharknews.com](https://www.redsharknews.com/technology/item/221-how-to-write-video-effects-for-lightworks):*  
->**`float4 ps_main( float2 xy1 : TEXCOORD1 ) : COLOR`**  
+``` Code
+    float4 ps_main( float2 xy1 : TEXCOORD1 ) : COLOR
+``` 
 >The “float2 xy1 : TEXCOORD1” inside the parenthesis defines “xy1” to be the coordinates of the texture.  
 
 #### If the effect has more inputs:  
 
-Example with two inputs: `float4 ps_main (float2 xy1 : TEXCOORD1, float2 xy2 : TEXCOORD2) : COLOR`  
+Example with two inputs:
+``` Code
+    float4 ps_main (float2 xy1 : TEXCOORD1, float2 xy2 : TEXCOORD2) : COLOR
+```
 
 **`TEXCOORD1`** receives the pixel coordinates from the first input.  
 **`TEXCOORD2`** is assigned to the second input.  
