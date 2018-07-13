@@ -31,7 +31,7 @@ The following chapters assume that you understood the above linked introduction.
 
  - [**Functions**](Functions.md)
 
- - **Shaders**
+ - [**Shaders**](Shaders/README.md)
 
  - **Techniques**
 
