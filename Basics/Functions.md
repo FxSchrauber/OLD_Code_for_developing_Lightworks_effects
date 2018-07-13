@@ -22,3 +22,6 @@ float2 fn_some_func (...)
 >  
 >On the subject of functions, it will always be more efficient if you can manage to use as few as possible.  
 >The overhead of a function call is actually higher than implementing it as a separate compile pass, or better still, inline code....
+  
+More funktions can be found in [other code collections of this repository](../README.md).
+
