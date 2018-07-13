@@ -15,25 +15,25 @@ Please also note the links listed there.
  ---
  
 ## Details:
-  - The following chapters assume that you understood the above linked introduction. 
+The following chapters assume that you understood the above linked introduction. 
     
-    - [**File Header**](File_Header.md)
+ - [**File Header**](File_Header.md)
 
-    - [**Inputs**](Inputs.md)
+ - [**Inputs**](Inputs.md)
 
-    - [**Samplers**](Samplers/README.md)
+ - [**Samplers**](Samplers/README.md)
 
-    - [**Setting up the user settings tab**](UserSettings/README.md)
+ - [**Setting up the user settings tab**](UserSettings/README.md)
     
-    - [**Variables, Auto-synced parameters und Definitions, Swizzle operators**](Variables_etc/README.md)
+ - [**Variables, Auto-synced parameters und Definitions, Swizzle operators**](Variables_etc/README.md)
  
-    - [**Definitions and declarations**](Definitions_and_declarations.md)
+ - [**Definitions and declarations**](Definitions_and_declarations.md)
 
-    - **Functions**
+ - **Functions**
 
-    - **Shaders**
+ - **Shaders**
 
-    - **Techniques**
+ - **Techniques**
 
 ---
 
