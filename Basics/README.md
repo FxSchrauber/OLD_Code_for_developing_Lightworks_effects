@@ -29,7 +29,7 @@ The following chapters assume that you understood the above linked introduction.
  
  - [**Definitions and declarations**](Definitions_and_declarations.md)
 
- - [**Functions**](Funktions.md)
+ - [**Functions**](Functions.md)
 
  - **Shaders**
 
