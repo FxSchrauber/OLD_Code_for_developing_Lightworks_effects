@@ -15,10 +15,7 @@ Please also note the links listed there.
  ---
  
 ## Details:
-  - The following chapters are structured according to this template  
-    and collect important information about the program sections.  
-    It is assumed that you have understood the introduction by the author "jwrl",  
-    and the introductory links listed there.  
+  - The following chapters assume that you understood the above linked introduction. 
     
     - [**File Header**](File_Header.md)
 
@@ -30,7 +27,7 @@ Please also note the links listed there.
     
     - [**Variables, Auto-synced parameters und Definitions, Swizzle operators**](Variables_etc/README.md)
  
-    - **Definitions and declarations**
+    - [**Definitions and declarations**](Definitions_and_declarations.md)
 
     - **Functions**
 
