@@ -45,4 +45,6 @@ In the case of rendering with TEXCOORD0, this inaccuracy can worsen the result w
 #### There are test effects that perform a correction calculation.
 Apparently, this correction may not or otherwise be applied to Linux & Mac systems. If you would like to help find a solution for these special cases, then install the [current test effect and report on your results.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=179224&Itemid=81)
 
+Many effects name the assigned variable with "xy", or xy with a number. 
+Instead of xy is also uv usual.
 
