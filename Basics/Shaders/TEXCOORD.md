@@ -47,14 +47,14 @@ This is different than in mathematical diargams, where the value increases from 
 **`TEXCOORD0`** is not assigned to an input.  
 This can be used when calculating and positioning graphical elements (such as lines) within the shader itself.  
 
-The values of **`TEXCOORD0`**, or position calculations based on them, should **not be used for the sampler coordinates**.
-At least not uncorrected under Windows.
-The reason, *Great White wrote:*
+The values of **`TEXCOORD0`**, or position calculations based on them, should **not be used for the sampler coordinates**.  
+At least not uncorrected under Windows.  
+The reason, *Great White wrote:*  
 >Lightworks always arranges for texcoord0 to be in the range 0..1, whereas texcoord1 and above are modified
 >to include the necessary half texel adjustments that you need for DirectX (when running on Windows).  
 
-This can lead to pixel shifts in certain areas.
-In the case of rendering with TEXCOORD0, this inaccuracy can worsen the result with each pass. 
+This can lead to pixel shifts in certain areas.  
+In the case of rendering with TEXCOORD0, this inaccuracy can worsen the result with each pass.  
 
 ##### There are test effects that perform a correction calculation.
 Apparently, this correction may not or otherwise be applied to Linux & Mac systems.  
