@@ -6,6 +6,8 @@
 ``` 
 >The “float2 xy1 : TEXCOORD1” inside the parenthesis defines “xy1” to be the coordinates of the texture.  
 
+
+
 #### If the effect has more inputs (Example with two inputs):
 ``` Code
     float4 ps_main (float2 xy1 : TEXCOORD1, float2 xy2 : TEXCOORD2) : COLOR
