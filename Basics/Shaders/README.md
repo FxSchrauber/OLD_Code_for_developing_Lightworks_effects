@@ -13,7 +13,7 @@ float4 ps_main (float2 uv : TEXCOORD1) : COLOR
 ### Name of the Pixel Shaders:  
 
 We recommend using the prefix **`ps_`** for each shader, which makes it clear what it is.  
-In the example above **`ps_main`**.
+In the example above **`ps_main`**.  
 Note: This name must also be entered outside the shader in the corresponding entry in the "Techniques" section.  
 
 ---
@@ -22,7 +22,7 @@ Note: This name must also be entered outside the shader in the corresponding ent
 
  `float4 ps_main `**`(float2 uv : TEXCOORD1)`**` : COLOR`
 
-The `**`(float2 uv : TEXCOORD1)`**` inside the parenthesis defines **`uvj* to be the coordinates of the texture.   
+The **`(float2 uv : TEXCOORD1)`** inside the parenthesis defines **`uv`** to be the coordinates of the texture.   
 
 **[more details](TEXCOORD.md)**  
 
