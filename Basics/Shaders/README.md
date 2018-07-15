@@ -38,9 +38,9 @@ Because the texture consists of many texels, uv will assume different values.
 * **`tex2D (`**.. is a function call. This [standard CG function](CG_standard_library/README.md) 
                                            is already implemented globally for all effects.  
 * **`InputSampler,`**  It is the first parameter passed to the `tex2D` function. The sampler specified here must exist outside the shader, further up in the effect code. This sampler will read and preprocess the RGBA value of a texture.  
-* **`1.0 - uv`** The result of this calculation is the second parameter passed to the `tex2D` function and thus also to the sampler. This float2 value tells the samper the sample position.
+* **`1.0 - uv`** The result of this calculation is the second parameter passed to the `tex2D` function and thus also to the sampler. This float2 value tells the samper the sample position. Because this calculation deviates the sampler position from the position of the output pixel, the rotation is achieved at 180 °. This is done by mirroring the texture on both the right and bottom edge of the frame.
    * **`1.0 `** This value corresponds to the right frame edge and the bottom frame edge. [details](TEXCOORD.md#position-on-the-frame)
-   * **`- uv`** [For details](#texture-coordinates) about this position variable, see above.
+   * **`- uv`** [For details](#texture-coordinates) about this position variable, see above. 
 
 
 
