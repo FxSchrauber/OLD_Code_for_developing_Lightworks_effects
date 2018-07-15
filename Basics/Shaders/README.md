@@ -11,6 +11,7 @@ float4 ps_main (float2 uv : TEXCOORD1) : COLOR
 
 ### Name of the Pixel Shaders:  
 
+**`float4 ps_main`**
 We recommend using the prefix **`ps_`** for each shader, which makes it clear what it is.  
 In the example above **`ps_main`**.  
 Note: This name must also be entered outside the shader in the corresponding entry in the "Techniques" section.  
@@ -32,8 +33,10 @@ Because the texture consists of many texels, uv will assume different values.
 
 ### Description of the above example code:
 
-`  return tex2D (InputSampler, 1.0 - uv);`  
-` return` expects a float4 RGBA value, which is returned to the ["Techniques"](../Techniques/README.md ).
+**`return tex2D (InputSampler, 1.0 - uv);`**  
+`return` expects a float4 RGBA value, which is returned to the ["Techniques"](../Techniques/README.md ).  
+` tex2D (`... 2 is a function call.  
+This standard CG function is already implemented globally for all effects.  
 
 
 
