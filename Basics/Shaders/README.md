@@ -19,7 +19,7 @@ Note: This name must also be entered outside the shader in the corresponding ent
 
 ### Texture coordinates:
 
-`float4 ps_main **`(float2 uv : TEXCOORD1)`** : COLOR`
+`float4 ps_main `**`(float2 uv : TEXCOORD1)`**` : COLOR`
 
 The **`(float2 uv : TEXCOORD1)`** inside the parenthesis defines **`uv`** to be the coordinates of the texture.   
 This float2 variable contains the components `x` and `y` that determine the position of the output texel to be calculated.  
