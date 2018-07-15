@@ -35,8 +35,8 @@ Because the texture consists of many texels, uv will assume different values.
 
 **`return tex2D (InputSampler, 1.0 - uv);`**  
 `return` expects a float4 RGBA value, which is returned to the ["Techniques"](../Techniques/README.md ).  
-` tex2D (`... 2 is a function call.  
-This standard CG function is already implemented globally for all effects.  
+` tex2D (`.. is a function call. This [standard CG function](CG_standard_library/README.md) 
+                                           is already implemented globally for all effects.  
 
 
 
