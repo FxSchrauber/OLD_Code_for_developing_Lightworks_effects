@@ -14,7 +14,7 @@ float4 ps_main (float2 uv : TEXCOORD1) : COLOR
 **`float4 ps_main`**
 We recommend using the prefix **`ps_`** for each shader, which makes it clear what it is.  
 In the example above **`ps_main`**.  
-Note: This name must also be entered outside the shader in the corresponding entry in the["Techniques"](../Techniques/README.md ) section.  
+Note: This name must also be entered outside the shader in the corresponding entry in the ["Techniques"](../Techniques/README.md ) section.  
 
 ---
 
