@@ -1,6 +1,14 @@
 # Shaders
 
 
+``` Code
+float4 ps_main (float2 uv : TEXCOORD1) : COLOR 
+{ 
+   float2 xy = float2 (1.0 - uv.x, uv.y);
+   return tex2D (InputSampler, xy); 
+}
+```
+
 ### Name of the Pixel Shaders:  
 
 *jwrl wrote:*  
