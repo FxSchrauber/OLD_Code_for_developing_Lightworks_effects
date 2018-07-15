@@ -39,6 +39,9 @@ Because the texture consists of many texels, uv will assume different values.
                                            is already implemented globally for all effects.  
 * **`InputSampler,`**  It is the first parameter passed to the `tex2D` function. The sampler specified here must exist outside the shader, further up in the effect code. This sampler will read and preprocess the RGBA value of a texture.  
 * **`1.0 - uv`** The result of this calculation is the second parameter passed to the `tex2D` function and thus also to the sampler. This float2 value tells the samper the sample position.
+   * **`1.0 `** This value corresponds to the right frame edge and the bottom frame edge. [details](TEXCOORD.md#position-on-the-frame)
+   * **`- uv`** 
+
 
 
 
