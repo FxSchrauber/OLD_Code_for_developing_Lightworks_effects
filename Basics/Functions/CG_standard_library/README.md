@@ -1,3 +1,3 @@
-# CG_standard_library
+# CG standard library
 
 ## This repository is still under construction!
