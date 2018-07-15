@@ -29,7 +29,7 @@ technique MyEffect
  Immediately before reaching the performance limit of the Pixel Shader, I noticed in some cases a sudden increase in the GPU load, which was much lower when testing with the Shader Model 3. This may be an indication that you should distribute the code before reaching the limit to another pixel shader.
 
 
-
+### [Multi technique](Multi_technique.md )
 
 
 
