@@ -1,13 +1,12 @@
 # Shaders
 
 ### Example of a simple shader
-This code reflects the texture along the x-axis. (as well as the Lightworks "Flop" effect):
+This code rotates the text by 180 °:
 ``` Code
 float4 ps_main (float2 uv : TEXCOORD1) : COLOR 
 { 
-   float2 xy = float2 (1.0 - uv.x, uv.y);
-   return tex2D (InputSampler, xy); 
-}
+   return tex2D (InputSampler, 1.0 - uv); 
+} 
 ```
 
 ### Name of the Pixel Shaders:  
@@ -33,7 +32,7 @@ Because the texture consists of many texels, uv will assume different values.
 
 ### Description of the above example code:
 
-`   float2 (1.0 - uv.x, uv.y);`
+`  return tex2D (InputSampler, 1.0 - uv);`
 
 
 
