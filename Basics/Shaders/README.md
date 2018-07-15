@@ -1,7 +1,7 @@
 # Shaders
 
 ### Example of a simple shader
-This code rotates the text by 180 °:
+This code rotates the texture by 180 °:
 ``` Code
 float4 ps_main (float2 uv : TEXCOORD1) : COLOR 
 { 
