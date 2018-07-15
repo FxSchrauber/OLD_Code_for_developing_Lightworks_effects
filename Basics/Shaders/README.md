@@ -1,7 +1,7 @@
 # Shaders
 
 ### Example of a simple shader
-This code reflects the texture horizontally (as well as the Lightworks "Flop" effect):
+This code reflects the texture along the x-axis. (as well as the Lightworks "Flop" effect):
 ``` Code
 float4 ps_main (float2 uv : TEXCOORD1) : COLOR 
 { 
@@ -33,7 +33,8 @@ Because the texture consists of many texels, uv will assume different values.
 
 ### Description of the above example code:
 
-`   float2 xy = float2 (1.0 - uv.x, uv.y);`
+`   float2 (1.0 - uv.x, uv.y);`
+
 
 
 
