@@ -20,6 +20,6 @@ technique Shear
 }
 ```
 
-To make the textures available to the pixel shaders, we still have to create the [inputs](../Inputs.md ) and [../samplers](). In order for it to be compiled, all import code and sampler code must be above the pixel shader and the technique:
+To make the textures available to the pixel shaders, we still have to create the [inputs](../Inputs.md ) and [samplers](../Samplers/README.md ). In order for it to be compiled, all import code and sampler code must be above the pixel shader and the technique:
 ![](images/multipass02.png )
 
