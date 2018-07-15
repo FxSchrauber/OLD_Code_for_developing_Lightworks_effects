@@ -20,12 +20,24 @@ Note: This name must also be entered outside the shader in the corresponding ent
 
 ### Texture coordinates:
 
- `float4 ps_main `**`(float2 uv : TEXCOORD1)`**` : COLOR`
+`float4 ps_main `**`(float2 uv : TEXCOORD1)`**` : COLOR`
 
 The **`(float2 uv : TEXCOORD1)`** inside the parenthesis defines **`uv`** to be the coordinates of the texture.   
+This float2 variable contains the components x and y that determine the position of the output texel to be calculated.
+Because the texture consists of many texels, uv will assume different values.
+** `(float2 uv: TEXCOORD1)` ** causes the GPU to do this fully automatically.
 
 **[more details](TEXCOORD.md)**  
 
+--- 
+
+### Description of the above example code:
+
+`   float2 xy = float2 (1.0 - uv.x, uv.y);`
+
+
+
+---
 ---
 
 ### Take parameters from the "Technique":
