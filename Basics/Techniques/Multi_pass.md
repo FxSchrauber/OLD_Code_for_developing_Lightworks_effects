@@ -21,6 +21,6 @@ technique Shear
 ```
 
 To make the textures available to the pixel shaders, we still have to create the inputs and samplers:  
-![]()
+![](images/multipass01.png )
 
-![]()
+![](images/multipass02.png )
