@@ -1,6 +1,7 @@
 # Shaders
 
-
+### Example of a simple shader
+This code reflects the texture horizontally (as well as the Lightworks "Flop" effect):
 ``` Code
 float4 ps_main (float2 uv : TEXCOORD1) : COLOR 
 { 
@@ -11,9 +12,8 @@ float4 ps_main (float2 uv : TEXCOORD1) : COLOR
 
 ### Name of the Pixel Shaders:  
 
-*jwrl wrote:*  
->I also prefix any [...] shaders with ps_ so that it's immediately clear what's going on. [...]  
-Example: float4 *`*ps_main`**  
+We recommend using the prefix **`ps_`** for each shader, which makes it clear what it is.  
+In the example above **`ps_main`**.
 Note: This name must also be entered outside the shader in the corresponding entry in the "Techniques" section.  
 
 ---
