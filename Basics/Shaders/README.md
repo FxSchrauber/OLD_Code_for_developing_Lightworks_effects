@@ -34,10 +34,10 @@ Because the texture consists of many texels, uv will assume different values.
 ### Description of the above example code:
 
 **`return tex2D (InputSampler, 1.0 - uv);`**  
-`return` expects a float4 RGBA value, which is returned to the ["Techniques"](../Techniques/README.md ).  
-`tex2D (`.. is a function call. This [standard CG function](CG_standard_library/README.md) 
+**`return`** expects a float4 RGBA value, which is returned to the ["Techniques"](../Techniques/README.md ).  
+**`tex2D (`**.. is a function call. This [standard CG function](CG_standard_library/README.md) 
                                            is already implemented globally for all effects.  
-`InputSampler,` This sampler will read and preprocess the RGBA value of a texture. The sampler specified here must exist outside the shader, further up in the effect code.
+**`InputSampler,`** This sampler will read and preprocess the RGBA value of a texture. The sampler specified here must exist outside the shader, further up in the effect code.
 
 
 
