@@ -20,7 +20,9 @@ Note: This name must also be entered outside the shader in the corresponding ent
 
 ### Texture coordinates:
 
-`float4 ps_main `**`(float2 uv : TEXCOORD1)`**` : COLOR`
+``` Code
+float4 ps_main (float2 uv : TEXCOORD1) : COLOR`
+```
 
 The **`(float2 uv : TEXCOORD1)`** inside the parenthesis defines **`uv`** to be the coordinates of the texture.   
 This float2 variable contains the components `x` and `y` that determine the position of the output texel to be calculated.  
@@ -32,7 +34,11 @@ Because the texture consists of many texels, uv will assume different values.
 --- 
 
 ### Description of the above example code:
-**`return tex2D (InputSampler, 1.0 - uv);`**  
+
+``` Code
+    return tex2D (InputSampler, 1.0 - uv);
+```
+
 * **`return`** expects a float4 RGBA value, which is returned to the ["Techniques"](../Techniques/README.md ).  
 * **`tex2D (`**.. is a function call. This [standard CG function](../Functions/CG_standard_library/README.md) 
                                            is already implemented globally for all effects.  
