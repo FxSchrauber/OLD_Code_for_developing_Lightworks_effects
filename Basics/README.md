@@ -33,7 +33,7 @@ The following chapters assume that you understood the above linked introduction.
 
  - [**Shaders**](Shaders/README.md)
 
- - **Techniques**
+ - [**Techniques**](Techniques/README.md)
 
 ---
 
