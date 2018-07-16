@@ -8,6 +8,7 @@ For details see the PDF document: [Nvidia's Cg reference manual, starting on pag
 
 ### Trigonometric functions:
    - **`acos`**   returns arccosine of scalars and vectors.  
+   - **`asin`**   returns arcsine of scalars and vectors. 
    
    
    
