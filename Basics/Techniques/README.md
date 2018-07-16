@@ -73,6 +73,6 @@ technique MyEffect
    }
 }
 ```
-[The Shader section shows how to assign these parameters to the sampler and the variable.](../Shaders#take-parameters-from-the-technique).
+[The Shader section shows how to assign these parameters to the sampler and the variable.](../Shaders/README.md#take-parameters-from-the-technique).
 
 
