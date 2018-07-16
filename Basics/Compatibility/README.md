@@ -22,7 +22,7 @@
    > a and b are either both scalars or both vectors of the same length.  
 
    If you do not, then there may be problems on some platforms.  
-   For an example and the solution, see [LWKS.com post #146013](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=45&Itemid=81#146013).  
+   For an example and the solution, see [lwks.com post #146013](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=45&Itemid=81#146013).  
 
 ---
 
@@ -37,9 +37,10 @@
 
 ---
 
-6. Sampler settings
+6. Sampler settings:  
    The sampler setting `Clamp` should not be used, because this has different function on Linux / Mac systems than on Windows systems.      Starting with Lightworks 14.5, we can instead use `ClampToEdge` for all operating systems, but not on older versions of Lightworks.  
    
 ---
 
-7. 
+7. You cannot assign a value to a sampler inside a function or shader in Linux/Mac code.  
+   For details, see  [lwks.com post # 152430](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=75&Itemid=81#152430).
