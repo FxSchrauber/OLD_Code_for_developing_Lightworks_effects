@@ -60,7 +60,7 @@ Because the texture consists of many texels, uv will assume different values.
 ``` Code
 float4 ps_main (float2 uv : TEXCOORD1, uniform sampler blurSampler, uniform float blurRadius) : COLOR
 ```
-These parameters (the actual sampler name and the variable value) must be entered in the ["Techniques"](../Techniques/README.md ).  
+These parameters (the actual sampler name and the variable value) must be entered in the ["Techniques"](../Techniques/README.md#transfer-parameters-from-the-technique-to-the-pixel-shader).  
 
 For more information see [lwks.com post # 147395 on page 5](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=60&Itemid=81#147395)
 
