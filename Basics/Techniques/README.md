@@ -47,9 +47,21 @@ With the use of Multi technique, you can also program multiple passes within thi
 
 
 For different shader passes, you can also give the Pixel Shader different parameters.
-For example, the value 0.5
+For example, the value 0.5:  
+`ps_main(0.5)`
+
 ``` Code
-PixelShader = compile PROFILE ps_main (0.5);
+//--------------------------------------------------------------//
+// Techniques
+//--------------------------------------------------------------//
+
+technique MyEffect
+{
+   pass P_1
+   {
+      PixelShader = compile PROFILE ps_main(0.5);
+   }
+}
 ```
 In the [Pixel Shader, variables must be declared in a certain way](../Shaders#take-parameters-from-the-technique
 ), which can take the values passed by the technique.
