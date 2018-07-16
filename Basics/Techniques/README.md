@@ -36,3 +36,22 @@ technique MyEffect
 
 ### * [Multi pass](Multi_pass.md)
 
+---
+
+### Multi technique, Multi pass
+With the use of Multi technique, you can also program multiple passes within this technique.  
+
+---
+
+### Transfer parameters from the Technique to the Pixel Shader:
+
+
+For different shader passes, you can also give the Pixel Shader different parameters.
+For example, the value 0.5
+``` Code
+PixelShader = compile PROFILE ps_main (0.5);
+```
+In the [Pixel Shader, variables must be declared in a certain way](../Shaders#take-parameters-from-the-technique
+), which can take the values passed by the technique.
+
+
