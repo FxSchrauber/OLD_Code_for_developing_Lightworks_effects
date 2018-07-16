@@ -34,19 +34,5 @@ The following chapters assume that you understood the above linked introduction.
  - [**Shaders**](Shaders/README.md)
 
  - [**Techniques**](Techniques/README.md)
-
----
-
-### Miscellaneous:
-
-  - **Cross-platform compatibility**
  
- 
- 
- 
- 
- ---
- ---
- ---
-  
-## This repository is still under construction!
+ - [**Cross-platform compatibility**](Compatibility/README.md)
