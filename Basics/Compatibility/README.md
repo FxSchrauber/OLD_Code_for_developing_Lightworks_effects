@@ -28,9 +28,7 @@
 
 4.  Avoid nested and incomplete comment delimiters.  
    The following erroneous example contain 3 opening comentar delimiters, but only 2 closing comentar delimiters:
-   ``` Code
-      /* Commentary 1    /* Commentary 2 */     /* Commentary 3  */  
-   ```
+   ` /* Commentary 1    /* Commentary 2 */     /* Commentary 3  */`  
    In Windorws, this will not cause a bug, but on Mac systems.
    
          
