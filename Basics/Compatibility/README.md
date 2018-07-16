@@ -26,11 +26,20 @@
 
 ---
 
-4.  Avoid nested and incomplete comment delimiters.  
+4. Avoid nested and incomplete comment delimiters.  
    The following erroneous example contain 3 opening comentar delimiters, but only 2 closing comentar delimiters:  
    ` /* Commentary 1    /* Commentary 2 */     /* Commentary 3  */`  
    In Windorws, this will not cause a bug, but on Mac systems.  
    
+   ---
    
-         
-         
+5. Linux and Mac: Only one sampler should be created per texture.
+
+---
+
+6. Sampler settings
+   The sampler setting `Clamp` should not be used, because this has different function on Linux / Mac systems than on Windows systems.      Starting with Lightworks 14.5, we can instead use `ClampToEdge` for all operating systems, but not on older versions of Lightworks.  
+   
+---
+
+7. 
