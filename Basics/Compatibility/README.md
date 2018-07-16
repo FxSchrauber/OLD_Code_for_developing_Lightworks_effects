@@ -16,7 +16,7 @@
    
 ---
 
-3. Application of variables into intrinsic functions.:  
+3. Application of variables into [CG standard functions](../Functions/CG_standard_library/README.md):  
   Example: lerp (a, b, w);
   Quote [Nvidia's Cg reference manual, page 729:](https://www.google.com.au/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwj5qpif6rHTAhXLF5QKHQ6MCeAQFggwMAI&url=http%3A%2F%2Fdeveloper.download.nvidia.com%2Fcg%2FCg_3.1%2FCg-3.1_April2012_ReferenceManual.pdf&usg=AFQjCNHI5gaVpuvJH6ZO8bnX7BxJGKXr0A)  
    > a and b are either both scalars or both vectors of the same length.  
