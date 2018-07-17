@@ -104,11 +104,5 @@ Not all of the features listed there are available in Lightworks or across platf
    - `ldexp`  returns x times 2 raised to the power n.
    - `lit`   computes lighting coefﬁcients for ambient, diffuse, and specular lighting contribution
    - `mul`   multiply a matrix by a column vector, row vector by a matrix, or matrix by a matrix
-   -`reﬂect` returns the reﬂectiton vector given an incidence vector and a normal vector.
-   - refract` computes a refraction vector.
-
-
----
----
-
-## This repository is still under construction!
+   - `reﬂect` returns the reﬂectiton vector given an incidence vector and a normal vector.
+   - `refract` computes a refraction vector.
