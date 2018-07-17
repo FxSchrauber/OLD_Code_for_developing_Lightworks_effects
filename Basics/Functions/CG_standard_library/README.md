@@ -20,7 +20,7 @@ For details see the PDF document: [Nvidia's Cg reference manual, starting on pag
    - **`asin`**   returns arcsine of scalars and vectors. 
    - **`atan`**   returns arctangent of scalars and vector.
    - **`atan2`**  returns arctangent of scalars and vectors.
-   - **cos``**    returns cosine of scalars and vectors.
+   - **`cos`**    returns cosine of scalars and vectors.
    - **`cosh`**   returns hyperbolic cosine of scalars and vectors.
    - **``** 
    
