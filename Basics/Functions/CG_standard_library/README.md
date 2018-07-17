@@ -18,7 +18,7 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`saturate`**  Clamps the specified value within the range of 0 to 1.
 
 
-#### Integer and floating-point manipulations:
+#### Integer and/or floating-point manipulations:
 
    - **`abs`**     returns absolute value of scalars and vectors.  
    - **`ceil`**    returns smallest integert (as a floating-point type) not less than a scalar or each vector component.
