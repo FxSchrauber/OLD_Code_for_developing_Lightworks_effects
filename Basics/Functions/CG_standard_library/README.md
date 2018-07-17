@@ -4,7 +4,7 @@ For details see the PDF document: [Nvidia's Cg reference manual, starting on pag
 
 With regard to the parameters, please note the permissible scalar and vector types.  
 Also note which combinations of these types of types are allowed. Deviating from this can lead to unexpected results and reduce compatibility.
-Also **avoid** the special types listed in the CG manual, such as `half`, `fixed , etc.  
+Also **avoid** the special types listed in the CG manual, such as `half`, `fixed` , etc.  
 Not all of the features listed there are available in Lightworks or across platforms.
 
 ---
@@ -39,10 +39,10 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`log2`**    returns the base-2 logarithm of scalars and vectors.
    - **`pow`**    returns x to the y-th power of scalars and vectors.
    - **`rsqrt`**  returns reciprocal square root of scalars and vectors.
-   - **``**   
+   - **`sqrt`**   returns square root of scalars and vectors.  
 
 
-#### Trigonometry and circles:
+#### Trigonometry, circles etc.:
    - **`acos`**     returns arccosine of scalars and vectors.  
    - **`asin`**     returns arcsine of scalars and vectors. 
    - **`atan`**     returns arctangent of scalars and vector.
@@ -51,9 +51,9 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`cosh`**     returns hyperbolic cosine of scalars and vectors.
    - **`degrees`**  converts values of scalars and vectors from radians to degrees.
    - **`radians`**  converts values of scalars and vectors from degrees to radians
-   - **``** 
-   - **``** 
-   - **``** 
+   - **`sin`**      returns sine of scalars and vectors.
+   - **`sincos`**   returns the sine and cosine of scalars and vectors.
+   - **`sinh`**     returns hyperbolic sine of scalars and vectors.
 
 
 #### Mainly for color vectors:
@@ -69,6 +69,12 @@ Not all of the features listed there are available in Lightworks or across platf
    
 ---
 ---
+1,  Null, und dazwischen:
+   - **`sign`**        returns sign of scalar or each vector component.
+   - **`smoothstep`**  interpolate smoothly between two input values based on a third.
+   - **`step`**         Compares two values, returning 0 or 1 based on which value is greater.
+   - 
+
 
 ### Miscellaneous (function in Lightworks may be uncertain or untested):
    - `all` Problems reported (details unknown so far)  
