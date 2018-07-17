@@ -15,30 +15,32 @@ For details see the PDF document: [Nvidia's Cg reference manual, starting on pag
    - **`ceil`** returns smallest integert (as a floating-point type) not less than a scalar or each vector component
 
 
-### Trigonometric functions:
-   - **`acos`**   returns arccosine of scalars and vectors.  
-   - **`asin`**   returns arcsine of scalars and vectors. 
-   - **`atan`**   returns arctangent of scalars and vector.
-   - **`atan2`**  returns arctangent of scalars and vectors.
-   - **`cos`**    returns cosine of scalars and vectors.
-   - **`cosh`**   returns hyperbolic cosine of scalars and vectors.
+### Trigonometry and circles:
+   - **`acos`**     returns arccosine of scalars and vectors.  
+   - **`asin`**     returns arcsine of scalars and vectors. 
+   - **`atan`**     returns arctangent of scalars and vector.
+   - **`atan2`**    returns arctangent of scalars and vectors.
+   - **`cos`**      returns cosine of scalars and vectors.
+   - **`cosh`**     returns hyperbolic cosine of scalars and vectors.
+   - **`degrees`**  converts values of scalars and vectors from radians to degrees.
+   - **``** 
+   - **``** 
    - **``** 
    
    
-### Checking multiple components of a variable:
-   - **`all`** Problems reported (details unknown so far)  
-      - It should be checked whether the function was used according to their specifications in these problem cases.
-   - **`any`** Problems reported (details unknown so far)  
-      - It should be checked whether the function was used according to their specifications in these problem cases.
-   
+
 ---
 
 #### Miscellaneous (function in Lightworks may be uncertain or untested):
+   - `all` Problems reported (details unknown so far)  
+      - It should be checked whether the function was used according to their specifications in these problem cases.
+   - `any` Problems reported (details unknown so far)  
+      - It should be checked whether the function was used according to their specifications in these problem cases.
    - `clip`  conditionally kill a pixel before output
    - `cross` returns the cross product of two three-component vectors
    - `ddx`   returns approximate partial derivative with respect to window-space X
    - `ddy`   returns approximate partial derivative with respect to window-space Y
-
+   - `determinant`  return the scalar determinant of a square matrix 
 
 
 ---
