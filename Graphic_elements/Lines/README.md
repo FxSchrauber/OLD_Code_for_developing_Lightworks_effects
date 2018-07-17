@@ -1,7 +1,7 @@
 # Lines
 
-### Vertical lines
+### Vertical lines over the entire frame.
    - Angle adjustable
 
-### Horizontal lines
+### Horizontal lines over the entire frame.
    - Angle adjustable
