@@ -12,10 +12,10 @@ Not all of the features listed there are available in Lightworks or across platf
 ### Thematic overview of helpful functions:
 
 #### Limit values
-   - **`clamp`** Clamps the specified value to the specified minimum and maximum range
-   - **`max`**   returns the maximum of two scalars or each respective component of two vecto
-   - **`min`**   returns the minimum of two scalars or each respective component of two vectors
-   - **``** 
+   - **`clamp`**     Clamps the specified value to the specified minimum and maximum range.
+   - **`max`**       returns the maximum of two scalars or each respective component of two vecto.
+   - **`min`**       returns the minimum of two scalars or each respective component of two vectors.
+   - **`saturate`**  Clamps the specified value within the range of 0 to 1.
 
 
 #### Integer and floating-point manipulations:
@@ -26,7 +26,7 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`fmod`**    returns the remainder of x/y with the same sign as x.
    - **`frac`**    returns the fractional portion of a scalar or each vector component. 
    - **`modf`**    decompose a ﬂoat into integer and fractional parts.
-   - **``** 
+   - **`round`**   returns the rounded value of scalars or vectors. [Problems reported, see lwks.com post#172865](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=255&Itemid=81#172865)
    - **``** 
 
   
@@ -36,7 +36,10 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`exp2`**    returns the base-2 exponential of scalars and vectors.
    - **`log`**     returns the natural logarithm of scalars and vectors.
    - **`log10`**   returns the base-10 logarithm of scalars and vectors.
-   - **`log2`**    returns the base-2 logarithm of scalars and vectors
+   - **`log2`**    returns the base-2 logarithm of scalars and vectors.
+   - **`pow`**    returns x to the y-th power of scalars and vectors.
+   - **`rsqrt`**  returns reciprocal square root of scalars and vectors.
+   - **``**   
 
 
 #### Trigonometry and circles:
@@ -47,7 +50,7 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`cos`**      returns cosine of scalars and vectors.
    - **`cosh`**     returns hyperbolic cosine of scalars and vectors.
    - **`degrees`**  converts values of scalars and vectors from radians to degrees.
-   - **``** 
+   - **`radians`**  converts values of scalars and vectors from degrees to radians
    - **``** 
    - **``** 
    - **``** 
@@ -86,7 +89,8 @@ Not all of the features listed there are available in Lightworks or across platf
    - `ldexp`  returns x times 2 raised to the power n.
    - `lit`   computes lighting coefﬁcients for ambient, diffuse, and specular lighting contribution
    - `mul`   multiply a matrix by a column vector, row vector by a matrix, or matrix by a matrix
-   
+   -`reﬂect` returns the reﬂectiton vector given an incidence vector and a normal vector.
+   - refract` computes a refraction vector.
 
 
 ---
