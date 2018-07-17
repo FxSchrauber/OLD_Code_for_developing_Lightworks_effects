@@ -2,6 +2,7 @@
 
 **Function call:** `fn_multilines_total_X (uv, color , bgVariable , lines , half_Lineweight , roll)`   
 **Macro call:** `MULTILINES_TOTAL_X (uv, color , bgVariable , lines , half_Lineweight , roll)`  
+  (Macro code can be found at the bottom of this page)
   
 ***Purpose of the macro:***  
 Generating a selectable number of **horizontal lines** of equal distance across the **entire frame**.  
@@ -14,6 +15,7 @@ More functions and details see the parameter descriptions
 
 ---
 
+#### Code as function:
 ```` Code
 float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable, 
                               float lines, float half_Lineweight ,float roll)
@@ -29,9 +31,13 @@ float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable,
       );
 }
 ````   
+`(1.0 / _OutputHeight` is the height of a texel within the output texture.  
+This creates the necessary edge softness of the lines.
 
+The use of `_OutputHeight` is controversial because in interlaced projects this variable has a different value during playback than when playback is stopped.  
+In this macro, this means that while the playbacks in interlaced projects, the edge softness of the lines is doubled. This may be desirable in the case of very narrow lines, because otherwise the position-dependent variations line width will be visible by one pixel. In the case of moving line positions using keyframing, this also minimizes the flickering of the lines in interlaced projects.
 
-
+---
 ---
 
 #### Parameter Description  
@@ -125,11 +131,7 @@ float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable,
       )                                                                     \
    )
 ````   
-`(1.0 / _OutputHeight` is the height of a texel within the output texture.  
-This creates the necessary edge softness of the lines.
 
-The use of `_OutputHeight` is controversial because in interlaced projects this variable has a different value during playback than when playback is stopped.  
-In this macro, this means that while the playbacks in interlaced projects, the edge softness of the lines is doubled. This may be desirable in the case of very narrow lines, because otherwise the position-dependent variations line width will be visible by one pixel. In the case of moving line positions using keyframing, this also minimizes the flickering of the lines in interlaced projects.
   
 ---
 
