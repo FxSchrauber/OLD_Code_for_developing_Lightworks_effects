@@ -1,6 +1,6 @@
-# Multilines_Total_X
+# multilines_total_X
 
-
+**Function call: `fn_multilines_total_X (uv, color , bgVariable , lines , half_Lineweight , roll)`**
 **Macro call: `MULTILINES_TOTAL_X (uv, color , bgVariable , lines , half_Lineweight , roll)`**
   
 ***Purpose of the macro:***  
@@ -10,6 +10,25 @@ This can be a color, or a texture from a sampler.
 The macro itself performs something similar to **pixel interpolation on the edges of the lines**.  
 (1 subtexel vertical edge softness of the lines)  
 More functions and details see the parameter descriptions  
+
+---
+
+```` Code
+float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable, float lines, 
+                              float half_Lineweight ,float roll, float OutputHeight)
+{
+   lerp (color, bgVariable,
+      saturate (
+         (abs( (uv.y - roll) - (round( (uv.y - roll)  * lines)  / lines ))
+         - half_Lineweight
+         )
+         /  (1.0 / OutputHeight)
+      )
+   )
+}
+````   
+
+
 
 ---
 
@@ -94,7 +113,7 @@ More functions and details see the parameter descriptions
 #### Macro code:
 
 ```` Code
-#define MULTILINES_TOTALx(uv, color,bgVariable,lines,half_Lineweight,roll)  \
+#define MULTILINES_TOTAL_X(uv, color,bgVariable,lines,half_Lineweight,roll)  \
    lerp (color, bgVariable,                                                 \
       saturate (                                                            \
          (abs( (uv.y - roll) - (round( (uv.y - roll)  * lines)  / lines ))  \
@@ -122,7 +141,7 @@ In this macro, this means that while the playbacks in interlaced projects, the e
 #### alternative Macro code:
   
 ```` Code
-#define MULTILINES_TOTALx(uv, color,bgVariable,lines,half_Lineweight,roll)  \
+#define MULTILINES_TOTAL_X(uv, color,bgVariable,lines,half_Lineweight,roll)  \
    lerp (color, bgVariable,                                                 \
       saturate (                                                            \
          (abs( (uv.y - roll) - (round( (uv.y  - roll)  * lines)  / lines )) \
