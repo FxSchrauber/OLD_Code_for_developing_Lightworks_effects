@@ -9,22 +9,24 @@ The **background texture** is added with the `bgVariable`.
 This can be a color, or a texture from a sampler.  
 The macro itself performs something similar to **pixel interpolation on the edges of the lines**.  
 (1 subtexel vertical edge softness of the lines)  
+GPU load regardless of the number of lines.
 More functions and details see the parameter descriptions  
 
 ---
 
 ```` Code
-float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable, float lines, float half_Lineweight ,float roll)
+float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable, 
+                              float lines, float half_Lineweight ,float roll)
 {
-   return  
-   lerp (color, bgVariable,
-      saturate (
-         (abs( (uv.y - roll) - (round( (uv.y - roll)  * lines)  / lines ))
-         - half_Lineweight
+   return 
+      lerp (color, bgVariable,
+         saturate (
+            (abs( (uv.y - roll) - (round( (uv.y - roll)  * lines)  / lines ))
+            - half_Lineweight
+            )
+            /  (1.0 / _OutputHeight)
          )
-         /  (1.0 / _OutputHeight)
-      )
-   );
+      );
 }
 ````   
 
