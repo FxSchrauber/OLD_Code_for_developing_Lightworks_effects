@@ -15,7 +15,7 @@ float2 fn_some_func (...)
 }
 ```
 
-You can call such functions in shaders.
+You can call such functions in [shaders](../Shaders/README.md ).  
 In effect code, these shaders must be below this function code.
 
 ---
