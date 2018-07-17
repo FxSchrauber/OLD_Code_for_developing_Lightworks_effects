@@ -2,6 +2,8 @@
 
 For details see the PDF document: [Nvidia's Cg reference manual, starting on page 685](https://www.google.com.au/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwj5qpif6rHTAhXLF5QKHQ6MCeAQFggwMAI&url=http%3A%2F%2Fdeveloper.download.nvidia.com%2Fcg%2FCg_3.1%2FCg-3.1_April2012_ReferenceManual.pdf&usg=AFQjCNHI5gaVpuvJH6ZO8bnX7BxJGKXr0A)  
 
+
+
 ### Limit values
    - **`clamp`** Clamps the specified value to the specified minimum and maximum range
    - **``** 
@@ -11,8 +13,22 @@ For details see the PDF document: [Nvidia's Cg reference manual, starting on pag
 
 ### Integer and floating-point manipulations:
 
-   - **`abs`**  returns absolute value of scalars and vectors.  
-   - **`ceil`** returns smallest integert (as a floating-point type) not less than a scalar or each vector component
+   - **`abs`**     returns absolute value of scalars and vectors.  
+   - **`ceil`**    returns smallest integert (as a floating-point type) not less than a scalar or each vector component.
+   - **`floor`**   returns largest integer (as a floating-point type) not greater than a scalar or each vector component. 
+   - **`fmod`**    returns the remainder of x/y with the same sign as x.
+   - **`frac`**    returns the fractional portion of a scalar or each vector component. 
+   - **``** 
+   - **``** 
+   - **``** 
+
+  
+   
+### General Mathematical Functions:
+   - **`exp`**   returns the base-e exponential of scalars and vectors.
+   - **`exp2`**  returns the base-2 exponential of scalars and vectors
+   - **``** 
+
 
 
 ### Trigonometry and circles:
@@ -26,9 +42,15 @@ For details see the PDF document: [Nvidia's Cg reference manual, starting on pag
    - **``** 
    - **``** 
    - **``** 
-   
-   
+   - **``** 
 
+   
+### Position and direction vectors:
+   - **`distance`** return the Euclidean distance between two points.
+   - **`dot`**      returns the scalar dot product of two vector
+   - **``** 
+   
+   
 ---
 
 #### Miscellaneous (function in Lightworks may be uncertain or untested):
@@ -41,6 +63,13 @@ For details see the PDF document: [Nvidia's Cg reference manual, starting on pag
    - `ddx`   returns approximate partial derivative with respect to window-space X
    - `ddy`   returns approximate partial derivative with respect to window-space Y
    - `determinant`  return the scalar determinant of a square matrix 
+   - `faceforward` ???
+   - `frexp` splits scalars and vectors into normalized fraction and a power of 2
+   - `fwidth`  returns sum of approximate window-space partial derivatives magnitudes.
+   - `isﬁnite` test whether or not a scalar or each vector component is a ﬁnite value.
+   - `isinf` test whether or not a scalar or each vector component is inﬁnite.
+   - `isnan` test whether or not a scalar or each vector component is not-a-number
+   
 
 
 ---
