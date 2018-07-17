@@ -15,7 +15,13 @@ More functions and details see the parameter descriptions
 
 ---
 
-#### Code as function:
+
+### Environment requirements
+
+#### Global variable:
+  `float _OutputHeight`
+
+#### Code (Example as a function):
 ```` Code
 float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable, 
                               float lines, float half_Lineweight ,float roll)
