@@ -13,7 +13,9 @@ Not all of the features listed there are available in Lightworks or across platf
 
    
 #### Loads color values from the sampler:
-   - **`tex2D`**   **This most important function is needed in almost all effects.**
+   - **`tex2D`**   **This most important function is needed in almost all effects.**  
+   There are similar tex .. functions. Whether these are useful for Lightworks is questionable ....
+   - For example: **`tex2Dbias`** [Test see lwks.com](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=75&Itemid=81#151431)
    
 
 #### Limit values
