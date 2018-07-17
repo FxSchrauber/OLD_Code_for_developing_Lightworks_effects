@@ -13,8 +13,8 @@ Not all of the features listed there are available in Lightworks or across platf
 
 #### Limit values
    - **`clamp`** Clamps the specified value to the specified minimum and maximum range
-   - **``** 
-   - **``** 
+   - **`max`**   returns the maximum of two scalars or each respective component of two vecto
+   - **`min`**   returns the minimum of two scalars or each respective component of two vectors
    - **``** 
 
 
@@ -25,13 +25,13 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`floor`**   returns largest integer (as a floating-point type) not greater than a scalar or each vector component. 
    - **`fmod`**    returns the remainder of x/y with the same sign as x.
    - **`frac`**    returns the fractional portion of a scalar or each vector component. 
-   - **``** 
+   - **`modf`**    decompose a ﬂoat into integer and fractional parts.
    - **``** 
    - **``** 
 
   
    
-#### General Mathematical Functions:
+#### General mathematical functions:
    - **`exp`**     returns the base-e exponential of scalars and vectors.
    - **`exp2`**    returns the base-2 exponential of scalars and vectors.
    - **`log`**     returns the natural logarithm of scalars and vectors.
@@ -58,9 +58,10 @@ Not all of the features listed there are available in Lightworks or across platf
    
    
 #### Mainly for position and direction vectors:
-   - **`distance`** return the Euclidean distance between two points.
-   - **`dot`**      returns the scalar dot product of two vector
-   - **`length`**   return scalar Euclidean length of a vector
+   - **`distance`**   return the Euclidean distance between two points.
+   - **`dot`**        returns the scalar dot product of two vector
+   - **`length`**     return scalar Euclidean length of a vector
+   - **`normalize`**  normalizes a vector
    
    
 ---
@@ -84,7 +85,7 @@ Not all of the features listed there are available in Lightworks or across platf
    - `isnan` test whether or not a scalar or each vector component is not-a-number
    - `ldexp`  returns x times 2 raised to the power n.
    - `lit`   computes lighting coefﬁcients for ambient, diffuse, and specular lighting contribution
-   
+   - `mul`   multiply a matrix by a column vector, row vector by a matrix, or matrix by a matrix
    
 
 
