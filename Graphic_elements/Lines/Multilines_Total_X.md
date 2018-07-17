@@ -1,6 +1,5 @@
-## Multilines_Total_X
+# Multilines_Total_X
 
-## MULTILINES_TOTALx (6 parameters)
 
 **Macro call: `MULTILINES_TOTALx (uv, color , bgVariable , lines , half_Lineweight , roll)`**
   
