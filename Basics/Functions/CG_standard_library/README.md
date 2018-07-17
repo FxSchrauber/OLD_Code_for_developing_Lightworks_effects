@@ -11,6 +11,11 @@ Not all of the features listed there are available in Lightworks or across platf
 
 ### Thematic overview of helpful functions:
 
+   
+#### Loads color values from the sampler:
+   - **`tex2D`**   **This most important function is needed in almost all effects.**
+   
+
 #### Limit values
    - **`clamp`**     Clamps the specified value to the specified minimum and maximum range.
    - **`max`**       returns the maximum of two scalars or each respective component of two vecto.
@@ -27,9 +32,13 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`frac`**    returns the fractional portion of a scalar or each vector component. 
    - **`modf`**    decompose a ﬂoat into integer and fractional parts.
    - **`round`**   returns the rounded value of scalars or vectors. [Problems reported, see lwks.com post#172865](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=255&Itemid=81#172865)
-   - **``** 
 
-  
+   
+#### Jumping to zero or 1 etc.
+   - **`sign`**        returns sign of scalar or each vector component.
+   - **`smoothstep`**  interpolate smoothly between two input values based on a third.
+   - **`step`**         Compares two values, returning 0 or 1 based on which value is greater
+   
    
 #### General mathematical functions:
    - **`exp`**     returns the base-e exponential of scalars and vectors.
@@ -54,6 +63,8 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`sin`**      returns sine of scalars and vectors.
    - **`sincos`**   returns the sine and cosine of scalars and vectors.
    - **`sinh`**     returns hyperbolic sine of scalars and vectors.
+   - **`tan`**      returns tangent of scalars and vectors.
+   - **`tanh`*      returns hyperbolic tangent of scalars and vectors.
 
 
 #### Mainly for color vectors:
@@ -66,14 +77,10 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`length`**     return scalar Euclidean length of a vector
    - **`normalize`**  normalizes a vector
    
+
    
 ---
 ---
-1,  Null, und dazwischen:
-   - **`sign`**        returns sign of scalar or each vector component.
-   - **`smoothstep`**  interpolate smoothly between two input values based on a third.
-   - **`step`**         Compares two values, returning 0 or 1 based on which value is greater.
-   - 
 
 
 ### Miscellaneous (function in Lightworks may be uncertain or untested):
