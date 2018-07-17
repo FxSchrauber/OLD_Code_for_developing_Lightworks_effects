@@ -1,7 +1,7 @@
 # multilines_total_X
 
-**Function call: `fn_multilines_total_X (uv, color , bgVariable , lines , half_Lineweight , roll)`**  
-**Macro call: `MULTILINES_TOTAL_X (uv, color , bgVariable , lines , half_Lineweight , roll)`**
+**Function call:** `fn_multilines_total_X (uv, color , bgVariable , lines , half_Lineweight , roll)`   
+**Macro call:** `MULTILINES_TOTAL_X (uv, color , bgVariable , lines , half_Lineweight , roll)`  
   
 ***Purpose of the macro:***  
 Generating a selectable number of **horizontal lines** of equal distance across the **entire frame**.  
