@@ -1,7 +1,7 @@
 
 # Functions
 
-A template that you can complete with your code:
+A template that you can complete with your code to implement a new feature for your effect:
 ``` Code
 //--------------------------------------------------------------//
 // Functions
@@ -14,6 +14,9 @@ float2 fn_some_func (...)
 
 }
 ```
+
+You can call such functions in shaders.
+In effect code, these shaders must be below this function code.
 
 ---
 
