@@ -61,15 +61,19 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
   
    2. `color`:  
      Color of the line  
-     ***Type:*** float3 (RGB) or float4 (RGBA) **but must be the same as** `bgVariable`  
-       - (For special purposes, float1 or float2 should also work as long as only one variant is used.) 
+     ***Type:*** float4 (RGBA)
+     When using other float types, the function code must be adjusted.
+     The macro code also works without adaptation with other float types (eg float3 RGB).  
+     In any case, it must be the same type as `bgVariable`
+
   
 ---
 
    3. `bgVariable`:  
      The background texture  
-     ***Type:*** float3 (RGB) or float4 (RGBA) **but must be the same as** `color`  
-       - (For special purposes, float1 or float2 should also work as long as only one variant is used.)  
+    When using other float types, the function code must be adjusted.
+     The macro code also works without adaptation with other float types (eg float3 RGB).  
+     In any case, it must be the same type as `color`
        
 ---
 
@@ -111,22 +115,14 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
    - The value of the parameter `color` (the line)  
      - or the value of the parameter`bgVariable`  
      - or a mix of both (edge-interpolatin of the lines)  
-   - *Type:* same as `color` and `bgVariable`  
-      - When used for line generation: float3 (RGB) or float4 (RGBA)  
+   - *Type:* same as `color` and `bgVariable`    
    - *Value range*: 0.0 to 1.0  
 
  
 ---
 ---
 
-### Environment requirements
-
-#### Global variable:
-  `float _OutputHeight`
-
----
-
-#### Macro code:
+### Macro code:
 
 ```` Code
 #define MULTILINES_TOTAL_X(uv, color,bgVariable,lines,half_Lineweight,roll)             \
