@@ -20,7 +20,7 @@ In effect code, these shaders must be below this function code.
 
 ---
 
-* [CG_standard_library (Intrinsic Functions, already implemented)](CG_standard_library/README.md)
+* [CG_standard_library (Intrinsic Functions)](CG_standard_library/README.md)
 
 ---
 
