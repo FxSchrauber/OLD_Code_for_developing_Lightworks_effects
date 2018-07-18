@@ -10,7 +10,6 @@ The **background texture** is added with the `bgVariable`.
 This can be a color, or a texture from a sampler.  
 The macro itself performs something similar to **pixel interpolation on the edges of the lines**.  
 (1 subtexel vertical edge softness of the lines)  
-GPU load regardless of the number of lines.
 More functions and details see the parameter descriptions.  
 
 ---
