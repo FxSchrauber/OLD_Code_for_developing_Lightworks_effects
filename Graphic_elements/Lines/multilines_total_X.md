@@ -23,17 +23,15 @@ More functions and details see the parameter descriptions.
 #### Code (Example as a function):
 ```` Code
 float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable, 
-                              float lines, float half_Lineweight ,float roll)
-{
-   return 
-      lerp (color, bgVariable,
-         saturate (
-            (abs( (uv.y - roll) - (round( (uv.y - roll)  * lines)  / lines ))
-            - half_Lineweight
-            )
-            /  (1.0 / _OutputHeight)
-         )
-      );
+                              float lines, float half_Lineweight, float roll)
+{ 
+   float mix = saturate (
+      (abs( (uv.y - roll) - (round( (uv.y - roll)  * lines)  / lines ))
+      - half_Lineweight
+      ) /  (1.0 / _OutputHeight)
+   );
+  
+   return lerp (color, bgVariable, mix);
 }
 ````   
 `(1.0 / _OutputHeight)` is the height of a texel within the output texture.  
