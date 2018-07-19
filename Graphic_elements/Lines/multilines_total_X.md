@@ -123,14 +123,11 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
 
 ```` Code
 #define MULTILINES_TOTAL_X(uv, color,bgVariable,lines,half_Lineweight,roll)             \
-   lerp ((color), (bgVariable),                                                         \
-      saturate (                                                                        \
+   lerp ((color), (bgVariable), saturate (                                              \
          (abs( ((uv.y) - (roll)) - (round( ((uv.y) - (roll))  * (lines))  / (lines) ))  \
          - (half_Lineweight)                                                            \
-         )                                                                              \
-         /  (1.0 / _OutputHeight)                                                       \
-      )                                                                                 \
-   )
+         ) /  (1.0 / _OutputHeight)                                                     \
+   ))
 ````  
 
 ### Screenshot  
