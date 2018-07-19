@@ -5,6 +5,8 @@ or
 **Macro call:** `MULTILINES_TOTAL_X (uv, color , bgVariable , lines , half_Lineweight , roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
   
+--- 
+  
 ***Purpose of the macro:***  
 Generating a selectable number of **horizontal lines** of equal distance across the **entire frame**.  
 The **background texture** is added with the `bgVariable`.  
