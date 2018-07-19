@@ -1,6 +1,7 @@
 # multilines_total_X                         [![](images/multilines_total_X-thumbnail.png)](images/multilines_total_X.png)
 
 **Function call:** `fn_multilines_total_X (uv, color , bgVariable , lines , half_Lineweight , roll)`   
+or  
 **Macro call:** `MULTILINES_TOTAL_X (uv, color , bgVariable , lines , half_Lineweight , roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
   
