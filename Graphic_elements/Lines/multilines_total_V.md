@@ -124,3 +124,6 @@ This creates the necessary edge softness of the lines.
          ) /  (1.0 / _OutputWidth)                                                      \
    ))
 ````   
+
+### Screenshot  
+![](images/multilines_total_V.png)
