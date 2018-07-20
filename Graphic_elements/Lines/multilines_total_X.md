@@ -103,8 +103,8 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
        - Rolling of the lines (keyframing): ~ -1000 to + 1000  
          (if this range is exceeded, the mathematical unrealities can be seen.)  
      - Position of the first line (which is the only one independent of the number of lines): 
-       - Value 0.0: The center of the line thickness is at the top  edge of the frame. (half of the line is outside the texture)   
-       - Value 0.5: The line is centered in the frame.  
+       - Value 0.0: The center of this line thickness is at the top  edge of the frame. (half of the line is outside the texture)   
+       - Value 0.5: This line is centered in the frame.  
        - Value 1.0: Like value 0, (wrapped)  
 
 
