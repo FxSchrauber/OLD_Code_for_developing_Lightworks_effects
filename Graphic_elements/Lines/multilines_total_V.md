@@ -104,10 +104,9 @@ This creates the necessary edge softness of the lines.
 
  #### Return value:
    - The value of the parameter `color` (the line)  
-      or the value of the parameter`bgVariable`  
-      or a mix of both (edge-interpolatin of the lines)  
-   - **Type: same as `color` and `bgVariable`**  
-       When used for line generation: float3 (RGB) or float4 (RGBA)  
+     - or the value of the parameter`bgVariable`  
+     - or a mix of both (edge-interpolatin of the lines)  
+   - **Type: same as `color` and `bgVariable`**    
    - Value range: 0.0 to 1.0  
 
  
