@@ -1,10 +1,11 @@
 # multilines_total_H  [![](images/multilines_total_H-thumbnail.png)](images/multilines_total_H.png)
 
-**Function call:** `fn_multilines_total_H (uv, color , bgVariable , lines , half_Lineweight , roll)`  
+**Function call:** `fn_multilines_total_H (uv, color, bgVariable, lines, half_Lineweight, roll)`  
+
 Example with values: `fn_multilines_total_H (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 0.0)`
 (Result [see image](images/multilines_total_H.png))
 
-*or* **Macro call:** `MULTILINES_TOTAL_H (uv, color , bgVariable , lines , half_Lineweight , roll)`  
+*or* **Macro call:** `MULTILINES_TOTAL_H (uv, color, bgVariable, lines, half_Lineweight, roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
   
 --- 
