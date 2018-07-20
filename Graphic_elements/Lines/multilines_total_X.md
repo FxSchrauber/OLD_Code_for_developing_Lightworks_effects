@@ -20,8 +20,7 @@ More functions and details see the parameter descriptions.
 
 ### Environment requirements
 
-#### Global variable:
-  `float _OutputHeight`
+#### Global variable:  `float _OutputHeight`
 
 #### Code (Example as a function):
 ```` Code
