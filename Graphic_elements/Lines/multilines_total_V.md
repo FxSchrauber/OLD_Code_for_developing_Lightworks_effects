@@ -1,7 +1,7 @@
 # multilines_total_V         [![](images/multilines_total_V-thumbnail.png)](images/multilines_total_V.png)
 
 **Function call:** `fn_multilines_total_V (uv, color , bgVariable , lines , half_Lineweight , roll)`  
-The image was created with these parameters: `fn_multilines_total_V (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 0.0)`
+Example with parameters: `fn_multilines_total_V (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 0.0)`
 
 
 *or* **Macro call:** `MULTILINES_TOTAL_V (uv, color , bgVariable , lines , half_Lineweight , roll)`  
