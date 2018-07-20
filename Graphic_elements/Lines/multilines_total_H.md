@@ -1,8 +1,8 @@
-# multilines_total_X                         [![](images/multilines_total_X-thumbnail.png)](images/multilines_total_X.png)
+# multilines_total_H                         [![](images/multilines_total_H-thumbnail.png)](images/multilines_total_H.png)
 
-**Function call:** `fn_multilines_total_X (uv, color , bgVariable , lines , half_Lineweight , roll)`   
+**Function call:** `fn_multilines_total_H (uv, color , bgVariable , lines , half_Lineweight , roll)`   
 or  
-**Macro call:** `MULTILINES_TOTAL_X (uv, color , bgVariable , lines , half_Lineweight , roll)`  
+**Macro call:** `MULTILINES_TOTAL_H (uv, color , bgVariable , lines , half_Lineweight , roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
   
 --- 
@@ -24,7 +24,7 @@ More functions and details see the parameter descriptions.
 
 #### Code (Example as a function):
 ```` Code
-float4 fn_multilines_total_X (float2 uv, float4 color, float4 bgVariable, 
+float4 fn_multilines_total_H (float2 uv, float4 color, float4 bgVariable, 
                               float lines, float half_Lineweight, float roll)
 { 
    float mix = saturate (
@@ -124,7 +124,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
 ### Macro code:
 
 ```` Code
-#define MULTILINES_TOTAL_X(uv,color,bgVariable,lines,half_Lineweight,roll)              \
+#define MULTILINES_TOTAL_H(uv,color,bgVariable,lines,half_Lineweight,roll)              \
    lerp ((color), (bgVariable), saturate (                                              \
          (abs( ((uv).y - (roll)) - (round( ((uv).y - (roll))  * (lines))  / (lines) ))  \
          - (half_Lineweight)                                                            \
@@ -133,4 +133,4 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
 ````  
 
 ### Screenshot  
-![](images/multilines_total_X.png)
+![](images/multilines_total_H.png)
