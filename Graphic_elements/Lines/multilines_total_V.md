@@ -79,8 +79,8 @@ This creates the necessary edge softness of the lines.
        - Usable value range 0.0 to 0.5  
        - Examples:  
          0.0:  Line thickness 1 to 2 pixels  (line thickness + 2 * edge softness)  
-         0.005: line thickness 1% of the frame width  
-         0.5:  line thickness over the entire frame width  
+         0.005: Line thickness 1% of the frame width  
+         0.5:  Line thickness over the entire frame width  
          
 ---
    
