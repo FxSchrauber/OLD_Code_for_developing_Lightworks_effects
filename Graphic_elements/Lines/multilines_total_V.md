@@ -114,7 +114,7 @@ This creates the necessary edge softness of the lines.
 ---
 
 
-#### Macro code:
+### Macro code:
 
 ```` Code
 #define MULTILINES_TOTAL_V(uv,color,bgVariable,lines,half_Lineweight,roll)              \
