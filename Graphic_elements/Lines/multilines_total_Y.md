@@ -1,6 +1,4 @@
-## MULTILINES_TOTALy (6 parameters)
-
-# multilines_total_Y                         [![](images/multilines_total_Y-thumbnail.png)](images/multilines_total_Y.png)
+# multilines_total_Y         [![](images/multilines_total_Y-thumbnail.png)](images/multilines_total_Y.png)
 
 **Function call:** `fn_multilines_total_Y (uv, color , bgVariable , lines , half_Lineweight , roll)`   
 or  
