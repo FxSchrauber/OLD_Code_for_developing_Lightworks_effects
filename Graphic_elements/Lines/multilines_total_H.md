@@ -20,7 +20,7 @@ More functions and details see the parameter descriptions.
 
 ---
 
-### Environment requirements
+### Requirements
 
 #### Global variable:  `float _OutputHeight`
 
