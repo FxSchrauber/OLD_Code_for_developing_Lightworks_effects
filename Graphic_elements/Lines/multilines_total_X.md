@@ -71,7 +71,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
 
    3. `bgVariable`:  
      The background texture  
-    When using other float types, the function code must be adjusted.
+     When using other float types, the function code must be adjusted.
      The macro code also works without adaptation with other float types (eg float3 RGB).  
      In any case, it must be the same type as `color`
        
