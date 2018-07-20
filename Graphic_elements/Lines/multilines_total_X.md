@@ -51,7 +51,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
   
    1. `uv`:  
      Enter the name of the used texture coordinate variable.  
-     *Type:* `float2`  
+     **Type: `float2`**  
      Recommendation: float2 uv0 : TEXCOORD0   (which may not be used for sampler parameters!)
 
 
@@ -60,25 +60,25 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
   
    2. `color`:  
      Color of the line  
-     ***Type:*** float4 (RGBA)
-     When using other float types, the function code must be adjusted.
-     The macro code also works without adaptation with other float types (eg float3 RGB).  
-     In any case, it must be the same type as `bgVariable`
+     **Type: float4 (RGBA)**  
+        - The macro code also works with other float types (eg float3 RGB).  
+          In any case, it must be the same type as `bgVariable`
 
   
 ---
 
    3. `bgVariable`:  
      The background texture  
-     When using other float types, the function code must be adjusted.
-     The macro code also works without adaptation with other float types (eg float3 RGB).  
-     In any case, it must be the same type as `color`
+     **Type: float4 (RGBA)**  
+        - The macro code also works with other float types (eg float3 RGB).  
+          In any case, it must be the same type as `color`  
+
        
 ---
 
    4. `lines`:  
      Number of lines  
-     *Type:* **scalar** `float`  
+     **Type: scalar `float`**  
      **Impermissible value:** 0 (would be a division by zero within the macro)
 
 ---
