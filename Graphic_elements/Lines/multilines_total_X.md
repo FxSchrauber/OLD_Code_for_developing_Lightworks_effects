@@ -61,7 +61,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
    2. `color`:  
      Color of the line  
      **Type: float4 (RGBA)**  
-        - The macro code also works with other float types (eg float3 RGB).  
+        - The **macro code** also works with other float types (eg float3 RGB).  
           In any case, it must be the same type as `bgVariable`
 
   
@@ -70,7 +70,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
    3. `bgVariable`:  
      The background texture  
      **Type: float4 (RGBA)**  
-        - The macro code also works with other float types (eg float3 RGB).  
+        - The **macro code** also works with other float types (eg float3 RGB).  
           In any case, it must be the same type as `color`  
 
        
