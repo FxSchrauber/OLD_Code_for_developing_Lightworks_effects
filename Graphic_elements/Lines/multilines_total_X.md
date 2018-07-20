@@ -85,7 +85,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
 
    5. `half_Lineweight`:  
      Half line width  
-     *Type:* **scalar** `float`  
+     **Type: scalar `float`**  
        - Usable value range 0.0 to 0.5  
        - Examples:  
          0.0:  Line thickness 1 to 2 pixels  (line thickness + 2 * edge softness)  
@@ -97,7 +97,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
    6. `roll`:  
      - Roll the lines along the Y axi.  
      - Rising values of `roll` roll all lines down, sinking values up.
-     - *Type:* **scalar** `float`  
+     - **Type: scalar `float`**  
      - Usable value ranges:  
        - To position the first line within the texture: from 0 to 1  
        - Rolling of the lines (keyframing): ~ -1000 to + 1000  
@@ -114,8 +114,8 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
    - The value of the parameter `color` (the line)  
      - or the value of the parameter`bgVariable`  
      - or a mix of both (edge-interpolatin of the lines)  
-   - *Type:* same as `color` and `bgVariable`    
-   - *Value range*: 0.0 to 1.0  
+   - **Type: same as `color` and `bgVariable`**    
+   - Value range: 0.0 to 1.0  
 
  
 ---
