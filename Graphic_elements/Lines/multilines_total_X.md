@@ -124,7 +124,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
 ### Macro code:
 
 ```` Code
-#define MULTILINES_TOTAL_X(uv, color,bgVariable,lines,half_Lineweight,roll)             \
+#define MULTILINES_TOTAL_X(uv,color,bgVariable,lines,half_Lineweight,roll)              \
    lerp ((color), (bgVariable), saturate (                                              \
          (abs( ((uv.y) - (roll)) - (round( ((uv.y) - (roll))  * (lines))  / (lines) ))  \
          - (half_Lineweight)                                                            \
