@@ -1,6 +1,6 @@
-﻿## MULTILINESsoftTOTAL_Yx (8 parameters)
+# multilines_total_V02.md
 
-**Macro call: `MULTILINESsoftTOTAL_Yx (uv , color , bgVariable , lines , lineweight , soft , angle , roll)`**
+**Macro call: `MULTILINES_TOTAL_V02 (uv , color , bgVariable , lines , lineweight , soft , angle , roll)`**
 
 ***Purpose of the macro:***  
 Generating a selectable number of **lines** of equal distance across the **entire frame**.  
@@ -11,6 +11,28 @@ The **background texture** is added with the `bgVariable`.
 This can be a color, or a texture from a sampler.  
 More functions and details see the parameter descriptions.
 
+
+---
+
+### Requirements
+
+#### Global variable:  ``
+
+#### Code (Example as a function):
+```` Code
+float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, float lines,
+                              float lineweight, float soft, float angle, float roll)
+{ 
+   float mix = saturate (
+      (abs( (uv.x - (roll + (uv.y / _OutputAspectRatio) * angle))
+          - (round( (uv.x  - (roll + (uv.y / _OutputAspectRatio) * angle ))  * lines)  / lines )
+          ) - lineweight
+      ) / soft
+   );
+  
+   return lerp (color, bgVariable, mix);
+}
+````   
 
 ---
 
@@ -148,16 +170,13 @@ More functions and details see the parameter descriptions.
 #### Macro code:
 
 ```` Code
-#define MULTILINESsoftTOTAL_Yx(uv, color,bgVariable,lines,lineweight,soft,angle,roll)               \
-   lerp (color, bgVariable,                                                                         \
-      saturate  (                                                                                   \
-         (abs( (uv.x - (roll + (uv.y / _OutputAspectRatio) * angle))                                \
-            - (round( (uv.x  - (roll + (uv.y / _OutputAspectRatio) * angle ))  * lines)  / lines )) \
-         - lineweight                                                                               \
-         )                                                                                          \
-         /  soft                                                                                    \
-      )                                                                                             \
-   )
+#define MULTILINES_TOTAL_V02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)                             \
+   lerp (color, bgVariable, saturate  (                                                                        \
+         (abs( ((uv).x - ((roll) + ((uv).y / _OutputAspectRatio) * (angle)))                                   \
+             - (round( ((uv).x  - ((roll) + ((uv).y / _OutputAspectRatio) * (angle) ))  * (lines))  / (lines) )\
+             ) - (lineweight)                                                                                  \
+         ) / (soft)                                                                                            \
+   ))
 ````  
 
 ---
