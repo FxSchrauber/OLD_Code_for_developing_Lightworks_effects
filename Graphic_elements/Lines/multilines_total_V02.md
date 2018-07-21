@@ -185,3 +185,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
          ) / (soft)                                                                                            \
    ))
 ````  
+
+
+### Screenshot  
+![](images/multilines_total_V02.png)
