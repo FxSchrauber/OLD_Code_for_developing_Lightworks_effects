@@ -2,7 +2,7 @@
 
 **Function call:** `fn_multilines_total_V02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
 Example with values: `fn_multilines_total_V02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 9E-4, 0.37, 0.0)`
-(Result [see image](images/multilines_total_V.png))  
+(Result [see image](images/multilines_total_V02.png))  
 
 *or* **Macro call:** `MULTILINES_TOTAL_V02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
