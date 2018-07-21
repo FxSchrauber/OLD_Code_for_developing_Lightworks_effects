@@ -115,7 +115,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 
 ...
   
-   6. `soft` **Different requirements** for this parameter when using the **alternative code `) /  (soft + (1.0 / _OutputWidth))`**:  
+   6. `soft` **Different requirements** for this parameter when using the **alternative code** `) /  (soft + (1.0 / _OutputWidth))`:  
      - Usable value range 0.0 to 0.5  
      - **Impermissible values:** Negative values (risk of divide by zero within the macro)  
      - A value of 0.0 automatically applies a minimum edge softness of 1 texel (interlaced projects 2 texel).  
