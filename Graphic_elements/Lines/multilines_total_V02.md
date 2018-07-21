@@ -40,7 +40,8 @@ float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, floa
    return lerp (color, bgVariable, mix);
 }
 ````   
-Alternatively, you can replace `) / soft` with `) /  (soft + (1.0 / _OutputWidth))` .
+
+Alternatively, you can replace `      ) / soft` with `      ) /  (soft + (1.0 / _OutputWidth))`.  
 `(1.0 / _OutputWidth)` is the widht of a texel within the output texture.  
 This creates the necessary edge softness of the lines to minimize pixel jumps and aliasing.
 (Remember to declare these global variables high up in the code, outside the function.)
