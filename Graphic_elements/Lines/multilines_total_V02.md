@@ -1,4 +1,4 @@
-# multilines_total_V02.md  [![](images/multilines_total_V02-thumbnail.png)](images/multilines_total_V02.png)
+# multilines_total_V02  [![](images/multilines_total_V02-thumbnail.png)](images/multilines_total_V02.png)
 
 **Function call:** `fn_multilines_total_V02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
 Example with values: `fn_multilines_total_V02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 9E-4, 0.37, 0.0)`
@@ -52,7 +52,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
   
    1. `uv`:  
      Enter the name of the used texture coordinate variable.  
-     *Type:* `float2`  
+     **Type: `float2`**  
      Recommendation: float2 uv0 : TEXCOORD0   (which may not be used for sampler parameters!)
 
 ---
@@ -60,15 +60,17 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
   
    2. `color`:  
      Color of the line  
-     ***Type:*** float3 (RGB) or float4 (RGBA) **but must be the same as** `bgVariable`  
-       - (For special purposes, float1 or float2 should also work as long as only one variant is used.) 
+     **Type: float4 (RGBA)**  
+        - The **macro code** also works with other float types (eg float3 RGB).  
+          In any case, it must be the same type as `bgVariable`  
   
 ---
 
    3. `bgVariable`:  
      The background texture  
-     ***Type:*** float3 (RGB) or float4 (RGBA) **but must be the same as** `color`  
-       - (For special purposes, float1 or float2 should also work as long as only one variant is used.)  
+     **Type: float4 (RGBA)**  
+        - The **macro code** also works with other float types (eg float3 RGB).  
+          In any case, it must be the same type as `color`  
        
 ---
 
@@ -83,7 +85,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 
    5. `lineweight`:  
      - Line width  
-     - *Type:* **scalar** `float`  
+     - **Type:scalar `float`**  
      - Usable value range 0.0 to 0.5  
      - Examples (vertical lines without edge softness):  
        0.000: Line width 0 pixels  
@@ -99,7 +101,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 
    6. `soft`:
      - Edge softness of the lines.  
-     - *Type:* **scalar** `float`  
+     - **Type:scalar `float`**  
      - Usable value range ~ 0.0001 to 0.5
      - **Impermissible value:** 0 (would be a division by zero within the macro)  
      - Examples (vertical lines):  
@@ -128,7 +130,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
   7. `angle`:
     - The **angle** can be changed by shifting the lower end of the lines  
       without changing the position of the upper end of the line.  
-    - *Type:* **scalar** `float`  
+    - **Type: scalar `float`**  
       0.0 V Vertical lines  
       +1.0 : 45° (lower end of line shifted to the **left**)  
       -1.0 : 45° (lower end of line shifted to the **right**)  
@@ -143,7 +145,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
       2.73 : ~ 70°  
       5.70  : ~ 80°  
       There are no 90 ° adjustable  
-      For values well above 45 ° another macro is recommended: (MULTILINESsoftTOTAL_**Xy**)  
+      For values well above 45 ° another macro is recommended: (multilines_total_H02)  
     - This parameter also affects the line width.    
 
 ---
@@ -151,7 +153,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
    6. `roll`:  
      - This rolls the lines in the 90 ° direction to the line. 
      - Rising values of `roll` roll all lines to thr right, sinking values to the left (if an angle of 0° is set).
-     - *Type:* **scalar** `float`  
+     - **Type: scalar** `float`**  
      - Usable value ranges:  
        - To position the first line within the texture (which is the only one independent of the number of lines): from 0 to 1  
        - Rolling of the lines (keyframing): ~ -1000 to + 1000  
@@ -164,8 +166,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
    - The value of the parameter `color` (the line)  
       or the value of the parameter`bgVariable`  
       or a mix of both (edge softness)  
-   - *Type:* same as `color` and `bgVariable`  
-     When used for line generation: float3 (RGB) or float4 (RGBA)
+   - **Type: same as `color` and `bgVariable`**  
    - *Value range*: 0.0 to 1.0  
 
  
