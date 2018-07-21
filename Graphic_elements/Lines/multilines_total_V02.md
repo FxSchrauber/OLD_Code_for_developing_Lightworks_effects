@@ -7,6 +7,8 @@ Example with values: `fn_multilines_total_V02 (uv0, float4(0.4.xxx, 1.0), 1.0.xx
 *or* **Macro call:** `MULTILINES_TOTAL_V02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
 
+---
+
 ***Purpose of the macro:***  
 Generating a selectable number of **lines** of equal distance across the **entire frame**.  
 Optimized for **vertical lines**; recommended application range 0 to 45°.  
@@ -21,7 +23,7 @@ More functions and details see the parameter descriptions.
 
 ### Requirements
 
-#### Global variable:  ``
+#### Global variable:  `float _OutputAspectRatio`
 
 #### Code (Example as a function):
 ```` Code
@@ -38,6 +40,10 @@ float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, floa
    return lerp (color, bgVariable, mix);
 }
 ````   
+Alternatively, you can replace `) / soft` with `) /  (soft + (1.0 / _OutputWidth))` .
+`(1.0 / _OutputWidth)` is the widht of a texel within the output texture.  
+This creates the necessary edge softness of the lines to minimize pixel jumps and aliasing.
+(Remember to declare these global variables high up in the code, outside the function.)
 
 ---
 
@@ -109,7 +115,7 @@ float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, floa
 
 ...
   
-   6. `soft` **Different requirements** for this parameter when using the **alternative macro code**:  
+   6. `soft` **Different requirements** for this parameter when using the **alternative code `) /  (soft + (1.0 / _OutputWidth))`**:  
      - Usable value range 0.0 to 0.5  
      - **Impermissible values:** Negative values (risk of divide by zero within the macro)  
      - A value of 0.0 automatically applies a minimum edge softness of 1 texel (interlaced projects 2 texel).  
@@ -166,12 +172,6 @@ float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, floa
 ---
 
 
-### Environment requirements
-
-#### Global variable:
-  float `_OutputAspectRatio`
-
-
 ### Macro code:
 
 ```` Code
@@ -183,35 +183,3 @@ float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, floa
          ) / (soft)                                                                                            \
    ))
 ````  
-
----
-
-#### Alternative macro:
- ( with automatic minimum edge softness)
-  
-
-#### Global variable:
-  `float  _OutputWidth, _OutputAspectRatio`   
-
-
-#### alternative Macro code:
-
-```` Code
-#define MULTILINESsoftTOTAL_Yx(uv, color,bgVariable,lines,lineweight,soft,angle,roll)               \
-   lerp (color, bgVariable,                                                                         \
-      saturate  (                                                                                   \
-         (abs( (uv.x - (roll + (uv.y / _OutputAspectRatio) * angle))                                \
-            - (round( (uv.x  - (roll + (uv.y / _OutputAspectRatio) * angle ))  * lines)  / lines )) \
-         - lineweight                                                                               \
-         )                                                                                          \
-         /  (soft + (1.0 / _OutputWidth))                                                           \
-      )                                                                                             \
-   )
-````  
-
-`(1.0 / _OutputWidth` is the width of a texel within the output texture.  
-This creates the necessary edge softness of the lines.
-
-
-### Screenshot  
-![](images/multilines_total_V02.png)
