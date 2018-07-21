@@ -1,6 +1,11 @@
-# multilines_total_V02.md
+# multilines_total_V02.md  [![](images/multilines_total_V02-thumbnail.png)](images/multilines_total_V02.png)
 
-**Macro call: `MULTILINES_TOTAL_V02 (uv , color , bgVariable , lines , lineweight , soft , angle , roll)`**
+**Function call:** `fn_multilines_total_V02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
+Example with values: `fn_multilines_total_V02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 9E-4, 0.37, 0.0)`
+(Result [see image](images/multilines_total_V.png))  
+
+*or* **Macro call:** `MULTILINES_TOTAL_V02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
+  ([Macro code](#macro-code) can be found at the bottom of this page)
 
 ***Purpose of the macro:***  
 Generating a selectable number of **lines** of equal distance across the **entire frame**.  
@@ -21,7 +26,7 @@ More functions and details see the parameter descriptions.
 #### Code (Example as a function):
 ```` Code
 float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, float lines,
-                              float lineweight, float soft, float angle, float roll)
+                                float lineweight, float soft, float angle, float roll)
 { 
    float mix = saturate (
       (abs( (uv.x - (roll + (uv.y / _OutputAspectRatio) * angle))
@@ -167,7 +172,7 @@ float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, floa
   float `_OutputAspectRatio`
 
 
-#### Macro code:
+### Macro code:
 
 ```` Code
 #define MULTILINES_TOTAL_V02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)                             \
@@ -206,3 +211,7 @@ float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, floa
 
 `(1.0 / _OutputWidth` is the width of a texel within the output texture.  
 This creates the necessary edge softness of the lines.
+
+
+### Screenshot  
+![](images/multilines_total_V02.png)
