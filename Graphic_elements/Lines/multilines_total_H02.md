@@ -1,4 +1,4 @@
-﻿# multilines_total_H02  [![](images/multilines_total_H02-thumbnail.png)](images/multilines_total_H02.png)
+# multilines_total_H02  [![](images/multilines_total_H02-thumbnail.png)](images/multilines_total_H02.png)
 
 **Function call:** `fn_multilines_total_H02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
 Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 9E-4, 0.37, 0.0)`
@@ -11,7 +11,7 @@ Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xx
 
 ***Purpose of the macro:***  
 Generating a selectable number of **lines** of equal distance across the **entire frame**.  
-Optimized for **vertical lines**; recommended application range 0 to 45°.  
+Optimized for **vertical lines**; recommended application range 0 to ~45°.  
 The **angle** can be changed by shifting the lower end of the lines without changing the position of the upper end of the line.  
 The **softness of the line edges** can be adjusted.  
 The **background texture** is added with the `bgVariable`.  
@@ -23,16 +23,14 @@ More functions and details see the parameter descriptions.
 
 ### Requirements
 
-#### Global variable:  `float _OutputAspectRatio`
-
 #### Code (Example as a function):
 ```` Code
-float4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, float lines,
+ffloat4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, float lines,
                                 float lineweight, float soft, float angle, float roll)
 { 
    float mix = saturate (
-      (abs( (uv.x - (roll + (uv.y / _OutputAspectRatio) * angle))
-          - (round( (uv.x  - (roll + (uv.y / _OutputAspectRatio) * angle ))  * lines)  / lines )
+      (abs( (uv.y  - (roll + uv.x  * angle))
+          - (round( (uv.y - (roll + uv.x * angle ))  * lines)  / lines )
           ) - lineweight
       ) / soft
    );
@@ -41,10 +39,18 @@ float4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, floa
 }
 ````   
 
-Alternatively, you can replace `      ) / soft` with `      ) /  (soft + (1.0 / _OutputWidth))`.  
-`(1.0 / _OutputWidth)` is the widht of a texel within the output texture.  
+Alternatively, you can replace `      ) / soft` with `      ) /  (soft + (1.0 / _OutputHeight))`.  
+`(1.0 / _OutputHeight)` is the widht of a texel within the output texture.  
 This creates the necessary edge softness of the lines to minimize pixel jumps and aliasing.
-(Remember to declare these global variables high up in the code, outside the function.)
+(Remember to declare these global variables high up in the code, outside the function.)  
+
+The use of `_OutputHeight` is controversial because in interlaced projects this variable has a different value
+during playback than when playback is stopped.  
+In this macro, this means that while the playbacks in interlaced projects, the edge softness of the lines is doubled.
+This may be desirable in the case of very narrow lines, because otherwise the position-dependent variations line width
+will be visible by one pixel. In the case of moving line positions using keyframing, this also minimizes the flickering
+of the lines in interlaced projects.
+
 
 ---
 
@@ -75,10 +81,10 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 ---
 
    4. `lines`:  
-   - Number of lines on the top edge of the frame.  
-     Depending on the angle settings, additional lines may be visible, starting at the right or left edge.  
-     This parameter only takes into account lines touching the top edge of the frame.  
-    - *Type:* **scalar** `float`  
+   - Number of lines on the left edge of the frame.  
+     Depending on the angle settings, additional lines may be visible beginning at the bottom or top of the frame.  
+     This parameter only takes into account lines touching the left edge of the frame.  
+    - **Type: scalar `float`**  
     - **Impermissible value:** 0 (would be a division by zero within the macro)  
 
 ---
@@ -87,12 +93,12 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
      - Line width  
      - **Type:scalar `float`**  
      - Usable value range 0.0 to 0.5  
-     - Examples (vertical lines without edge softness):  
-       0.000: Line width 0 pixels  
-       0.005: Line width 1% of the frame width  
-       0.500: Line width over the entire frame width 
-     - If the angle of the lines is not vertical, then the lines move closer together,  
-       because additional lines on the left or right edge of the frame fill the vacant areas.  
+     - Examples (horizontal lines without edge softness):  
+       0.000:  Line width 0 pixels  
+       0.005: Line width 1% of the frame hight  
+       0.500: Line width over the entire frame height 
+     - If the angle of the lines is not horizontal, then the lines move closer together,  
+       because additional lines on the top or bottom edge of the frame fill the vacant areas.  
        The ratio of the line width to the width of the intervening background remains approximately constant. 
        As a result, the line width becomes narrower than the set value.
      - A set edge softness increases the line width.
@@ -103,18 +109,19 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
      - Edge softness of the lines.  
      - **Type:scalar `float`**  
      - Usable value range ~ 0.0001 to 0.5
-     - **Impermissible value:** 0 (would be a division by zero within the macro)  
-     - Examples (vertical lines):  
+     - **Impermissible values:** 0 (would be a division by zero within the macro)  
+     - Examples (horizontal lines):  
        0.0001: No softness  
-       0.005: Softness 1% of the frame width  
+       0.005: Softness 1% of the frame hight  
      - Softness increases the line width. This can far exceed the set line width.   
      - The maximum softness is achieved when, with the line width parameter set to zero,   
        the width is set only with the softness parameter.  
      - Recommended minimum settings to minimize pixel jumps and aliasing:
 
-  | PAL / NTSC |   720p |  1080p |  UHD  |
-  |:----------:|:------:|:------:|:-----:|
-  |    35E-4   | 14E-4  |  9E-4  | 5E-4  |
+
+  |   720p |  1080p |  UHD  |
+  |:------:|:------:|:-----:|
+  | 14E-4  |  9E-4  | 5E-4  |
 
 ...
   
@@ -128,25 +135,17 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 ---
 
   7. `angle`:
-    - The **angle** can be changed by shifting the lower end of the lines  
-      without changing the position of the upper end of the line.  
+    - The **angle** can be changed by vertically shifting the right end of the line  
+      without changing the position of the left end of the line.  
     - **Type: scalar `float`**  
-      0.0 V Vertical lines  
-      +1.0 : 45° (lower end of line shifted to the **left**)  
-      -1.0 : 45° (lower end of line shifted to the **right**)  
-      The adjustment characteristic is not linear.
-      0.18 : ~ 10°  
-      0.37 : ~ 20°  
-      0.58 : ~ 30°  
-      0.84 : ~ 40°  
-      1.00 : = 45°  
-      1.19 : ~ 50°  
-      1.74 : ~ 60°  
-      2.73 : ~ 70°  
-      5.70  : ~ 80°  
+    - Examples:  
+      angle =  0.0: Horizontal line (for other settings, the angle depends on the project aspect ratio)  
+      angle = +1.0: Diagonal line from the upper left corner to the lower right corner.  
+      angle = -1.0: Diagonal line from the lower left corner to the upper right corner.  
+      The angle is not proportional to the set value.  
       There are no 90 ° adjustable  
-      For values well above 45 ° another macro is recommended: (multilines_total_H02)  
-    - This parameter also affects the line width.    
+      For values well above 45 ° another macro is recommended: (multilines_total_V02)  
+    - This angle parameter also affects the line width.  
 
 ---
    
@@ -177,12 +176,12 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 ### Macro code:
 
 ```` Code
-#define MULTILINES_TOTAL_H02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)                             \
-   lerp (color, bgVariable, saturate  (                                                                        \
-         (abs( ((uv).x - ((roll) + ((uv).y / _OutputAspectRatio) * (angle)))                                   \
-             - (round( ((uv).x  - ((roll) + ((uv).y / _OutputAspectRatio) * (angle) ))  * (lines))  / (lines) )\
-             ) - (lineweight)                                                                                  \
-         ) / (soft)                                                                                            \
+#define MULTILINES_TOTAL_H02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)        \
+   lerp (color, bgVariable, saturate  (                                                   \
+         (abs( ((uv).y - ((roll) + (uv).x * (angle)))                                     \
+             - (round( ((uv).y  - ((roll) + (uv).x * (angle) ))  * (lines))  / (lines) )  \
+             ) - (lineweight)                                                             \
+         ) / (soft)                                                                       \
    ))
 ````  
 
