@@ -105,7 +105,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
      - Usable value range ~ 0.0001 to 0.5
      - **Impermissible value:** 0 (would be a division by zero within the macro)  
      - Examples (vertical lines):  
-       0.0001: No softness  
+       1E-6 : No softness  
        0.005: Softness 1% of the frame width  
      - Softness increases the line width. This can far exceed the set line width.   
      - The maximum softness is achieved when, with the line width parameter set to zero,   
