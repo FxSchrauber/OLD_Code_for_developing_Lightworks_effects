@@ -40,7 +40,7 @@ ffloat4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, flo
 ````   
 **Option: Automatic use of minimum edge smoothness for pixel interpolation purposes:**  
 You can replace `      ) / soft` with `      ) /  (soft + (1.0 / _OutputHeight))`.  
-`(1.0 / _OutputHeight)` is the widht of a texel within the output texture.  
+`(1.0 / _OutputHeight)` is the hight of a texel within the output texture.  
 This creates the necessary edge softness of the lines to minimize pixel jumps and aliasing.
 (Remember to declare these global variables high up in the code, outside the function.)  
 
