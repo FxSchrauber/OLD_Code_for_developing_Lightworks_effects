@@ -33,9 +33,10 @@ technique MyEffect
  [test on which operating system the effect is used.](../Variables_etc/Auto_synced/README.md#check-on-which-operating-system-the-effect-is-used) 
  This opens up new possibilities to use ps_3_0 on Windows platforms, without losing the compatibility with Linux and Mac.
 
- Immediately before reaching the performance limit of the Pixel Shader, I noticed in some cases a sudden increase in the GPU load, 
- which was much lower when testing with the Shader Model 3. 
- This may be an indication that you should distribute the code before reaching the limit to another pixel shader.
+*Quote by FxSchrauber*
+> Immediately before reaching the performance limit of the Pixel Shader, I noticed in some cases a sudden increase in the GPU load, 
+> which was much lower when testing with the Shader Model 3. 
+> This may be an indication that you should distribute the code before reaching the limit to another pixel shader.
 
 ---
 
