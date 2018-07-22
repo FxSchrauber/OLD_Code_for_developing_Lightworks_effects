@@ -11,7 +11,7 @@ Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xx
 
 ***Purpose of the macro:***  
 Generating a selectable number of **lines** of equal distance across the **entire frame**.  
-Optimized for **vertical lines**; recommended application range 0 to 45°.  
+Optimized for **vertical lines**; recommended application range 0 to ~45°.  
 The **angle** can be changed by shifting the lower end of the lines without changing the position of the upper end of the line.  
 The **softness of the line edges** can be adjusted.  
 The **background texture** is added with the `bgVariable`.  
@@ -23,16 +23,14 @@ More functions and details see the parameter descriptions.
 
 ### Requirements
 
-#### Global variable:  `float _OutputAspectRatio`
-
 #### Code (Example as a function):
 ```` Code
-float4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, float lines,
+ffloat4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, float lines,
                                 float lineweight, float soft, float angle, float roll)
 { 
    float mix = saturate (
-      (abs( (uv.y - (roll + (uv.x / _OutputAspectRatio) * angle))
-          - (round( (uv.y  - (roll + (uv.x / _OutputAspectRatio) * angle ))  * lines)  / lines )
+      (abs( (uv.y  - (roll + uv.x  * angle))
+          - (round( (uv.y - (roll + uv.x * angle ))  * lines)  / lines )
           ) - lineweight
       ) / soft
    );
@@ -120,9 +118,9 @@ of the lines in interlaced projects.
        the width is set only with the softness parameter.  
      - Recommended minimum settings to minimize pixel jumps and aliasing:
 
-  | PAL / NTSC |   720p |  1080p |  UHD  |
-  |:----------:|:------:|:------:|:-----:|
-  |    35E-4   | 14E-4  |  9E-4  | 5E-4  |
+  |   720p |  1080p |  UHD  |
+  |:------:|:------:|:-----:|
+  | 14E-4  |  9E-4  | 5E-4  |
 
 ...
   
@@ -185,12 +183,12 @@ of the lines in interlaced projects.
 ### Macro code:
 
 ```` Code
-#define MULTILINES_TOTAL_H02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)                             \
-   lerp (color, bgVariable, saturate  (                                                                        \
-         (abs( ((uv).y - ((roll) + ((uv).x / _OutputAspectRatio) * (angle)))                                   \
-             - (round( ((uv).y  - ((roll) + ((uv).x / _OutputAspectRatio) * (angle) ))  * (lines))  / (lines) )\
-             ) - (lineweight)                                                                                  \
-         ) / (soft)                                                                                            \
+#define MULTILINES_TOTAL_H02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)        \
+   lerp (color, bgVariable, saturate  (                                                   \
+         (abs( ((uv).y - ((roll) + (uv).x * (angle)))                                     \
+             - (round( ((uv).y  - ((roll) + (uv).x * (angle) ))  * (lines))  / (lines) )  \
+             ) - (lineweight)                                                             \
+         ) / (soft)                                                                       \
    ))
 ````  
 
