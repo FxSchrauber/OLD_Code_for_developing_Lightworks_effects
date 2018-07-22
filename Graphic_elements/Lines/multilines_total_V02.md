@@ -23,16 +23,14 @@ More functions and details see the parameter descriptions.
 
 ### Requirements
 
-#### Global variable:  `float _OutputAspectRatio`
-
 #### Code (Example as a function):
 ```` Code
 float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, float lines,
                                 float lineweight, float soft, float angle, float roll)
 { 
    float mix = saturate (
-      (abs( (uv.x - (roll + (uv.y / _OutputAspectRatio) * angle))
-          - (round( (uv.x  - (roll + (uv.y / _OutputAspectRatio) * angle ))  * lines)  / lines )
+      (abs( (uv.x - (roll + uv.y  * angle))
+          - (round( (uv.x  - (roll + uv.y * angle ))  * lines)  / lines )
           ) - lineweight
       ) / soft
    );
@@ -102,7 +100,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
    6. `soft`:
      - Edge softness of the lines.  
      - **Type:scalar `float`**  
-     - Usable value range ~ 0.0001 to 0.5
+     - Usable value range > 0.0 to ~0.5
      - **Impermissible value:** 0 (would be a division by zero within the macro)  
      - Examples (vertical lines):  
        1E-6 : No softness  
@@ -177,12 +175,12 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 ### Macro code:
 
 ```` Code
-#define MULTILINES_TOTAL_V02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)                             \
-   lerp (color, bgVariable, saturate  (                                                                        \
-         (abs( ((uv).x - ((roll) + ((uv).y / _OutputAspectRatio) * (angle)))                                   \
-             - (round( ((uv).x  - ((roll) + ((uv).y / _OutputAspectRatio) * (angle) ))  * (lines))  / (lines) )\
-             ) - (lineweight)                                                                                  \
-         ) / (soft)                                                                                            \
+#define MULTILINES_TOTAL_V02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)       \
+   lerp (color, bgVariable, saturate  (                                                  \
+         (abs( ((uv).x - ((roll) + (uv).y * (angle)))                                    \
+             - (round( ((uv).x  - ((roll) + (uv).y * (angle) ))  * (lines))  / (lines) ) \
+             ) - (lineweight)                                                            \
+         ) / (soft)                                                                      \
    ))
 ````  
 
