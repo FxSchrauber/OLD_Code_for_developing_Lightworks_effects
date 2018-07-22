@@ -111,7 +111,7 @@ of the lines in interlaced projects.
      - Usable value range ~ 0.0001 to 0.5
      - **Impermissible values:** 0 (would be a division by zero within the macro)  
      - Examples (horizontal lines):  
-       0.0001: No softness  
+       1E-6 : No softness  
        0.005: Softness 1% of the frame hight  
      - Softness increases the line width. This can far exceed the set line width.   
      - The maximum softness is achieved when, with the line width parameter set to zero,   
