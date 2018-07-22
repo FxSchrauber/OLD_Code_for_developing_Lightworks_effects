@@ -108,7 +108,7 @@ of the lines in interlaced projects.
    6. `soft`:
      - Edge softness of the lines.  
      - **Type:scalar `float`**  
-     - Usable value range ~ 0.0001 to 0.5
+     - Usable value range >0.0 to ~0.5
      - **Impermissible values:** 0 (would be a division by zero within the macro)  
      - Examples (horizontal lines):  
        1E-6 : No softness  
