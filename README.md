@@ -5,4 +5,6 @@ This repository was built mainly from [Markdown.md files](https://guides.github.
 
 ## [Basics](Basics/README.md)
   
-## This repository is still under construction!
+## [Graphic elements](Graphic_elements/README.md)
+
+## [Remote control](Remote_control/README.md)
