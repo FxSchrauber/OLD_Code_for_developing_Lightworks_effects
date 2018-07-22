@@ -112,9 +112,9 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
        the width is set only with the softness parameter.  
      - Recommended minimum settings to minimize pixel jumps and aliasing:
 
-  | PAL / NTSC |   720p |  1080p |  UHD  |
-  |:----------:|:------:|:------:|:-----:|
-  |    35E-4   | 14E-4  |  9E-4  | 5E-4  |
+  |   720p |  1080p |  UHD  |
+  |:------:|:------:|:-----:|
+  |  8E-4  |  5E-4  | 3E-4  |
 
 ...
   
