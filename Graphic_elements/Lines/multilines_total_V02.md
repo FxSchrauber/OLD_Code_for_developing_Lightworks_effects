@@ -129,21 +129,13 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
     - The **angle** can be changed by shifting the lower end of the lines  
       without changing the position of the upper end of the line.  
     - **Type: scalar `float`**  
-      0.0 V Vertical lines  
-      +1.0 : 45° (lower end of line shifted to the **left**)  
-      -1.0 : 45° (lower end of line shifted to the **right**)  
-      The adjustment characteristic is not linear.
-      0.18 : ~ 10°  
-      0.37 : ~ 20°  
-      0.58 : ~ 30°  
-      0.84 : ~ 40°  
-      1.00 : = 45°  
-      1.19 : ~ 50°  
-      1.74 : ~ 60°  
-      2.73 : ~ 70°  
-      5.70  : ~ 80°  
-      There are no 90 ° adjustable  
-      For values well above 45 ° another macro is recommended: (multilines_total_H02)  
+    - Examples:  
+      angle =  0.0: Vertical line (for other settings, the angle depends on the project aspect ratio)  
+      angle = +1.0: Diagonal line from the upper left corner to the lower right corner.  
+      angle = -1.0: Diagonal line from the upper right corner to the lower left corner.  
+    - The angle is not proportional to the set value. 
+    - There are no 90 ° adjustable  
+    -  For values well above 45 ° another macro is recommended: [multilines_total_H02](multilines_total_H02.md) 
     - This parameter also affects the line width.    
 
 ---
