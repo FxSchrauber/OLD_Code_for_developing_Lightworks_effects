@@ -142,9 +142,9 @@ of the lines in interlaced projects.
       angle =  0.0: Horizontal line (for other settings, the angle depends on the project aspect ratio)  
       angle = +1.0: Diagonal line from the upper left corner to the lower right corner.  
       angle = -1.0: Diagonal line from the lower left corner to the upper right corner.  
-      The angle is not proportional to the set value.  
-      There are no 90 ° adjustable  
-      For values well above 45 ° another macro is recommended: [multilines_total_V02](multilines_total_V02.md)
+    - The angle is not proportional to the set value.  
+    - There are no 90 ° adjustable  
+    - For values well above 45 ° another macro is recommended: [multilines_total_V02](multilines_total_V02.md)
     - This angle parameter also affects the line width.  
 
 ---
