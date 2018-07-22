@@ -1,4 +1,4 @@
-﻿# multilines_total_H02  [![](images/multilines_total_H02-thumbnail.png)](images/multilines_total_H02.png)
+# multilines_total_H02  [![](images/multilines_total_H02-thumbnail.png)](images/multilines_total_H02.png)
 
 **Function call:** `fn_multilines_total_H02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
 Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 9E-4, 0.37, 0.0)`
@@ -81,10 +81,10 @@ of the lines in interlaced projects.
 ---
 
    4. `lines`:  
-   - Number of lines on the top edge of the frame.  
-     Depending on the angle settings, additional lines may be visible, starting at the right or left edge.  
-     This parameter only takes into account lines touching the top edge of the frame.  
-    - *Type:* **scalar** `float`  
+   - Number of lines on the left edge of the frame.  
+     Depending on the angle settings, additional lines may be visible beginning at the bottom or top of the frame.  
+     This parameter only takes into account lines touching the left edge of the frame.  
+    - **Type: scalar `float`**  
     - **Impermissible value:** 0 (would be a division by zero within the macro)  
 
 ---
@@ -93,12 +93,12 @@ of the lines in interlaced projects.
      - Line width  
      - **Type:scalar `float`**  
      - Usable value range 0.0 to 0.5  
-     - Examples (vertical lines without edge softness):  
-       0.000: Line width 0 pixels  
-       0.005: Line width 1% of the frame width  
-       0.500: Line width over the entire frame width 
-     - If the angle of the lines is not vertical, then the lines move closer together,  
-       because additional lines on the left or right edge of the frame fill the vacant areas.  
+     - Examples (horizontal lines without edge softness):  
+       0.000:  Line width 0 pixels  
+       0.005: Line width 1% of the frame hight  
+       0.500: Line width over the entire frame height 
+     - If the angle of the lines is not horizontal, then the lines move closer together,  
+       because additional lines on the top or bottom edge of the frame fill the vacant areas.  
        The ratio of the line width to the width of the intervening background remains approximately constant. 
        As a result, the line width becomes narrower than the set value.
      - A set edge softness increases the line width.
@@ -109,14 +109,15 @@ of the lines in interlaced projects.
      - Edge softness of the lines.  
      - **Type:scalar `float`**  
      - Usable value range ~ 0.0001 to 0.5
-     - **Impermissible value:** 0 (would be a division by zero within the macro)  
-     - Examples (vertical lines):  
+     - **Impermissible values:** 0 (would be a division by zero within the macro)  
+     - Examples (horizontal lines):  
        0.0001: No softness  
-       0.005: Softness 1% of the frame width  
+       0.005: Softness 1% of the frame hight  
      - Softness increases the line width. This can far exceed the set line width.   
      - The maximum softness is achieved when, with the line width parameter set to zero,   
        the width is set only with the softness parameter.  
      - Recommended minimum settings to minimize pixel jumps and aliasing:
+
 
   |   720p |  1080p |  UHD  |
   |:------:|:------:|:-----:|
@@ -134,25 +135,17 @@ of the lines in interlaced projects.
 ---
 
   7. `angle`:
-    - The **angle** can be changed by shifting the lower end of the lines  
-      without changing the position of the upper end of the line.  
+    - The **angle** can be changed by vertically shifting the right end of the line  
+      without changing the position of the left end of the line.  
     - **Type: scalar `float`**  
-      0.0 V Vertical lines  
-      +1.0 : 45° (lower end of line shifted to the **left**)  
-      -1.0 : 45° (lower end of line shifted to the **right**)  
-      The adjustment characteristic is not linear.
-      0.18 : ~ 10°  
-      0.37 : ~ 20°  
-      0.58 : ~ 30°  
-      0.84 : ~ 40°  
-      1.00 : = 45°  
-      1.19 : ~ 50°  
-      1.74 : ~ 60°  
-      2.73 : ~ 70°  
-      5.70  : ~ 80°  
+    - Examples:  
+      angle =  0.0: Horizontal line (for other settings, the angle depends on the project aspect ratio)  
+      angle = +1.0: Diagonal line from the upper left corner to the lower right corner.  
+      angle = -1.0: Diagonal line from the lower left corner to the upper right corner.  
+      The angle is not proportional to the set value.  
       There are no 90 ° adjustable  
-      For values well above 45 ° another macro is recommended: (multilines_total_H02)  
-    - This parameter also affects the line width.    
+      For values well above 45 ° another macro is recommended: (multilines_total_V02)  
+    - This angle parameter also affects the line width.  
 
 ---
    
