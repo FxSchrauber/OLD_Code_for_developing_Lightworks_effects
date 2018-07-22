@@ -1,7 +1,7 @@
 # multilines_total_H02  [![](images/multilines_total_H02-thumbnail.png)](images/multilines_total_H02.png)
 
 **Function call:** `fn_multilines_total_H02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
-Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 9E-4, 0.37, 0.0)`
+Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 9E-4, 1.0, 0.0);`  
 (Result [see image](images/multilines_total_H02.png))  
 
 *or* **Macro call:** `MULTILINES_TOTAL_H02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
@@ -38,8 +38,8 @@ ffloat4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, flo
    return lerp (color, bgVariable, mix);
 }
 ````   
-
-Alternatively, you can replace `      ) / soft` with `      ) /  (soft + (1.0 / _OutputHeight))`.  
+**Option: Automatic use of minimum edge smoothness for pixel interpolation purposes:**  
+You can replace `      ) / soft` with `      ) /  (soft + (1.0 / _OutputHeight))`.  
 `(1.0 / _OutputHeight)` is the widht of a texel within the output texture.  
 This creates the necessary edge softness of the lines to minimize pixel jumps and aliasing.
 (Remember to declare these global variables high up in the code, outside the function.)  
