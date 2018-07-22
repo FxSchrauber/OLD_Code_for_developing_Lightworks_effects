@@ -11,8 +11,8 @@ Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xx
 
 ***Purpose of the macro:***  
 Generating a selectable number of **lines** of equal distance across the **entire frame**.  
-Optimized for **vertical lines**; recommended application range 0 to ~45°.  
-The **angle** can be changed by shifting the lower end of the lines without changing the position of the upper end of the line.  
+Optimized for **horizontal lines**; recommended application range 0 to 45°.  
+The **angle** can be changed by shifting the right end of the line without changing the position of the left end of the line.  
 The **softness of the line edges** can be adjusted.  
 The **background texture** is added with the `bgVariable`.  
 This can be a color, or a texture from a sampler.  
