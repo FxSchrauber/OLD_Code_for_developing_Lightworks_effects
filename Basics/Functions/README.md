@@ -39,7 +39,7 @@ in the function directly into the shader. In many other cases, you probably will
 
 ---
 
-Codes for creating functions can be found in [specialized topics of this library.](../README.md).
+Codes for creating functions can be found in [specialized topics of this library.](../../README.md).
 
 ---
 
