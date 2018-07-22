@@ -25,7 +25,7 @@ More functions and details see the parameter descriptions.
 
 #### Code (Example as a function):
 ```` Code
-ffloat4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, float lines,
+float4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, float lines,
                                 float lineweight, float soft, float angle, float roll)
 { 
    float mix = saturate (
