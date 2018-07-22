@@ -31,7 +31,7 @@ technique MyEffect
  instead on Windows computers. But keep in mind the limited usability of your effect. 
  **New from Lightworks 14.5:**  It is now possible within the effect to 
  [test on which operating system the effect is used.](../Variables_etc/Auto_synced/README.md#check-on-which-operating-system-the-effect-is-used) 
- This opens up new possibilities to use ps_3.0 on Windows platforms, without losing the compatibility with Linux and Mac.
+ This opens up new possibilities to use ps_3_0 on Windows platforms, without losing the compatibility with Linux and Mac.
 
  Immediately before reaching the performance limit of the Pixel Shader, I noticed in some cases a sudden increase in the GPU load, 
  which was much lower when testing with the Shader Model 3. 
