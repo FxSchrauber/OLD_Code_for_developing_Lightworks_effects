@@ -9,11 +9,11 @@ Example with values: `fn_multilines_total_V (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx
 
 ---
 
-***Purpose of the macro:***  
+***Purpose:***  
 Generating a selectable number of **vertical lines** of equal distance across the **entire frame**.  
 The **background texture** is added with the `bgVariable`.  
 This can be a color, or a texture from a sampler.  
-The macro itself performs something similar to **pixel interpolation on the edges of the lines**.  
+The code itself performs something similar to **pixel interpolation on the edges of the lines**.  
 (1 subtexel horizontal edge softness of the lines)  
 More functions and details see the parameter descriptions  
 
@@ -71,7 +71,7 @@ This creates the necessary edge softness of the lines.
    4. `lines`:  
      Number of lines  
      **Type: scalar `float`**  
-     **Impermissible value:** 0 (would be a division by zero within the macro)
+     **Impermissible value:** 0 (would be a division by zero within the code)
 
 ---
 
