@@ -50,6 +50,15 @@ float fn_receiving (float Ch)
 * `pos` is the center of the rectangular color signal of the channel to be received.  
 * `ret` The receiving RGBA color signal.  
 * `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
+* Calculate return value:
+   1. `ret.r` Red = Bit 1 to bit 8 in case of 8 bit GPU precision setting  
+   2. `+ (ret.g / 255.0)` Green = The intermediate values bit 9 to bit 16 in case of 8 bit GPU precision setting
+   3. ` * 2.0 - step( 0.001 , status);`
+      Adjustment of the numeral system from  ( 0 ... 1) to (-1 ... +1)  
+      If Status Channel >= 0.001 then step = 1 (this line then performs the adjustment `*2 -1`)  
+      If the Status = 0.0 (no remote control) then this line then performs the adjustment `*2 -0`  
+      This prevents the receive value 0 in -1 from being changed.  
+
 
 ---
 
@@ -217,8 +226,7 @@ tex2D(RcSampler, POSCHANNEL(floor(Ch))).r
       If Status Channel >= 0.001 then step = 1 (this line then performs the adjustment `*2 -1`)  
       If the Status = 0.0 (no remote control) then this line then performs the adjustment `*2 -0`  
       This prevents the receive value 0 in -1 from being changed.  
-      In the future, it would be better to send only absolute values on the RGA channels,  
-      and to set a status value in the blue channel for negative values (transmitter and receiver side).  
+     
  2. The value of  "Ch" (receiving channel) is only passed to sub macros  
    
    
