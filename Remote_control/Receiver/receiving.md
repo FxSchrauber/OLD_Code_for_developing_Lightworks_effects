@@ -1,8 +1,8 @@
 # receiving
 
-**Function call:** `fn_receiving(channel)`  
+**Function call:** `fn_receiving (channel)`  
 
-*or* **Macro call:** `RECEIVING(channel)`
+*or* **Macro call:** `RECEIVING (channel)`
 
 ***Purpose of the macro:***
 Receive values from another effect or pixel shader. (For example, the value of a variable)  
