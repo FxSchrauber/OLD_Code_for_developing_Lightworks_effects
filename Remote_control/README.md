@@ -9,7 +9,7 @@ Note that the macros were developed at a time when the effects typically only ou
 
 ## [Channel definitions](Channel_definitions/README.md)
 
-## [Receiver](Receiver/receiving.md)  
+## [Receiver](Receiver/README.md)  
 
 ## Transmitter (not yet documented)
 
