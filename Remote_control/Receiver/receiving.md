@@ -39,7 +39,12 @@ float fn_receiving (float Ch)
           ) * 2.0 - step( 0.001 , status);
 }
 ```
-
+* `ch` is the channel whose remote control signal is to be received.  
+     Any fractional parts that could possibly be caused by an imprecisely set slider will be removed.  
+* `posY` is the vertical position (measured from the top) of the top edge of the rectangular color signal.  
+* `pos` is the center of the rectangular color signal of the channel to be received.  
+* `ret` The receiving RGBA color signal.  
+* `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
 
 ---
 
