@@ -69,19 +69,6 @@ float fn_receiving (float Ch)
   
 ---
   
-#### Required macros:
-   - *Main macro:* `RECEIVING`
-   - *Sub macros:*
-      - `STATUS_CH_IN` (is called by main macro `RECEIVING`)
-      - `POSCHANNEL`   (is called by main macro `RECEIVING` and sub madro `STATUS_CH_IN`)
-      - `POSyCHANNEL`  (is called by sub macro `STATUS_CH_IN`)
-   - [Codes see below](#all-required-macro-codes)
- 
-  
----
-  
-### Codes:
-  
   
 #### Example of a remote control optimized texture and sampler code:
 
@@ -102,22 +89,6 @@ sampler RcSampler = sampler_state
 
 *Reason for using `Point`:*  Actually unnecessary, but should unexpected texture shifts occur, which is still within the position defined for that channel, then this will prevent unwanted interpolation.
 
-
----
-
-
-#### All required macro codes:
-
-```` Code
-#define RECEIVING(Ch)    (    (   tex2D(RcSampler, POSCHANNEL(floor(Ch))).r \
-                                + ((tex2D(RcSampler, POSCHANNEL(floor(Ch))).g) / 255.0) \
-                              ) * 2.0 - step( 0.001 , STATUS_CH_IN(Ch))  )
-                             
-#define STATUS_CH_IN(Ch)     ((tex2D(RcSampler, POSCHANNEL(floor(Ch)))).b)
-            
-   #define POSCHANNEL(ch)       float2 ( frac(ch / 100.0) - 0.005  ,  POSyCHANNEL(ch) + 0.01 )
-      #define POSyCHANNEL(ch)        ( (floor( ch/100.0) )/ 50.0 )
-````         
   
 ---
   
@@ -152,10 +123,38 @@ This could slightly reduce the GPU load.
   
 
 ---
-#
-#
-#
-#
+
+  
+#### Required macros:
+   - *Main macro:* `RECEIVING`
+   - *Sub macros:*
+      - `STATUS_CH_IN` (is called by main macro `RECEIVING`)
+      - `POSCHANNEL`   (is called by main macro `RECEIVING` and sub madro `STATUS_CH_IN`)
+      - `POSyCHANNEL`  (is called by sub macro `STATUS_CH_IN`)
+   - [Codes see below](#all-required-macro-codes)  
+ 
+
+Within the macro code, no variables were used to achieve the greatest possible compatibility 
+(avoidance of potential redefinition error messages). Instead, intermediate calculations were performed in sub-makos.  
+The order of the macros is not important (tested with Windows) because the preprocessor automatically assembles these 
+codes correctly in the calling shader (of course, the macro codes must always be defined above the macro call).
+
+
+#### All required macro codes:
+
+```` Code
+#define RECEIVING(Ch)    (    (   tex2D(RcSampler, POSCHANNEL(floor(Ch))).r \
+                                + ((tex2D(RcSampler, POSCHANNEL(floor(Ch))).g) / 255.0) \
+                              ) * 2.0 - step( 0.001 , STATUS_CH_IN(Ch))  )
+                             
+#define STATUS_CH_IN(Ch)     ((tex2D(RcSampler, POSCHANNEL(floor(Ch)))).b)
+            
+   #define POSCHANNEL(ch)       float2 ( frac(ch / 100.0) - 0.005  ,  POSyCHANNEL(ch) + 0.01 )
+      #define POSyCHANNEL(ch)        ( (floor( ch/100.0) )/ 50.0 )
+````         
+  
+---
+
 
 ### Description of the macro codes already presented above:
 
