@@ -1,4 +1,8 @@
-## Macro call: `RECEIVING(Ch)`
+# receiving
+
+**Function call:** `fn_receiving(channel)`  
+
+*or* **Macro call:** `RECEIVING(channel)`
 
 ***Purpose of the macro:***
 Receive values from another effect or pixel shader. (For example, the value of a variable)  
@@ -9,6 +13,33 @@ The position and size of this point is defined in the channel definition folder 
 Limitations:
 This macro is unsigned for the special channels 100 and a multiple of it (for example, channel 100, 200, etc.).
 The code below will position the sampler out of texture at such channel settings.
+
+---
+### Requirements
+
+#### Required sampler and texture:
+   - *Sampler:* `RcSampler`
+   - *Separate texture for this sampler:*  Remote control input (see Channel definitions folder)
+   - [Example see below](#example-of-a-remote-control-optimized-texture-and-sampler-code)
+
+#### Required function code:
+```Code
+float fn_receiving (float Ch)
+{
+   float  ch    = floor(Ch);
+   float  posY  = floor(ch/100.0) / 50.0;
+   float2 pos   = float2 ( frac(ch / 100.0) - 0.005  ,  posY + 0.01 );
+  
+   float4 ret   = tex2D (RcSampler, pos );
+
+   float status = ret.b;
+
+   return ( ret.r
+             + (ret.g / 255.0)
+          ) * 2.0 - step( 0.001 , status);
+}
+```
+
 
 ---
 
@@ -23,13 +54,6 @@ The code below will position the sampler out of texture at such channel settings
    - *Type:* **scalar**
    - *Value range*: -1.0 to +1.0
    - *Precision:* [~ 10 to 32 bit, details see below](#precision)
- 
----
-
-#### Required sampler and texture:
-   - *Sampler:* `RcSampler`
-   - *Separate texture for this sampler:*  Remote control input (see Channel definitions folder)
-   - [Example see below](#example-of-a-remote-control-optimized-texture-and-sampler-code)
    
 ---
   
