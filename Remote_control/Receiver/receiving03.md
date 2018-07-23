@@ -1,8 +1,10 @@
-# receiving
+# receiving03
 
-**Function call:** `fn_receiving (Ch)`  
+This code fixes the problem of older receive codes which channels 100, 200, 300 etc. could not receive.
 
-*or* **Macro call:** `RECEIVING (Ch)`
+**Function call:** `fn_receiving03 (Ch)`  
+
+*or* **Macro call:** `RECEIVING03 (Ch)`
   ([Macro code](#macro-code) can be found at the bottom of this page)
 
 ### Purpose:  
@@ -16,11 +18,8 @@ The position and size of this point is defined in the [channel definition folder
    - *Value range*: -1.0 to +1.0
    - *Precision:* [~ 10 to 32 bit, details see below](#precision)
 
-### Limitations:
-This code is unsigned for the special channels 100 and a multiple of it (for example, channel 100, 200, etc.).
-The code below will position the sampler out of texture at such channel settings.
-
 ---
+
 ### Requirements
 
 #### Required sampler and texture:
@@ -30,11 +29,11 @@ The code below will position the sampler out of texture at such channel settings
 
 #### Required function code:
 ```Code
-float fn_receiving (float Ch)
+float fn_receiving03 (float Ch)
 {
-   float  ch    = floor(Ch);
+   float  ch    = floor(Ch) - 1.0;
    float  posY  = floor(ch/100.0) / 50.0;
-   float2 pos   = float2 ( frac(ch / 100.0) - 0.005  ,  posY + 0.01 );
+   float2 pos   = float2 ( frac(ch / 100.0) + 0.005  ,  posY + 0.01 );
   
    float4 ret   = tex2D (RcSampler, pos );
 
@@ -47,8 +46,11 @@ float fn_receiving (float Ch)
 ```
 * `ch` is the channel whose remote control signal is to be received.  
      Any fractional parts that could possibly be caused by an imprecisely set slider will be removed.  
+     ` -1.0` is part of the problem solution to position Canal 100 and many of them correctly.
 * `posY` is the vertical position (measured from the top) of the top edge of the rectangular color signal.  
 * `pos` is the center of the rectangular color signal of the channel to be received.  
+        The horizontal channel centering has been changed from `-0.005` to `+ 0.005` (compared to older codes) 
+        because the internal channel numbering `ch` has been changed by `-1`.
 * `ret` The receiving RGBA color signal.  
 * `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
 * Calculate return value:
