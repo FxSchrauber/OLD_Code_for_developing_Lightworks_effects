@@ -57,7 +57,7 @@ If the remote is transmitting on multiple channels, the lowest remote control ch
 
 ### Currently blocked special channels:
 The following channels can not be received by the current remote controllable effects.  
-Maybe there will soon be other uses (maybe status information?).  
+[Improved code is available](../Receiver/receiving03.md ).  
 
 |   Channel    |Remote control  | Data content | Coding   |
 |:------------:|:--------------:|:------------:|:--------:|
