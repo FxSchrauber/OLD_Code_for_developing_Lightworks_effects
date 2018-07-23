@@ -115,10 +115,10 @@ sampler RcSampler = sampler_state
   
 #### Precision:
 
-This macro is designed to convert the low precision of an 8-bit red-green pixel value to a 16-bit precision scalar value.  
-Setting a different GPU precision in the Lightworks project settings also affects the return value of this macro:  
+This code is designed to convert the low precision of an 8-bit red-green pixel value to a 16-bit precision scalar value.  
+Setting a different GPU precision in the Lightworks project settings also affects the return value of this code:  
   
-| GPU precision          | Precision of the return value of the main macro `RECEIVING(Ch)`                                   |
+| GPU precision          | Precision of the return value                                   |
 | :--------------------: | :------------------------------------------------------------------------------------------------ |
 |8-bit                   |        16-bit                                                                                     |
 |16-bit                  |        24-bit                                                                                     |
@@ -135,7 +135,7 @@ Because the calculation basis for the Markos changes under these fluctuating con
 
 With GPU settings of "16-bit" or "16-bit Floating Point", the calculation basis is indeed changed, but makes in these cases, less or not noticeable.  
 
-Option (other macro):  
+Option (other code):  
 With 16-bit Floating Point or 32-bit Floating Point precision set, the value could also be taken directly from the alpha channel  
 because the remote control effects on that channel send the value without conversion.  
 This also applies to other GPU precision settings if the return value needs to be less accurate.  
