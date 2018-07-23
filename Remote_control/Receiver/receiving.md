@@ -1,5 +1,9 @@
 # receiving
 
+**Old version**, which is still being used in effects. For new effects please use more up-to-date code.  
+
+---
+
 **Function call:** `fn_receiving (Ch)`  
 
 *or* **Macro call:** `RECEIVING (Ch)`
@@ -227,11 +231,3 @@ tex2D(RcSampler, POSCHANNEL(floor(Ch))).r
       This prevents the receive value 0 in -1 from being changed.  
      
  2. The value of  "Ch" (receiving channel) is only passed to sub macros  
-   
-   
-   
-
-
-
-
-[Channel_assignment]: https://github.com/FxSchrauber/lwks-fx_Code-blocks/blob/master/Remote_control/Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages
