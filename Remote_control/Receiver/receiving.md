@@ -157,10 +157,7 @@ codes correctly in the calling shader (of course, the macro codes must always be
       #define POSyCHANNEL(ch)        ( (floor( ch/100.0) )/ 50.0 )
 ````         
   
----
-
-
-### Description of the macro codes already presented above:
+### Description of the macro codes:
 
 
 #### Sub macro for determining the position of the receive channel within the remote control texture:
