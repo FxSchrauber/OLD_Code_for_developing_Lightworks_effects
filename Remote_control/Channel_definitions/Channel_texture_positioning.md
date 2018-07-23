@@ -1,4 +1,4 @@
-# Channel texture positioning:
+# Positioning the channels within the texture:
 
 The remote control signals are encoded as color dots in a texture and transmitted on the remote control line.
 ![Example:](Channel_definitions.PNG)
