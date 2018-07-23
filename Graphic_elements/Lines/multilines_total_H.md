@@ -10,11 +10,11 @@ Example with values: `fn_multilines_total_H (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx
   
 --- 
   
-***Purpose of the macro:***  
+***Purpose:***  
 Generating a selectable number of **horizontal lines** of equal distance across the **entire frame**.  
 The **background texture** is added with the `bgVariable`.  
 This can be a color, or a texture from a sampler.  
-The macro itself performs something similar to **pixel interpolation on the edges of the lines**.  
+The code itself performs something similar to **pixel interpolation on the edges of the lines**.  
 (1 subtexel vertical edge softness of the lines)  
 More functions and details see the parameter descriptions.  
 
@@ -42,7 +42,7 @@ float4 fn_multilines_total_H (float2 uv, float4 color, float4 bgVariable,
 This creates the necessary edge softness of the lines.
 
 The use of `_OutputHeight` is controversial because in interlaced projects this variable has a different value during playback than when playback is stopped.  
-In this macro, this means that while the playbacks in interlaced projects, the edge softness of the lines is doubled. This may be desirable in the case of very narrow lines, because otherwise the position-dependent variations line width will be visible by one pixel. In the case of moving line positions using keyframing, this also minimizes the flickering of the lines in interlaced projects.  
+In this code, this means that while the playbacks in interlaced projects, the edge softness of the lines is doubled. This may be desirable in the case of very narrow lines, because otherwise the position-dependent variations line width will be visible by one pixel. In the case of moving line positions using keyframing, this also minimizes the flickering of the lines in interlaced projects.  
 If you do not want more edge smoothness of the lines in interlaced projects, then you can use instead:  
 `(1.0 / (_OutputWidth/_OutputAspectRatio))`. (Remember to declare these global variables high up in the code, outside the function.)
 
