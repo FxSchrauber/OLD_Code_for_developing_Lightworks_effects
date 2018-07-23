@@ -4,14 +4,14 @@
 
 *or* **Macro call:** `RECEIVING (channel)`
 
-***Purpose of the macro:***
+### Purpose:  
 Receive values from another effect or pixel shader. (For example, the value of a variable)  
 Transmission path: As texture, coded in the RGBA values of a rectangular point.  
-The macro selects the center of that point in the texture and decodes the RGBA values.
+The code selects the center of that point in the texture and decodes the RGBA values.
 The position and size of this point is defined in the channel definition folder of this developer repository.  
 
-Limitations:
-This macro is unsigned for the special channels 100 and a multiple of it (for example, channel 100, 200, etc.).
+### Limitations:
+This code is unsigned for the special channels 100 and a multiple of it (for example, channel 100, 200, etc.).
 The code below will position the sampler out of texture at such channel settings.
 
 ---
