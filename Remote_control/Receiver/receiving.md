@@ -3,6 +3,7 @@
 **Function call:** `fn_receiving (Ch)`  
 
 *or* **Macro call:** `RECEIVING (Ch)`
+  ([Macro code](#macro-code) can be found at the bottom of this page)
 
 ### Purpose:  
 Receive values from another effect or pixel shader. (For example, the value of a variable)  
@@ -123,7 +124,10 @@ This could slightly reduce the GPU load.
   
 
 ---
+---
+---
 
+## Macro code:
   
 #### Required macros:
    - *Main macro:* `RECEIVING`
@@ -192,7 +196,6 @@ codes correctly in the calling shader (of course, the macro codes must always be
 
 
 ---
-#
 
 
 #### The main macro:
