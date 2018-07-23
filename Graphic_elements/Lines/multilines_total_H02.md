@@ -9,7 +9,7 @@ Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xx
 
 ---
 
-***Purpose of the macro:***  
+***Purpose:***  
 Generating a selectable number of **lines** of equal distance across the **entire frame**.  
 Optimized for **horizontal lines**; recommended application range 0 to 45°.  
 The **angle** can be changed by shifting the right end of the line without changing the position of the left end of the line.  
@@ -46,7 +46,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 
 The use of `_OutputHeight` is controversial because in interlaced projects this variable has a different value
 during playback than when playback is stopped.  
-In this macro, this means that while the playbacks in interlaced projects, the edge softness of the lines is doubled.
+In this code, this means that while the playbacks in interlaced projects, the edge softness of the lines is doubled.
 This may be desirable in the case of very narrow lines, because otherwise the position-dependent variations line width
 will be visible by one pixel. In the case of moving line positions using keyframing, this also minimizes the flickering
 of the lines in interlaced projects.
@@ -85,7 +85,7 @@ of the lines in interlaced projects.
      Depending on the angle settings, additional lines may be visible beginning at the bottom or top of the frame.  
      This parameter only takes into account lines touching the left edge of the frame.  
     - **Type: scalar `float`**  
-    - **Impermissible value:** 0 (would be a division by zero within the macro)  
+    - **Impermissible value:** 0 (would be a division by zero within the code)  
 
 ---
 
@@ -109,7 +109,7 @@ of the lines in interlaced projects.
      - Edge softness of the lines.  
      - **Type:scalar `float`**  
      - Usable value range >0.0 to ~0.5
-     - **Impermissible values:** 0 (would be a division by zero within the macro)  
+     - **Impermissible values:** 0 (would be a division by zero within the code)  
      - Examples (horizontal lines):  
        1E-6 : No softness  
        0.005: Softness 1% of the frame hight  
@@ -127,7 +127,7 @@ of the lines in interlaced projects.
   
    6. `soft` **Different requirements** for this parameter when using the **alternative code** `) /  (soft + (1.0 / _OutputWidth))`:  
      - Usable value range 0.0 to 0.5  
-     - **Impermissible values:** Negative values (risk of divide by zero within the macro)  
+     - **Impermissible values:** Negative values (risk of divide by zero within the code)  
      - A value of 0.0 automatically applies a minimum edge softness of 1 texel (interlaced projects 2 texel).  
        This applies to the 0 ° angle setting. At angles of 45 ° or more, additional edge softness may be required.
 
@@ -144,7 +144,7 @@ of the lines in interlaced projects.
       angle = -1.0: Diagonal line from the lower left corner to the upper right corner.  
     - The angle is not proportional to the set value.  
     - There are no 90 ° adjustable  
-    - For values well above 45 ° another macro is recommended: [multilines_total_V02](multilines_total_V02.md)
+    - For values well above 45 ° another code is recommended: [multilines_total_V02](multilines_total_V02.md)
     - This angle parameter also affects the line width.  
 
 ---
