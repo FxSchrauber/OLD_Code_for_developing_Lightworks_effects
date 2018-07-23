@@ -7,7 +7,7 @@ Note that the macros were developed at a time when the effects typically only ou
 
 ---
 
-## 
+## [Channel definitions](Channel_definitions/README.md)
 
 ## [Receiver](Receiver/RECEIVING(Ch).md)  
 
