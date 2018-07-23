@@ -138,9 +138,7 @@ This could slightly reduce the GPU load.
    - *Sub macros:*
       - `STATUS_CH_IN` (is called by main macro `RECEIVING`)
       - `POSCHANNEL`   (is called by main macro `RECEIVING` and sub madro `STATUS_CH_IN`)
-      - `POSyCHANNEL`  (is called by sub macro `STATUS_CH_IN`)
-   - [Codes see below](#all-required-macro-codes)  
- 
+      - `POSyCHANNEL`  (is called by sub macro `STATUS_CH_IN`) 
 
 Within the macro code, no variables were used to achieve the greatest possible compatibility 
 (avoidance of potential redefinition error messages). Instead, intermediate calculations were performed in sub-makos.  
