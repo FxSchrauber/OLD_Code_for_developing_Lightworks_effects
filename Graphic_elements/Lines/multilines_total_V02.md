@@ -9,7 +9,7 @@ Example with values: `fn_multilines_total_V02 (uv0, float4(0.4.xxx, 1.0), 1.0.xx
 
 ---
 
-***Purpose of the macro:***  
+***Purpose:***  
 Generating a selectable number of **lines** of equal distance across the **entire frame**.  
 Optimized for **vertical lines**; recommended application range 0 to 45°.  
 The **angle** can be changed by shifting the lower end of the lines without changing the position of the upper end of the line.  
@@ -77,7 +77,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
      Depending on the angle settings, additional lines may be visible, starting at the right or left edge.  
      This parameter only takes into account lines touching the top edge of the frame.  
     - *Type:* **scalar** `float`  
-    - **Impermissible value:** 0 (would be a division by zero within the macro)  
+    - **Impermissible value:** 0 (would be a division by zero within the code)  
 
 ---
 
@@ -101,7 +101,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
      - Edge softness of the lines.  
      - **Type:scalar `float`**  
      - Usable value range > 0.0 to ~0.5
-     - **Impermissible value:** 0 (would be a division by zero within the macro)  
+     - **Impermissible value:** 0 (would be a division by zero within the code)  
      - Examples (vertical lines):  
        1E-6 : No softness  
        0.005: Softness 1% of the frame width  
@@ -118,7 +118,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
   
    6. `soft` **Different requirements** for this parameter when using the **alternative code** `) /  (soft + (1.0 / _OutputWidth))`:  
      - Usable value range 0.0 to 0.5  
-     - **Impermissible values:** Negative values (risk of divide by zero within the macro)  
+     - **Impermissible values:** Negative values (risk of divide by zero within the code)  
      - A value of 0.0 automatically applies a minimum edge softness of 1 texel (interlaced projects 2 texel).  
        This applies to the 0 ° angle setting. At angles of 45 ° or more, additional edge softness may be required.
 
@@ -135,7 +135,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
       angle = -1.0: Diagonal line from the upper right corner to the lower left corner.  
     - The angle is not proportional to the set value. 
     - There are no 90 ° adjustable  
-    -  For values well above 45 ° another macro is recommended: [multilines_total_H02](multilines_total_H02.md) 
+    -  For values well above 45 ° another code is recommended: [multilines_total_H02](multilines_total_H02.md) 
     - This parameter also affects the line width.    
 
 ---
