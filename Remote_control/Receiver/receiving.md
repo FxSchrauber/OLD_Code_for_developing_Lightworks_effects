@@ -8,7 +8,12 @@
 Receive values from another effect or pixel shader. (For example, the value of a variable)  
 Transmission path: As texture, coded in the RGBA values of a rectangular point.  
 The code selects the center of that point in the texture and decodes the RGBA values.
-The position and size of this point is defined in the channel definition folder of this developer repository.  
+The position and size of this point is defined in the [channel definition folder](../Channel_definitions/Channel_assignment.md) of this developer repository.
+
+#### Return value:
+   - *Type:* **scalar**
+   - *Value range*: -1.0 to +1.0
+   - *Precision:* [~ 10 to 32 bit, details see below](#precision)
 
 ### Limitations:
 This code is unsigned for the special channels 100 and a multiple of it (for example, channel 100, 200, etc.).
@@ -53,13 +58,6 @@ float fn_receiving (float Ch)
   - Ignores fractional part
   - *Type*: **scalar** `float` or `int`  
   
----
-
- #### Return value:
-   - *Type:* **scalar**
-   - *Value range*: -1.0 to +1.0
-   - *Precision:* [~ 10 to 32 bit, details see below](#precision)
-   
 ---
   
 #### Required macros:
