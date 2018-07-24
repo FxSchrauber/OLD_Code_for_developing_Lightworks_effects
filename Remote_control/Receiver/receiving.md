@@ -30,7 +30,7 @@ The code below will position the sampler out of texture at such channel settings
 #### Required sampler and texture:
    - *Sampler:* `RcSampler`
    - *Separate texture for this sampler:*  Remote control input (see Channel definitions folder)
-   - [Example see below](#example-of-a-remote-control-optimized-texture-and-sampler-code)
+   - [Click here to see an optimized sampler code.](#example-of-a-remote-control-optimized-texture-and-sampler-code)
 
 #### Required function code:
 ```Code
@@ -40,12 +40,12 @@ float fn_receiving (float Ch)
    float  posY  = floor(ch/100.0) / 50.0;
    float2 pos   = float2 ( frac(ch / 100.0) - 0.005  ,  posY + 0.01 );
   
-   float4 ret   = tex2D (RcSampler, pos );
+   float4 sample   = tex2D (RcSampler, pos );
 
-   float status = ret.b;
+   float status = sample.b;
 
-   return ( ret.r
-             + (ret.g / 255.0)
+   return ( sample.r
+             + (sample.g / 255.0)
           ) * 2.0 - step( 0.001 , status);
 }
 ```
@@ -53,7 +53,7 @@ float fn_receiving (float Ch)
      Any fractional parts that could possibly be caused by an imprecisely set slider will be removed.  
 * `posY` is the vertical position (measured from the top) of the top edge of the rectangular color signal.  
 * `pos` is the center of the rectangular color signal of the channel to be received.  
-* `ret` The receiving RGBA color signal.  
+* `sample` The receiving RGBA color signal.  
 * `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
 * Calculate return value:
    *  `ret.r` Red = Bit 1 to bit 8 in case of 8 bit GPU precision setting  
