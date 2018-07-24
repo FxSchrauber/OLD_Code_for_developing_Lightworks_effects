@@ -22,7 +22,7 @@ The position and size of this point is defined in the [channel definition folder
 #### Required sampler and texture:
    - *Sampler:* `RcSampler`
    - *Separate texture for this sampler:*  Remote control input (see Channel definitions folder)
-   - [Example see below](#example-of-a-remote-control-optimized-texture-and-sampler-code)
+   - [Click here to see an optimized sampler code](#example-of-a-remote-control-optimized-texture-and-sampler-code)
 
 #### Required function code:
 ```Code
@@ -32,12 +32,12 @@ float fn_receiving03 (float Ch)
    float  posY  = floor(ch/100.0) / 50.0;
    float2 pos   = float2 ( frac(ch / 100.0) + 0.005  ,  posY + 0.01 );
   
-   float4 ret   = tex2D (RcSampler, pos );
+   float4 sample   = tex2D (RcSampler, pos );
 
-   float status = ret.b;
+   float status = sample.b;
 
-   return ( ret.r
-             + (ret.g / 255.0)
+   return ( sample.r
+             + (sample.g / 255.0)
           ) * 2.0 - step( 0.001 , status);
 }
 ```
@@ -48,7 +48,7 @@ float fn_receiving03 (float Ch)
 * `pos` is the center of the rectangular color signal of the channel to be received.  
         The horizontal channel centering has been changed from `-0.005` to `+ 0.005` (compared to older codes) 
         because the internal channel numbering `ch` has been changed by `-1`.
-* `ret` The receiving RGBA color signal.  
+* `sample` The receiving RGBA color signal.  
 * `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
 * Calculate return value:
    *  `ret.r` Red = Bit 1 to bit 8 in case of 8 bit GPU precision setting  
