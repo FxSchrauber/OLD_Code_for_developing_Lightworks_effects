@@ -56,8 +56,8 @@ float fn_receiving (float Ch)
 * `sample` The receiving RGBA color signal.  
 * `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
 * Calculate return value:
-   *  `ret.r` Red = Bit 1 to bit 8 in case of 8 bit GPU precision setting  
-   *  `+ (ret.g / 255.0)` Green = The intermediate values bit 9 to bit 16 in case of 8 bit GPU precision setting
+   *  `sample.r` Red = Bit 1 to bit 8 in case of 8 bit GPU precision setting  
+   *  `+ (sample.g / 255.0)` Green = The intermediate values bit 9 to bit 16 in case of 8 bit GPU precision setting
    *  ` * 2.0 - step( 0.001 , status);`
       Adjustment of the numeral system from  ( 0 ... 1) to (-1 ... +1)  
       If Status Channel >= 0.001 then step = 1 (this line then performs the adjustment `*2 -1`)  
