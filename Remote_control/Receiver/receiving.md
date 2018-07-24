@@ -140,8 +140,7 @@ This could slightly reduce the GPU load.
       - `POSCHANNEL`   (is called by main macro `RECEIVING` and sub madro `STATUS_CH_IN`)
       - `POSyCHANNEL`  (is called by sub macro `STATUS_CH_IN`) 
 
-Within the macro code, no variables were used to achieve the greatest possible compatibility 
-(avoidance of potential redefinition error messages). Instead, intermediate calculations were performed in sub-makos.  
+Within the macro code, no variables were used. Instead, intermediate calculations were performed in sub-makos.  
 The order of the macros is not important (tested with Windows) because the preprocessor automatically assembles these 
 codes correctly in the calling shader (of course, the macro codes must always be defined above the macro call).
 
