@@ -32,13 +32,12 @@ float fn_receiving03 (float Ch)
    float  posY  = floor(ch/100.0) / 50.0;
    float2 pos   = float2 ( frac(ch / 100.0) + 0.005  ,  posY + 0.01 );
   
-   float4 sample   = tex2D (RcSampler, pos );
-
+   float4 sample = tex2D (RcSampler, pos );
    float status = sample.b;
+   float ret =  sample.r + (sample.g / 255.0);
+   ret = status > 0.001 ? ret * 2.0 -1.0 : 0.0;
 
-   return ( sample.r
-             + (sample.g / 255.0)
-          ) * 2.0 - step( 0.001 , status);
+   return ret;
 }
 ```
 * `ch` is the channel whose remote control signal is to be received.  
@@ -50,14 +49,12 @@ float fn_receiving03 (float Ch)
         because the internal channel numbering `ch` has been changed by `-1`.
 * `sample` The receiving RGBA color signal.  
 * `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
-* Calculate return value:
-   *  `ret.r` Red = Bit 1 to bit 8 in case of 8 bit GPU precision setting  
-   *  `+ (ret.g / 255.0)` Green = The intermediate values bit 9 to bit 16 in case of 8 bit GPU precision setting
-   *  ` * 2.0 - step( 0.001 , status);`
-      Adjustment of the numeral system from  ( 0 ... 1) to (-1 ... +1)  
-      If Status Channel >= 0.001 then step = 1 (this line then performs the adjustment `*2 -1`)  
-      If the Status = 0.0 (no remote control) then this line then performs the adjustment `*2 -0`  
-      This prevents the receive value 0 in -1 from being changed.  
+* `ret` Calculate return value:
+   *  `sample.r` Red = Bit 1 to bit 8 in case of 8 bit GPU precision setting  
+   *  `+ (sample.g / 255.0)` Green = The intermediate values bit 9 to bit 16 in case of 8 bit GPU precision setting
+* `ret = status > 0.001 ? ret * 2.0 -1.0 : 0.0;`  
+   If Status Channel > 0.001, then the number system is rescaled from (0 ... 1) to (-1 ... +1).  
+   Otherwise, ret = 0. This ensures that the return value is 0 when the remote control channel is offline.   
 
 
 ---
