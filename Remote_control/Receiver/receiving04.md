@@ -1,8 +1,6 @@
 # receiving04
 Version with return values in the **special range from 0 to 1** (in most cases, however, -1 to +1 are required).
 
-This code fixes the problem of older receive codes which channels 100, 200, 300 etc. could not receive.
-
 **Function call:** `fn_receiving04 (Ch)`  
 
 ### Purpose:  
@@ -42,8 +40,6 @@ float fn_receiving04 (float Ch)
      ` -1.0` is part of the problem solution to position Canal 100 and many of them correctly.
 * `posY` is the vertical position (measured from the top) of the top edge of the rectangular color signal.  
 * `pos` is the center of the rectangular color signal of the channel to be received.  
-        The horizontal channel centering has been changed from `-0.005` to `+ 0.005` (compared to older codes) 
-        because the internal channel numbering `ch` has been changed by `-1`.
 * `sample` The receiving RG color signal.  
 * `return sample.r + (sample.g / 255.0)` Calculate return value:
    *  `sample.r` Red = Bit 1 to bit 8 in case of 8 bit GPU precision setting  
