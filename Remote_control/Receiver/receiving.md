@@ -70,7 +70,7 @@ float fn_receiving (float Ch)
 #### Parameter Description `Ch`:
   - Receiving Channel (see Channel definitions folder)
   - Ignores fractional part
-  - *Type*: **scalar** `float` or `int`  
+  - *Type*: **scalar** `float`  
   
 ---
   
