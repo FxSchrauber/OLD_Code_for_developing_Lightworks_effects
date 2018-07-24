@@ -12,7 +12,7 @@
 ### Purpose:  
 Receive values from another effect or pixel shader. (For example, the value of a variable)  
 Transmission path: As texture, coded in the RGBA values of a rectangular point.  
-The code selects the center of that point in the texture and decodes the RGBA values.
+The code selects the center of that point in the texture and decodes the RGB values.
 The position and size of this point is defined in the [channel definition folder](../Channel_definitions/Channel_assignment.md) of this developer repository.
 
 #### Return value:
