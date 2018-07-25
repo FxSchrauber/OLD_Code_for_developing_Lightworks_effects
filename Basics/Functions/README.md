@@ -2,7 +2,7 @@
 # Functions
 
 
-#### [CG_standard_library (Intrinsic Functions)](CG_standard_library/README.md)  
+#### [Cg_standard_library (Intrinsic Functions)](Cg_standard_library/README.md)  
    You can call these functions directly.
 
 --- 
