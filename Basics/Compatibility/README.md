@@ -2,8 +2,8 @@
 
 1. In the "[Techniques](../Techniques/README.md)" section, use the default code: "... compile PROFILE ..."
 
- Starting with Lightworks 14.5 the operating system can be identified at compile time. 
- This allows the profile to be set to explicitly suit the operating system used. 
+   Starting with Lightworks 14.5 the operating system can be identified at compile time. 
+   This allows the profile to be set to explicitly suit the operating system used. 
 
 ---
 
