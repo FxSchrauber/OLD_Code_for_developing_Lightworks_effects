@@ -28,8 +28,8 @@ Not all of the features listed there are available in Lightworks or across platf
 #### Integer and/or floating-point manipulations:
 
    - **`abs`**     returns absolute value of scalars and vectors.  
-   - **`ceil`**    returns smallest integert (as a floating-point type) not less than a scalar or each vector component.
-   - **`floor`**   returns largest integer (as a floating-point type) not greater than a scalar or each vector component. 
+   - **`ceil`**    Corresponds to floor (parameter) + 1.0.
+   - **`floor`**   Returns a floating-point type where all digits to the right of the decimal point are 0. 
    - **`fmod`**    returns the remainder of x/y with the same sign as x.
    - **`frac`**    returns the fractional portion of a scalar or each vector component. 
    - **`modf`**    decompose a ﬂoat into integer and fractional parts.
@@ -106,3 +106,5 @@ Not all of the features listed there are available in Lightworks or across platf
    - `mul`   multiply a matrix by a column vector, row vector by a matrix, or matrix by a matrix
    - `reﬂect` returns the reﬂectiton vector given an incidence vector and a normal vector.
    - `refract` computes a refraction vector.
+   - `transpose` returns transpose matrix of a matrix.
+   - `trunc` Returns the integral value nearest to but no larger in magnitude than the parameter.
