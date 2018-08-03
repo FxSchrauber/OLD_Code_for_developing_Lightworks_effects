@@ -28,12 +28,12 @@ Not all of the features listed there are available in Lightworks or across platf
 #### Integer and/or floating-point manipulations:
 
    - **`abs`**     returns absolute value of scalars and vectors.  
-   - **`ceil`**    ?? would be to investigate; seems to be the same as round ()?.
+   - **`ceil`**    Round up
    - **`floor`**   Returns a floating-point type where all digits to the right of the decimal point are 0. 
-   - **`fmod`**    returns the remainder of x/y with the same sign as x.
+   - **`fmod`**    Round off
    - **`frac`**    returns the fractional portion of a scalar or each vector component. 
    - **`modf`**    decompose a ﬂoat into integer and fractional parts.
-   - **`round`**   returns the rounded value of scalars or vectors. [Problems reported, see lwks.com post#172865](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=255&Itemid=81#172865)
+   - **`round`**   [Issues were reported regarding threshold  x.5. ; see lwks.com post#172865](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=255&Itemid=81#172865)
 
    
 #### Jumping to zero or 1 etc.
