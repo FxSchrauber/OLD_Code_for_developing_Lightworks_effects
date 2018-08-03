@@ -28,7 +28,7 @@ Not all of the features listed there are available in Lightworks or across platf
 #### Integer and/or floating-point manipulations:
 
    - **`abs`**     returns absolute value of scalars and vectors.  
-   - **`ceil`**    Corresponds to floor (parameter) + 1.0.
+   - **`ceil`**    ?? would be to investigate; seems to be the same as round ()?.
    - **`floor`**   Returns a floating-point type where all digits to the right of the decimal point are 0. 
    - **`fmod`**    returns the remainder of x/y with the same sign as x.
    - **`frac`**    returns the fractional portion of a scalar or each vector component. 
