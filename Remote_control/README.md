@@ -1,7 +1,7 @@
 # Remote control of effects settings.
 
 
-Usage: Texture output (and input) to pass variable values etc to other effects in the routing.
+Usage: Texture output (and input) to pass a scalar values etc to other effects in the routing.
 
 Note that the codes were developed at a time when the effects typically only output 8-bit RGBA values. With Lightworks 14.5, higher precision can also be set.
 
@@ -11,5 +11,13 @@ Note that the codes were developed at a time when the effects typically only out
 
 ## [Receiver](Receiver/README.md)  
 
-## Transmitter (not yet documented)
-
+## Transmitter
+**Red and green color channel:** Coded value to increase precision.  
+   ``` code
+   float green = frac(original_value * 255.0)
+   float red = ramp - green / 255.0;
+   ```
+**Blue color channel:** [Status information](Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)  
+**Alpha channel:** Uncoded original value (precision according to the GPU precision setting)  
+  
+**Position of the RGBA signal in the texture:** [Depends on the remote control channel.](Channel_definitions/README.md)  
