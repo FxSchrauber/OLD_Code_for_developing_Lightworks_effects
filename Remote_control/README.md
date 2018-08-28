@@ -14,8 +14,8 @@ Note that the codes were developed at a time when the effects typically only out
 ## Transmitter
 **Red and green color channel:** Coded value to increase precision.  
    ``` code
-   float green = frac(original_value * 255.0)
-   float red = ramp - green / 255.0;
+   float green = frac(original_value * 255.0);
+   float red   = original_value - green / 255.0;
    ```
 **Blue color channel:** [Status information](Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)  
 **Alpha channel:** Uncoded original value (precision according to the GPU precision setting)  
