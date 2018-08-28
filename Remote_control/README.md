@@ -11,10 +11,6 @@ Note that the codes were developed at a time when the effects typically only out
 
 ---
 
-## [Receiver](Receiver/README.md)  
-
----
-
 ## Transmitter
 * **Red and green color channel:** Coded value to increase precision.  
    ``` code
@@ -25,6 +21,10 @@ Note that the codes were developed at a time when the effects typically only out
 * **Alpha channel:** Uncoded original value (precision according to the GPU precision setting)  
   
 * **Position of the RGBA signal in the texture:** [Depends on the remote control channel.](Channel_definitions/README.md)  
+
+---
+
+## [Receiver](Receiver/README.md)  
 
 ---
 
