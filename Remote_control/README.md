@@ -30,4 +30,4 @@ Note that the codes were developed at a time when the effects typically only out
 
 ## Test effect to test the precision of transmission of coded values.
   * Test effect code: ["Measuring the difference, Remote control precision measurement.fx"](Measuring%20the%20difference%2C%20Remote%20control%20precision%20measurement.fx)  
-  * [Download as a .zip file](Measuring%20the%20difference%2C%20Render%20a%20floating%20point%20variable%20as%20color-02.zip)  
+  * [Download as a .zip file](Measuring%20the%20difference%2C%20Remote%20control%20precision%20measurement.zip)  
