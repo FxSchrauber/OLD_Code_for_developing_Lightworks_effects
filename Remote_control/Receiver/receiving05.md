@@ -99,21 +99,15 @@ sampler RcSampler = sampler_state
   
   
 #### Precision:
+Maximum deviation within a return value range from -1 to +1
 Tested with LWKS 14.5, Windows, Intel HD Graphics 4600
 
-| GPU precision          | Maximum deviation within a return value range from -1 to +1  |
-| :--------------------: | :----------------------------------------------------------- |
-|8-bit                   |    +16E-6  (+0.000016)       and -16E-6   (-0.000016)        |
-|16-bit                  |    +25E-8  (+0.00000025)     and  -7E-8   (-0.00000007)      |
-|16-bit Floating Point   |    +13E-8  (+0.00000013)     and  -4E-6   (-0.000004)        |
-|32-bit Floating Point   |    +13E-8  (+0.00000013)     no negative difference measured |
+| GPU precision          | Maximum positive deviation | Maximum negative deviation   |
+| :--------------------: | :------------------------: | :--------------------------: |
+|8-bit                   |    +16E-6  (+0.000016)     |   -16E-6   (-0.000016)       |
+|16-bit                  |    +25E-8  (+0.00000025)   |    -7E-8   (-0.00000007)     |
+|16-bit Floating Point   |    +13E-8  (+0.00000013)   |    -4E-6   (-0.000004)       |
+|32-bit Floating Point   |    +13E-8  (+0.00000013)   |              -               |
 
 The return value is decoded from the red and green channels.
 The red channel the coarsely graded 8-bit values, and the green channel contains the intermediate values (example: 8 bits + 8 bits = 16 bits).  
-
-Option (other code):  
-With 32-bit Floating Point precision set (if supported), the value could also be taken directly from the alpha channel  
-because the remote control effects on that channel send the value without conversion. 
-In this case, the received value would be absolutely identical to the original value.
-The alpha channel can also be used by others GPU precision settings if the return value needs to be less accurate.  
-This could reduce the GPU load.
