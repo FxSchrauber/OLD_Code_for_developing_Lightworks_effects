@@ -53,7 +53,7 @@ float fn_receiving05 (float Ch)
 * `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
 * `ret` Calculate return value:
    * `round (sample.r * 255.0) / 255.0` Red = Bit 1 to bit 8.
-      The code removes intermediate values, which are transmitted with GPU-Päzisionen above 8-bit. 
+      The code removes intermediate values, which are transmitted with GPU-PÃ¤zisionen above 8-bit. 
       With "16-bit floating point", these intermediate values would considerably reduce the precision of the decoded value 
       because subsequently the precise intermediate values coded in the green color channel are added.
    *  `+ sample.g / 255.0` Green = The intermediate values bit 9 to bit 16 in case of 8 bit GPU precision setting
@@ -106,7 +106,7 @@ Tested with LWKS 14.5, Windows, Intel HD Graphics 4600
 |32-bit Floating Point   |    +13E-8  (+0.00000013)     no negative difference measured |
 
 The return value is decoded from the red and green channels.
-The red channel contains the contains the coarsely graded 8-bit values, and the green channel contains the intermediate values (example: 8 bits + 8 bits = 16 bits).  
+The red channel the coarsely graded 8-bit values, and the green channel contains the intermediate values (example: 8 bits + 8 bits = 16 bits).  
 
 Option (other code):  
 With 32-bit Floating Point precision set (if supported), the value could also be taken directly from the alpha channel  
