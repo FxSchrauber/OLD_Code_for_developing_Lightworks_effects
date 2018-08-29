@@ -91,14 +91,15 @@ sampler RcSampler = sampler_state
   
   
 #### Precision:
+Maximum deviation within a return value range from 0 to +1
 Tested with LWKS 14.5, Windows, Intel HD Graphics 4600
 
-| GPU precision          | Maximum deviation within a return value range from 0 to +1   |
-| :--------------------: | :----------------------------------------------------------- |
-|8-bit                   |     +8E-6  (+0.00008)       and  -8E-6   (-0.00008)          |
-|16-bit                  |    +13E-8  (+0.00000013)     and -4E-8   (-0.00000004)       |
-|16-bit Floating Point   |     +7E-8  (+0.00000007)     and -2E-6   (-0.000002)         |
-|32-bit Floating Point   |     +7E-8  (+0.00000007)     no negative difference measured |
+| GPU precision          | Maximum positive deviation | Maximum negative deviation   |
+| :--------------------: | :------------------------: | :--------------------------: |
+|8-bit                   |     +8E-6  (+0.00008)      |   -8E-6   (-0.00008)         |
+|16-bit                  |    +13E-8  (+0.00000013)   |  -4E-8   (-0.00000004)       |
+|16-bit Floating Point   |     +7E-8  (+0.00000007)   |  -2E-6   (-0.000002)         |
+|32-bit Floating Point   |     +7E-8  (+0.00000007)   |           -                  |
 
 The return value is decoded from the red and green channels.
 The red channel the coarsely graded 8-bit values, and the green channel contains the intermediate values (example: 8 bits + 8 bits = 16 bits).  
