@@ -12,8 +12,9 @@ The position and size of this point is defined in the [channel definition folder
 
 #### Return value:
    - *Type:* **scalar**
-   - *Value range*: -1.0 to +1.0
-     In the case of floating-point GPU precision adjustment, experimentally values of> +1 may be possible, but this will reduce precision.
+   - *Value range*: -1.0 to +1.0  
+     In the case of floating-point GPU precision adjustment, experimentally values of> +1 may be possible,  
+     but this will reduce precision.
    - *Precision:* [see below](#precision)
 
 ---
@@ -22,7 +23,7 @@ The position and size of this point is defined in the [channel definition folder
 
 #### Required sampler and texture:
    - *Sampler:* `RcSampler`
-   - *Separate texture for this sampler:*  Remote control input (see Channel definitions folder)
+   - *Separate texture for this sampler:*  Remote control input [see also Channel definitions](../Channel_definitions/README.md)
    - [Click here to see an optimized sampler code](#example-of-a-remote-control-optimized-texture-and-sampler-code)
 
 #### Required function code:
@@ -52,11 +53,13 @@ float fn_receiving05 (float Ch)
 * `sample` The receiving RGBA color signal.  
 * `status` [The status of the receiving channel.](../Channel_definitions/Channel_assignment.md#blue-color-channel-status-messages)
 * `ret` Calculate return value:
-   * `round (sample.r * 255.0) / 255.0` Red = Bit 1 to bit 8.
+   * `round (sample.r * 255.0) / 255.0`  
+      Red = Bit 1 to bit 8.
       The code removes intermediate values, which are transmitted with GPU-Päzisionen above 8-bit. 
       With "16-bit floating point", these intermediate values would considerably reduce the precision of the decoded value 
-      because subsequently the precise intermediate values coded in the green color channel are added.
-   *  `+ sample.g / 255.0` Green = The intermediate values bit 9 to bit 16 in case of 8 bit GPU precision setting
+      because the precise intermediate values coded in the green color channel are added.
+   *  `+ sample.g / 255.0`  
+   Green = The intermediate values bit 9 to bit 16 in case of 8 bit GPU precision setting
 * `ret = status > 0.001 ? ret * 2.0 -1.0 : 0.0;`  
    If Status Channel > 0.001, then the number system is rescaled from (0 ... 1) to (-1 ... +1).  
    Otherwise, ret = 0. This ensures that the return value is 0 when the remote control channel is offline.   
