@@ -1,6 +1,6 @@
 # Using Lightworks special auto-synced parameters
 
-[The available variables, which Lightworks automatically updates with the project, can be found in chapter "Basics".  ]../Basics/Variables_etc/Auto_synced/README.md)
+[The available variables, which Lightworks automatically updates with the project, can be found in chapter "Basics".  ](../Basics/Variables_etc/Auto_synced/README.md)
 
 
 ### Calculation of the project frame rate
