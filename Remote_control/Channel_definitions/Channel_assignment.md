@@ -100,15 +100,20 @@ The following channels can not be received by the current remote controllable ef
 ### Channels for the transmission of internal values:
 (Send by cyclic remote controls to the "Settings Display Unit")
 
-| Channel group |Channel       |Remote control             | Data content                            | Coding          |
-|:-------------:|:------------:|:-------------------------:|:---------------------------------------:|:---------------:|
-|     30        | 3002         | RC 3001                   | The current position in the cycle       | Data 0to1 >8bit |
-|     30        | 3003         | RC 3001                   | Value of: #define TIME_CYCLE_FRAME      | Data 0to1 >8bit |
-|     30        | 3004         | RC 3001                   | Effect progress                         | Data 0to1 >8bit |
-|     30        | 3005         | RC 3001                   | Delayed start time of the effect        | Data 0to1 >8bit |
-|     30        | 3006         | RC 3001                   | *Reserved (option)*                     | -               |
-|     30        | 3007 & 3008  | RC 3001                   | Status messages                         | Data boolean    |
-|     30        | 3009         | RC 3001                   | *Reserved (option)*                     | -               |
+| Channel group |Channel   |Remote control | Data content                                       | Coding            |
+|:-------------:|:--------:|:-------------:|:--------------------------------------------------:|:-----------------:|
+|     30        | 3002     | RC 3001       | The current position in the cycle                  | Data 0to1 >8bit   |
+|     30        | 3003     | RC 3001       | Value of: #define TIME_CYCLE_FRAME                 | Data 0to1 >8bit   |
+|     30        | 3004     | RC 3001       | Effect progress                                    | Data 0to1 >8bit   |
+|     30        | 3005     | RC 3001       | Delayed start time of the effect                   | Data 0to1 >8bit   |
+|     30        | 3006     | RC 3001       | *Reserved (option)*                                | -                 |
+|     30        | 3007.r   | RC 3001       | Old: `ERROR_FRAC`        unused from Nov. 2018     |    0 = ok         |
+|     30        | 3007.g   | RC 3001       | Old: `ERROR_PROGRESS`    unused from Nov. 2018     |    0 = ok         |
+|     30        | 3007.a   | RC 3001       | Status messages, `ERROR_FRAMES_TOTAL`              | 0 ok, 1 error     |
+|     30        | 3008.r   | RC 3001       | Old: `BEFORE_START`       unused from Nov. 2018    |    0 = ok         |
+|     30        | 3008.g   | RC 3001       | Status messages, `ERROR_INTERVAL`                  | 0 ok, 1 error     |
+|     30        | 3008.a   | RC 3001       | *Reserved (option)*                                | -                 |
+|     30        | 3009     | RC 3001       | *Reserved (option)*                                | -                 |
   
   
 ---
@@ -163,9 +168,9 @@ The following channels can not be received by the current remote controllable ef
 ### Blue color channel (status messages)
 These values are compared with the measured values of the blue color channels.:
 
-|            Definition          |  Status                | Details                                                                |
-|:------------------------------:|:----------------------:|:----------------------------------------------------------------------:|
-| `#define STATUS_OFF       0.0` | Channel OFF            |                                                                        |
-| `#define STATUS_DATA_ON   0.2` | Data                   | Data for the "Settings Display Unit"                                   |
-| `#define STATUS_RC_ON     0.4` | Remote control         |                                                                        |
+|            Definition          |  Status                       | Details                                                         |
+|:------------------------------:|:-----------------------------:|:---------------------------------------------------------------:|
+| `#define STATUS_OFF       0.0` | Channel OFF                   |                                                                 |
+| `#define STATUS_DATA_ON   0.2` | Data for Settings Display Uni |  Receiver: consider transmission tolerance of approx. + -0.01   |
+| `#define STATUS_RC_ON     0.4` | Remote control                |  Receiver: consider transmission tolerance of approx. + -0.01   |
 | `#define STATUS_RC_CLAMP  1.0` | Limited remote control | The value of the remote control signal was limited by a remote controls|
