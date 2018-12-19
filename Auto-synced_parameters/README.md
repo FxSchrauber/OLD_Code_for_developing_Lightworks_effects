@@ -28,11 +28,16 @@ float _LengthFrames;
 
 ### Relative position in effect progress
 
+### progressCos1_0_1   ![](images/_Progress.PNG)
+
+```` Code
+float _Progress;
+````
 
 
 --- 
  
-### progressCos1_0_1   ![](images/progressCos1_0_1.JPG)
+### progressCos1_0_1   ![](images/progressCos1_0_1.PNG)
 Three-point progress: 1 .. 0 .. 1 
 
 ```` Code
