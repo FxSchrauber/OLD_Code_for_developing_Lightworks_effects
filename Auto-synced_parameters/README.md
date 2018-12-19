@@ -28,7 +28,8 @@ float _LengthFrames;
 
 ### Relative position in effect progress
 
-### _Progress   ![](images/_Progress.PNG)
+### _Progress   ![](images/_Progress.PNG)  
+Ramp from value 0 to 1 over the duration of the effect.
 ```` Code
 float _Progress;
 ````  
@@ -44,6 +45,7 @@ Three-point progress: 1 .. 0 .. 1
 ```` Code
 #define TWO_PI  6.2831853072
 float _Progress;
+
 float progressCos1_0_1 = cos(_Progress * TWO_PI) * 0.5 + 0.5;
 ````
 
