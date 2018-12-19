@@ -28,11 +28,12 @@ float _LengthFrames;
 
 ### Relative position in effect progress
 
-### progressCos1_0_1   ![](images/_Progress.PNG)
-
+### _Progress   ![](images/_Progress.PNG)
 ```` Code
 float _Progress;
-````
+````  
+
+Often it can be more useful to [create this ramp using keyframing.](cd/Basics/Variables_etc/Auto_synced/README.md)
 
 
 --- 
