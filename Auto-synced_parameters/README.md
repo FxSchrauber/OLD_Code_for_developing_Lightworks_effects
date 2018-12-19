@@ -31,9 +31,8 @@ float _LengthFrames;
 
 
 --- 
-**`progressCos1_0_1`**  
-### progressCos1_0_1  
-[![](images/progressCos1_0_1.JPG)]
+ 
+### progressCos1_0_1   ![](images/progressCos1_0_1.JPG)
 Three-point progress: 1 .. 0 .. 1 
 
 ```` Code
