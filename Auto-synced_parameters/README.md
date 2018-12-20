@@ -29,12 +29,12 @@ float _LengthFrames;
 ### Relative position in effect progress
 
 ### _Progress   
-![](images/_Progress.PNG)   
+![](images/_Progress.png)   
 Ramp from value 0 to 1 over the duration of the effect.  
 *Global for the entire effect (add outside and above all shaders and functions):*
 ```` Code
 //--------------------------------------------------------------//
-// Definitions, declarations und macros
+// Definitions and declarations
 //--------------------------------------------------------------//
 
 float _Progress;
@@ -51,7 +51,7 @@ Three-point progress: 1 .. 0 .. 1
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
 ```` Code
 //--------------------------------------------------------------//
-// Definitions, declarations und macros
+// Definitions and declarations
 //--------------------------------------------------------------//
 
 #define TWO_PI  6.2831853072
@@ -68,7 +68,7 @@ Often, it may be better to use another variable instead of `float _Progress`, wh
 --- 
  
 ### progressCos1_Y_1  
-![](images/progressCos1_Y_1.PNG)  
+![](images/progressCos1_Y_1.png)  
 Three-point progress: 1 ...  adjustable central value  ... 1  
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
 ```` Code
