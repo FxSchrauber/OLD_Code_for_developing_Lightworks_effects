@@ -46,7 +46,7 @@ Often it can be more useful to [create this ramp using keyframing.](../Basics/Va
 --- 
  
 ### progressCos1_0_1  
-![](images/progressCos1_0_1.PNG)  
+![](images/progressCos1_0_1.png)  
 Three-point progress: 1 .. 0 .. 1  
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
 ```` Code
