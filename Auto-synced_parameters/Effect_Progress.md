@@ -1,6 +1,6 @@
 # Relative position in effect progress
 
-### _Progress   
+## _Progress   
 ![](images/_Progress.png)   
 Ramp from value 0 to 1 over the duration of the effect.  
 *Global for the entire effect (add outside and above all shaders and functions):*
@@ -14,10 +14,10 @@ float _Progress;
 
 Often it can be more useful to [create this ramp using keyframing.](../Basics/Variables_etc/Auto_synced/_Progress.md)
 
-
+---
 --- 
  
-### progressCos1_0_1  
+## progressCos1_0_1  
 ![](images/progressCos1_0_1.PNG)  
 Three-point progress: 1 .. 0 .. 1  
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
@@ -38,8 +38,9 @@ Often, it may be better to use another variable instead of `float _Progress`, wh
 
 
 --- 
+---
  
-### progressCos1_Y_1  
+## progressCos1_Y_1  
 ![](images/progressCos1_Y_1.png)  
 Three-point progress: 1 ...  adjustable central value  ... 1  
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
