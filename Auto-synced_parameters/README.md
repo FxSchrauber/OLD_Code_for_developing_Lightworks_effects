@@ -10,5 +10,5 @@
 ### [Calculation of the project frame rate](PROJECTfps.md)
 
 
-### [Relative position in effect progress](progress.md)
+### [Relative position in effect progress](progress/README.md)
 
