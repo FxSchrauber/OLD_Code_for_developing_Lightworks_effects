@@ -7,14 +7,12 @@ Ramp from value 0 to 1 over the duration of the effect.
   
 ---
 
-
 ### [progressCos1_0_1](progressCos1_0_1.md)  
-Ramp from value 0 to 1 over the duration of the effect.  
+Three-point progress: 1 .. 0 .. 1  
 [![](images/thumbnails/progressCos1_0_1.png)](progressCos1_0_1.md)
 
 ---
  
-**progressCos1_Y_1**   
+### [progressCos1_Y_1](progressCos1_Y_1.md)  
 Three-point progress: 1 ...  adjustable central value  ... 1  
-![progressCos1_Y_1](images/thumbnails/progressCos1_Y_1.png)   
- 
+[![](images/thumbnails/progressCos1_Y_1.png)](progressCos1_Y_1.md)
