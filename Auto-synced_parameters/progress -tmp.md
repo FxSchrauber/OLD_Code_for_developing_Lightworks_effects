@@ -1,7 +1,7 @@
 # Relative position in effect progress
 
 ## _Progress   
-![](images/_Progress.png)   
+![](images/thumbnails/_Progress.png)   
 Ramp from value 0 to 1 over the duration of the effect.  
 *Global for the entire effect (add outside and above all shaders and functions):*
 ```` Code
@@ -18,7 +18,7 @@ float _Progress;
 --- 
  
 ## progressCos1_0_1  
-![](images/progressCos1_0_1.png)  
+![](images/thumbnails/progressCos1_0_1.png)  
 Three-point progress: 1 .. 0 .. 1  
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
 ```` Code
@@ -40,7 +40,7 @@ float progressCos1_0_1 = cos(_Progress * TWO_PI) * 0.5 + 0.5;
 ---
  
 ## progressCos1_Y_1  
-![](images/progressCos1_Y_1.png)  
+![](images/thumbnails/progressCos1_Y_1.png)  
 Three-point progress: 1 ...  adjustable central value  ... 1  
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
 ```` Code
