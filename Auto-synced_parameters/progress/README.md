@@ -2,7 +2,7 @@
 ## Characteristic curves
 
 ### [_Progress](_Progress.md)  
-Ramp from value 0 to 1 over the duration of the effect.  
+The **default** ramp from value 0 to 1 over the duration of the effect.  
 [![](images/thumbnails/_Progress.png)](_Progress.md) 
   
 ---
