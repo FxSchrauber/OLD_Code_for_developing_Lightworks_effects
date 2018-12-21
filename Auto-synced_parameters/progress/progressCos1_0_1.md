@@ -1,8 +1,7 @@
-# Relative position in effect progress
-
-## progressCos1_0_1  
+# progressCos1_0_1  
 ![](images/progressCos1_0_1.png)  
 Three-point progress: 1 .. 0 .. 1  
+  
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
 ```` Code
 //--------------------------------------------------------------//
