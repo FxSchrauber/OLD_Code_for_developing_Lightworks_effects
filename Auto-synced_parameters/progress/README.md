@@ -1,7 +1,7 @@
 # Relative position in effect progress
 ## Characteristic curves
 
-**[_Progress](images/thumbnails/_Progress.png)**  
+**[_Progress](progress/_Progress.md)**  
   Ramp from value 0 to 1 over the duration of the effect.  
 ![_Progress](images/thumbnails/_Progress.png)  
   
