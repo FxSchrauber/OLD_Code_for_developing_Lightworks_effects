@@ -1,6 +1,7 @@
 # progressCos1_Y_1  
 ![](images/progressCos1_Y_1.png)  
 Three-point progress: 1 ...  adjustable central value  ... 1  
+  
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
 ```` Code
 //--------------------------------------------------------------//
