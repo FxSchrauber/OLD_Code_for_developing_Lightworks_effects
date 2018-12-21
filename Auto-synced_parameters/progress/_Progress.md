@@ -1,6 +1,7 @@
 # _Progress   
 ![](images/_Progress.png)   
-Ramp from value 0 to 1 over the duration of the effect.  
+  
+The **default** ramp from value 0 to 1 over the duration of the effect.  
 *Global for the entire effect (add outside and above all shaders and functions):*
 ```` Code
 //--------------------------------------------------------------//
