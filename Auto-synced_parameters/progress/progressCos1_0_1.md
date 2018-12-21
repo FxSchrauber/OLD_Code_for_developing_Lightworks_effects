@@ -12,8 +12,7 @@ Three-point progress: 1 .. 0 .. 1
 float _Progress;
 ````  
   
-  
-## Local Code (within shaders or functions):  
+### Local Code (within shaders or functions):  
 ```` Code
 float progressCos1_0_1 = cos(_Progress * TWO_PI) * 0.5 + 0.5;
 ````
