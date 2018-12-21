@@ -10,4 +10,4 @@ Ramp from value 0 to 1 over the duration of the effect.
 float _Progress;
 ````  
 
-**Note:** Often it can be more useful to [create this ramp using keyframing.](../Basics/Variables_etc/Auto_synced/_Progress.md)
+**Note:** Often it can be more useful to [create this ramp using keyframing.](../../Basics/Variables_etc/Auto_synced/_Progress.md)
