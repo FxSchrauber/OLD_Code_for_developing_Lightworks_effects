@@ -14,7 +14,6 @@ Three-point progress: 0 .. 1 .. 0
 ---
  
 ### [progressCos0_Y_0](progressCos0_Y_0.md)  
-***Documentation still needs to be created***  
 Three-point progress: 0 ...  adjustable central value  ... 0  
 [![](images/thumbnails/progressCos0_Y_0.png)](progressCos0_Y_0.md)  
 
