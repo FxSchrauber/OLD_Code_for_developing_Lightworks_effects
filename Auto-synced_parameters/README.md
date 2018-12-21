@@ -7,8 +7,8 @@
 
 ## Calculation of more values based on these variables::
 
-### [Calculation of the project frame rate](PROJECTfps.md)
+### [Project frame rate](PROJECTfps.md)
 
 
-### [Relative position in effect progress](progress/README.md)
+### [Effect progress](progress/README.md)
 
