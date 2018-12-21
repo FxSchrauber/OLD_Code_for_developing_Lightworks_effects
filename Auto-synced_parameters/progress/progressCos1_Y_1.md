@@ -1,8 +1,11 @@
 # progressCos1_Y_1  
 ![](images/progressCos1_Y_1.png)  
-Three-point progress: 1 ...  adjustable central value  ... 1  
+### Three-point progress: 1 ...  adjustable central value  ... 1  
   
-*Required global variable declaration and definition (add outside and above all shaders and functions):*
+  ---
+    
+### Required global variable declaration and definition 
+*(add outside and above all shaders and functions):*
 ```` Code
 //--------------------------------------------------------------//
 // Definitions, declarations und macros
@@ -11,7 +14,7 @@ Three-point progress: 1 ...  adjustable central value  ... 1
 #define TWO_PI  6.2831853072
 float _Progress;
 ````
-**Code** (Example as a function):  
+### Code (Example as a function):  
 ```` Code
 float fn_progressCos1_Y_1 (float centralValue)
 {
@@ -19,7 +22,8 @@ float fn_progressCos1_Y_1 (float centralValue)
    return progressCos1_0_1 * (1.0 - centralValue) + centralValue;
 }
 ````
-
+---
+  
 **Parameter Description:**  
   
 1. `centralValue`:  
