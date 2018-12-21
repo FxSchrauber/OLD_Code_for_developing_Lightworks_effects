@@ -8,7 +8,6 @@ Ramp from value 0 to 1 over the duration of the effect.
 ---
 
 ### [progressCos0_1_0](progressCos0_1_0.md) 
-***Documentation still needs to be created***  
 Three-point progress: 0 .. 1 .. 0  
 [![](images/thumbnails/progressCos0_1_0.png)](progressCos0_1_0.md)  
 
