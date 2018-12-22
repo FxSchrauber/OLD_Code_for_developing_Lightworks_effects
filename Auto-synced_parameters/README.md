@@ -5,7 +5,7 @@
 
 ---
 
-## Calculation of more values based on these variables::
+## Calculation of more values based on these variables:
 
 ### [Project frame rate](PROJECTfps.md)
 
