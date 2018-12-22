@@ -1,11 +1,30 @@
 # Relative position in effect progress
-## Characteristic curves
+## Defauld:
 
 ### [_Progress](_Progress.md)  
 The **default** ramp from value 0 to 1 over the duration of the effect.  
 [![](images/thumbnails/_Progress.png)](_Progress.md) 
   
 ---
+---
+  
+# Generation of other characteristics from this ramp
+  
+## Two-point cosine curves, one direction of movement of the return value:
+  
+### [progressCos](progressCos.md)  
+***This missing documentation still has to be created.***
+Two-point progress: 0 .. 1  
+[![](images/thumbnails/progressCos0.png)](progressCos.md)  
+
+  
+---
+---
+
+
+  
+## Three-point cosine curves, two directions of movement of the return value
+  
 
 ### [progressCos0_1_0](progressCos0_1_0.md) 
 Three-point progress: 0 .. 1 .. 0  
