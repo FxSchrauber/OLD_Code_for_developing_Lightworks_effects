@@ -13,8 +13,7 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
 ## Two-point cosine curves, one direction of movement of the return value:
   
 ### [progressCos](progressCos.md)  
-***This missing documentation still has to be created.***
-Two-point progress: 0 .. 1  
+**S-curve**, Two-point progress: 0 to 1  
 [![](images/thumbnails/progressCos.png)](progressCos.md)  
 
   
