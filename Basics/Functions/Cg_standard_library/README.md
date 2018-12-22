@@ -66,7 +66,7 @@ Not all of the features listed there are available in Lightworks or across platf
    - **`sincos`**   returns the sine and cosine of scalars and vectors.
    - **`sinh`**     returns hyperbolic sine of scalars and vectors.
    - **`tan`**      returns tangent of scalars and vectors.
-   - **`tanh`*      returns hyperbolic tangent of scalars and vectors.
+   - **`tanh`**     returns hyperbolic tangent of scalars and vectors.
 
 
 #### Mainly for color vectors:
