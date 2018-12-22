@@ -15,7 +15,7 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
 ### [progressCos](progressCos.md)  
 ***This missing documentation still has to be created.***
 Two-point progress: 0 .. 1  
-[![](images/thumbnails/progressCos0.png)](progressCos.md)  
+[![](images/thumbnails/progressCos.png)](progressCos.md)  
 
   
 ---
