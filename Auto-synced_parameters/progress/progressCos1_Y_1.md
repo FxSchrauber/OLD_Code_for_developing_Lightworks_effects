@@ -31,6 +31,7 @@ float fn_progressCos1_Y_1 (float centralValue)
 1. `centralValue`:  
    The adjustable central value.  
    This defines the return value at 50% effect progress  (`_Progress = 0.5`).  
+    see also ["Return value"](#return-value)
    - **Type:** `float`, local   
    - **Permissible value range:** Unlimited, positive and negative.  
    
@@ -44,9 +45,10 @@ float fn_progressCos1_Y_1 (float centralValue)
 ---
   
 ## Return value:
-   - If `_Progress = 0.0`: 1.0  
-   - If `_Progress = 0.5`: identical to `centralValue` (unlimited, positive and negative)  
-   - If `_Progress = 1.0`: 1.0
+   - If `_Progress == 0.0` then 1.0  
+   - If `_Progress == 0.5`then identical to `centralValue` (unlimited, positive and negative)  
+      Other control behavior see the alternative code `progressCos1_Yb_1` below.
+   - If `_Progress == 1.0` then 1.0  
    - The return values between the three Progress points (0.0 and 0.5 and 1.0) are calculated by the cosine wave.
    - **Type:** `float`   
    - **Value range:** Unlimited, positive and negative.  
@@ -73,3 +75,26 @@ float progressCos1_Y_1 = progressCos1_0_1 * (1.0 - centralValue) + centralValue;
    float progressCos0_1_0 = cos(_Progress * TWO_PI) *-0.5 + 0.5;
    float progressCos1_Y_1 = 1.0 - progressCos0_1_0 * (1.0 - centralValue);
 ````
+
+---
+
+## progressCos1_Yb_1
+#### Alternative control behavior of parameter `centralValue`:
+
+```` Code
+   float progressCos0_1_0 = cos(_Progress * TWO_PI) *-0.5 + 0.5;
+   float progressCos1_Yb_1 = 1.0 - progressCos0_1_0 * centralValue;
+````
+
+#### Return value of `progressCos1_Yb_1` (deviating from `progressCos1_Y_1`):
+   - If `_Progress == 0.0` then 1.0  
+   - If `_Progress == 0.5` and   
+      - If `centralValue` < 0.0  then Return values over 1  
+      - If `centralValue` == 0.0 then 1.0  
+      - If `centralValue` == 0.5 then 0.5 
+      - If `centralValue` == 1.0 then 0.0  
+      - If `centralValue` > 1.0  then negative values  
+   - If `_Progress == 1.0` then 1.0  
+   - The return values between the three Progress points (0.0 and 0.5 and 1.0) are calculated by the cosine wave.
+   - **Type:** `float`   
+   - **Value range:** Unlimited, positive and negative.  
