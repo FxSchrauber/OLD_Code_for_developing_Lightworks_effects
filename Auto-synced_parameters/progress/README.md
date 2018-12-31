@@ -13,7 +13,7 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
 ## S_Curves:
   
 ### [progress_S](progress_S.md)  
-**S-Curve**, Two-point progress: 0 to 1  
+**S-Curve**, 0 to 1  
 [![](images/thumbnails/progress_S.png)](progress_S.md)  
 
   
