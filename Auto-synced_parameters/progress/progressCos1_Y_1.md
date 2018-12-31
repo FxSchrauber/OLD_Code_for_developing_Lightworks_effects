@@ -1,4 +1,5 @@
 # progressCos1_Y_1  
+and alternative code **[progressCos1_Yb_1](#progresscos1_yb_1)**
 ![](images/progressCos1_Y_1.png)  
 ### Three-point progress: 1 ...  adjustable central value  ... 1  
   
