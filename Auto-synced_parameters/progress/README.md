@@ -43,7 +43,7 @@ Three-point progress: 1 .. 0 .. 1
 
 ---
  
-### [progressCos1_Y_1](progressCos1_Y_1.md)  
+### [progressCos1_Y_1 and alternative code progressCos1_Yb_1](progressCos1_Y_1.md)  
 Three-point progress: 1 ...  adjustable central value  ... 1  
 [![](images/thumbnails/progressCos1_Y_1.png)](progressCos1_Y_1.md)  
 
