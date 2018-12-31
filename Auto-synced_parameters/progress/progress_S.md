@@ -1,7 +1,7 @@
 # progress_S  
 ![](images/progress_S.png)  
 
-**S-Curve**, Two-point progress: 0 to 1  
+**S-Curve**  
   
 *Required global variable declaration and definition (add outside and above all shaders and functions):*
 ```` Code
