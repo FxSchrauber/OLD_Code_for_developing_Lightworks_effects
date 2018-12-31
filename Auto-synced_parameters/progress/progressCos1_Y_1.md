@@ -51,4 +51,25 @@ float fn_progressCos1_Y_1 (float centralValue)
    - **Type:** `float`   
    - **Value range:** Unlimited, positive and negative.  
 
+---
+---
 
+## Alternatives:
+
+### Local code in the shader instead of the function:  
+If you need a settable and in addition a fixed progress curve in a single shader, then one of these variants could be useful:
+
+#### Two progress curves available `progressCos1_0_1` and `progressCos1_Y_1`:
+```` Code
+float progressCos1_0_1 = cos(_Progress * TWO_PI) * 0.5 + 0.5;
+float progressCos1_Y_1 = progressCos1_0_1 * (1.0 - centralValue) + centralValue;
+````
+  
+  or
+  
+#### Two progress curves available `progressCos0_1_0` and `progressCos1_Y_1`:
+
+```` Code
+   float progressCos0_1_0 = cos(_Progress * TWO_PI) *-0.5 + 0.5;
+   float progressCos1_Y_1 = 1.0 - progressCos0_1_0 * (1.0 - centralValue);
+````
