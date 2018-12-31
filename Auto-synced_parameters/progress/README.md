@@ -10,11 +10,11 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
   
 # Generation of other characteristics from this ramp
   
-## Two-point cosine curves, one direction of movement of the return value:
+## S_Curves:
   
-### [progressCos](progressCos.md)  
-**S-curve**, Two-point progress: 0 to 1  
-[![](images/thumbnails/progressCos.png)](progressCos.md)  
+### [progress_S](progress_S.md)  
+**S-Curve**, Two-point progress: 0 to 1  
+[![](images/thumbnails/progress_S.png)](progress_S.md)  
 
   
 ---
