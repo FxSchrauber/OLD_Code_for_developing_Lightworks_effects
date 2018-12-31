@@ -89,11 +89,11 @@ float progressCos1_Y_1 = progressCos1_0_1 * (1.0 - centralValue) + centralValue;
 #### Return value of `progressCos1_Yb_1` (deviating from `progressCos1_Y_1`):
    - If `_Progress == 0.0` then 1.0  
    - If `_Progress == 0.5` and   
-      - If `centralValue` < 0.0  then Return values over 1  
+      - If `centralValue` < 0.0  then return values > 1  
       - If `centralValue` == 0.0 then 1.0  
       - If `centralValue` == 0.5 then 0.5 
       - If `centralValue` == 1.0 then 0.0  
-      - If `centralValue` > 1.0  then negative values  
+      - If `centralValue` > 1.0  then negative return values  
    - If `_Progress == 1.0` then 1.0  
    - The return values between the three Progress points (0.0 and 0.5 and 1.0) are calculated by the cosine wave.
    - **Type:** `float`   
