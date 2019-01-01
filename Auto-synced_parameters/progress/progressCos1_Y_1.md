@@ -77,6 +77,16 @@ float progressCos1_Y_1 = progressCos1_0_1 * (1.0 - centralValue) + centralValue;
    float progressCos1_Y_1 = 1.0 - progressCos0_1_0 * (1.0 - centralValue);
 ````
 
+or  
+  
+  
+#### If only one variable is needed:
+```` Code
+float progressCos1_Y_1 = 1.0 
+                       - (cos(_Progress * TWO_PI) *-0.5 + 0.5)
+                       * (1.0 - centralValue);
+````
+
 ---
 
 ## progressCos1_Yb_1
