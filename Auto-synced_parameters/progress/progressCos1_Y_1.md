@@ -32,18 +32,25 @@ Detais: [Documentation of the variable `progressCos1_0_1`](progressCos1_0_1.md)
   
 ### Parameter Description:
   
-1. `centralValue`:  
+1. `_Progress`
+   Auto-synced parameter
+   - **Type:** `float`, global  
+   - **Value range:** 0.0 to 1.0
+   - Detais: [Documentation of the variable `_Progress`](_Progress.md) 
+     
+2. **TWO_PI**: Defines the wavelength as one complete wave.  
+   Higher values shorten the wavelength (more waves per effect runtime)  
+   
+3. `* 0.5` Scales the cos return values (+1 .. -1 ... +1) to +0.5 .. -0.5 .. +0.5  
+
+4. `+ 0.5` Moves the wave in the positive range: +1 .. 0 .. +1
+     
+5. `centralValue`:  
    The adjustable central value.  
    This defines the return value at 50% effect progress  (`_Progress = 0.5`).  
     see also ["Return value"](#return-value)
    - **Type:** `float`, local   
-   - **Permissible value range:** Unlimited, positive and negative.  
-   
-2. `_Progress`
-   Auto-synced parameter
-   - **Type:** `float`, global  
-   - **Value range:** 0.0 to 1.0
-   - Detais: [Documentation of the variable `_Progress`](_Progress.md)
+   - **Permissible value range:** Unlimited, positive and negative. 
   
 ---
   
