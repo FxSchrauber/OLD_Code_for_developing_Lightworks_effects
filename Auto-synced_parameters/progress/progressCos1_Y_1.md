@@ -25,6 +25,8 @@ float fn_progressCos1_Y_1 (float centralValue)
    return progressCos1_0_1 * (1.0 - centralValue) + centralValue;
 }
 ````
+Detais: [Documentation of the variable `progressCos1_0_1`](progressCos1_0_1.md)  
+ 
 ---
   
 ### Parameter Description:
