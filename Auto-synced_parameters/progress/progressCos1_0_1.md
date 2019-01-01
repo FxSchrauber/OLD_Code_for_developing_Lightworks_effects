@@ -17,6 +17,8 @@ float _Progress;
 float progressCos1_0_1 = cos(_Progress * TWO_PI) * 0.5 + 0.5;
 ````
   
+---
+  
 ### Parameter Description:
 1. [Documentation of the variable `_Progress`](_Progress.md)  
 2. **TWO_PI**: Defines the wavelength as one complete wave.  
