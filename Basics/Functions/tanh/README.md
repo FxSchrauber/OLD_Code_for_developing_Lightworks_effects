@@ -25,8 +25,8 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
      fn_test (xy.x);     // Parameter xy.x corresponds to a ramp from 0 to 1
      ````
      
-     ---
-     ---
+  ---
+  ---
      
 ## Critical parameter values:
      
@@ -34,4 +34,4 @@ If the parameter values are too high, mathematical inaccuracies can lead to unex
 Some sample videos (tested with Windows, GPU:Intel HD Graphics 4600):
 
    - In this example, if the parameter exceeds the value + -87, the return value unexpectedly jumps to 0:
-   **[Video](cirtic_values1.mp4?raw=true)**
+   **[Video](vdeo/cirtic_values1.mp4?raw=true)**
