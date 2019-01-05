@@ -37,7 +37,8 @@ Some sample videos (tested with Windows, GPU:Intel HD Graphics 4600):
    **[Video](video/cirtic_values1.mp4?raw=true)**  
      
    - With other code, the behavior can be completely different.  
-     In this example, the ramp was not generated with the texture coordinates xy.x, but with _Progress . 
+     In this example, the ramp was not generated with the texture coordinates xy.x,  
+     but with the Auto-synced parameter `_Progress`.  
           Function call in the shader:
      ```` Code
      fn_test (_Progress);     // Relative effect position, Range 0 to 1
