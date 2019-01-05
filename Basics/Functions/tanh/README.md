@@ -29,6 +29,17 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
   ---
      
 ## Critical parameter values:
+When using parameter values from 0 to 8.4, the return value comes closer to the saturation value (1).  
+The return value is then 0.999 999 9  
+The same applies to negative values.  
+For parameter values outside a range of **-9 to +9**,  
+only differences due to mathematical inaccuracies were detected in the test.  
+(tested with Windows, GPU:Intel HD Graphics 4600)  
+
+In the **[Video](video/cirtic_values3.mp4?raw=true)** you can see the difference of the saturation value of 1, 
+where the Grafig is scaled a maximum difference of 1E-6 to detect the smallest inaccuracies.  
+The parameter used is again a scalable ramp, as in the previous test.
+
      
 If the parameter values are too high, mathematical inaccuracies can lead to unexpected return values.
 Some sample videos (tested with Windows, GPU:Intel HD Graphics 4600):
