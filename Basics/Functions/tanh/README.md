@@ -24,3 +24,8 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
      ```` Code
      fn_test (xy.x);     // Parameter xy.x corresponds to a ramp from 0 to 1
      ````
+     
+     ---
+     ---
+     
+     ## Critical parameter values:
