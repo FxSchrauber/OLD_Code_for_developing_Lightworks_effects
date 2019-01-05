@@ -34,4 +34,14 @@ If the parameter values are too high, mathematical inaccuracies can lead to unex
 Some sample videos (tested with Windows, GPU:Intel HD Graphics 4600):
 
    - In this example, if the parameter exceeds the value + -87, the return value unexpectedly jumps to 0:
-   **[Video](video/cirtic_values1.mp4?raw=true)**
+   **[Video](video/cirtic_values1.mp4?raw=true)**  
+     
+   - With other code, the behavior can be completely different.  
+     In this example, the ramp was not generated with the texture coordinates xy.x, but with _Progress . 
+          Function call in the shader:
+     ```` Code
+     fn_test (_Progress);     // Relative effect position, Range 0 to 1
+     ````
+     In this case, incorrect return values occurred at parameter values of about 700.  
+     These incorrect return values do not return the value 0, but high negative values.  
+        **[Video with bar graph of the return values](video/cirtic_values2.mp4?raw=true)**
