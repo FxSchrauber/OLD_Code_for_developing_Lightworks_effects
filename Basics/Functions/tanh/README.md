@@ -7,4 +7,4 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
   - #### Example of return values of tanh when using a ramp from -2 to +2 for the parameter:  
    ![](image/tanh.png)
 
-  - #### [Video](video/tanh.mp4) of the tanh return characteristic with different linear parameter ramps.
+  - #### [Video](video/tanh.mp4?raw=true) of the tanh return characteristic with different linear parameter ramps.
