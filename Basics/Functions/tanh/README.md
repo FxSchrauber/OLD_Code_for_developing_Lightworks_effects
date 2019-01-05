@@ -8,11 +8,19 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
    ![](image/tanh.png)
 
   - #### [Video](video/tanh.mp4?raw=true) of the tanh return characteristic with different linear parameter ramps.  
-     - This code was used for the test (without the code for generating the graphic):
+  - #### This code was used for the test:
+     Function:
      ```` Code
-     float ramp = xy.x;            // Ramp 0 to 1
-     ramp = (ramp * 2.0 - 1.0);    // Ramp -1 to + 1
-     ramp *= TestValue;            // Range of the ramp ("TestValue" is the value of the slider in the video)
-     if (Mode == 0) return ramp;   // Uses the ramp
-     return tanh (ramp);           // Uses the return value of tanh
+     float fn_test (float ramp)
+     {                
+        ramp = (ramp * 2.0 - 1.0);    // Ramp -1 to + 1
+        ramp *= TestValue;            // Range of the ramp ("TestValue" is the value of the slider in the video) 
+        if (Mode == 0) return ramp;
+        return tanh (ramp);
+     }
+     ````
+     
+     Function call in the shader:
+     ```` Code
+     fn_test (xy.x);     // Parameter xy.x corresponds to a ramp from 0 to 1
      ````
