@@ -1,12 +1,14 @@
 
 # Functions
 
+## Intrinsic Functions
 
-#### [Cg_standard_library (Intrinsic Functions)](Cg_standard_library/README.md)  
+#### [Cg_standard_library](Cg_standard_library/README.md)  
    You can call these functions directly.
 
 --- 
-### More Functions
+
+## More Functions
 
 You can also program new functions.
 
