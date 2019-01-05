@@ -3,7 +3,7 @@
 
 ## [Intrinsic Functions](Cg_standard_library/README.md)  
 
-  (Cg_standard_library)  
+  (Cg Standard Library)  
    You can call these functions directly.
 
 --- 
