@@ -34,4 +34,4 @@ If the parameter values are too high, mathematical inaccuracies can lead to unex
 Some sample videos (tested with Windows, GPU:Intel HD Graphics 4600):
 
    - In this example, if the parameter exceeds the value + -87, the return value unexpectedly jumps to 0:
-   **[Video](vdeo/cirtic_values1.mp4?raw=true)**
+   **[Video](video/cirtic_values1.mp4?raw=true)**
