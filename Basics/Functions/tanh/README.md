@@ -29,6 +29,17 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
   ---
      
 ## Critical parameter values:
+
+### Recommendation:
+Make sure the parameter for tanh stays within the range of **-9 to +9**.  
+One possibility is for example:
+```` Code
+#define TANH(value)   tanh (clamp ( value , - 9.0 , 9.0))
+````
+Once you have defined this, you can simply use `TANH ()` in the code instead of `tanh ()`.  
+  
+
+### Reason for this range:
 When using parameter values from 0 to 8.4, the return value comes closer to the saturation value (1).  
 The return value is then 0.999 999 9  
 The same applies to negative values.  
