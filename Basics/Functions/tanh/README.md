@@ -48,7 +48,7 @@ only differences due to mathematical inaccuracies were detected in the test.
 (tested with Windows, GPU:Intel HD Graphics 4600)  
 
 In the **[Video](video/cirtic_values3.mp4?raw=true)** you can see the difference of the saturation value of 1, 
-where the Grafig is scaled a maximum difference of 1E-6 to detect the smallest inaccuracies.  
+where the graphic is scaled a maximum difference of 1E-6 to detect the smallest inaccuracies.  
 The parameter used is again a scalable ramp, as in the previous test.
 
      
@@ -65,7 +65,7 @@ Some sample videos (tested with Windows, GPU:Intel HD Graphics 4600):
      ```` Code
      fn_test (_Progress);     // Relative effect position, Range 0 to 1
      ````
-     From this, we created a parameter range from -1 to +1 in the function, as in the previous test.
+     From this, we created a parameter range from -1 to +1 in the function.
      In this case, incorrect return values occurred at parameter values of about 700.  
      These incorrect return values do not return the value 0, but high negative values.  
         **[Video with bar graph of the return values](video/cirtic_values2.mp4?raw=true)**
