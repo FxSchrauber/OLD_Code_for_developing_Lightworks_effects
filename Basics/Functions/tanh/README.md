@@ -15,8 +15,8 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
      {                
         ramp = (ramp * 2.0 - 1.0);    // Ramp -1 to + 1
         ramp *= TestValue;            // Range of the ramp ("TestValue" is the value of the slider in the video) 
-        if (Mode == 0) return ramp;
-        return tanh (ramp);
+        if (Mode == 0) return ramp;   // Values of the ramp, if this effect mode was selected.
+        return tanh (ramp);           // Values of the tanh, if this effect mode was selected.
      }
      ````
      
