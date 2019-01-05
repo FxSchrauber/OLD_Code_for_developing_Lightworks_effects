@@ -43,6 +43,7 @@ Some sample videos (tested with Windows, GPU:Intel HD Graphics 4600):
      ```` Code
      fn_test (_Progress);     // Relative effect position, Range 0 to 1
      ````
+     From this, we created a parameter range from -1 to +1 in the function, as in the previous test.
      In this case, incorrect return values occurred at parameter values of about 700.  
      These incorrect return values do not return the value 0, but high negative values.  
         **[Video with bar graph of the return values](video/cirtic_values2.mp4?raw=true)**
