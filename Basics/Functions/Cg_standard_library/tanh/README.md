@@ -31,7 +31,7 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
   ### Values, examples
   Calculated values. Actual return values may differ slightly (especially for parameter values of > +7 and <-7)
   
- | Parameter | Return value | Different to saturation |
+ | Parameter | Return value | Difference to saturation|
  |:---------:| ------------:| -----------------------:|
  |     -9    | -0.99999997  |         -3.05E-008      |
  |     -8    | -0.9999997   |         -2.25E-007      |
@@ -52,6 +52,10 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
  |     +7    |  0.99999834  |          1.66E-006      |
  |     +8    |  0.99999977  |          2.25E-007      |
  |     +9    |  0.99999997  |          3.05E-008      |
+ 
+The calculation of the difference to saturation in this table:  
+Negative parameter values: `-1 - Return value`  
+Positive parameter values: `+1 - Return value`  
 
      
   ---
