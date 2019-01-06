@@ -29,7 +29,7 @@ See **page 759** in the PDF document: [Nvidia's Cg reference manual](https://www
   ---
   
   ### Values, examples
-  Calculated values. Actual return values may differ slightly (especially for parameter values of> +7 and <-7)
+  Calculated values. Actual return values may differ slightly (especially for parameter values of > +7 and <-7)
   
  | Parameter | Return value | Different to saturation |
  |:---------:| ------------:| -----------------------:|
