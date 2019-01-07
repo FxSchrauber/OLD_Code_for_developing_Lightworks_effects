@@ -35,8 +35,8 @@ float fn_receiving06 (float Ch)
    float2 pos   = float2 ( frac(ch / 100.0) + 0.005  ,  posY + 0.01 );
   
    float4 sample = tex2D (RcSampler, pos );
-   return = round (sample.r * 255.0) / 255.0
-             + sample.g / 255.0;
+   return round (sample.r * 255.0) / 255.0
+          + sample.g / 255.0;
 }
 ```
 * `ch` is the channel whose remote control signal is to be received.  
