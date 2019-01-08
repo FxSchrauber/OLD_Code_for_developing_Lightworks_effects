@@ -3,7 +3,11 @@
 
 **S-Curve**  
   
-*Required global variable declaration and definition (add outside and above all shaders and functions):*
+---
+
+### Required global variable declaration and definition 
+*(add outside and above all shaders and functions):*  
+
 ```` Code
 //--------------------------------------------------------------//
 // Definitions and declarations
