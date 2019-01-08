@@ -5,8 +5,10 @@
 Double use of cosine waves to speed up the associated effect processes around the middle of the effect time.
 
 ---
-  
-*Required global variable declaration and definition (add outside and above all shaders and functions):*
+
+### Required global variable declaration and definition 
+*(add outside and above all shaders and functions):*  
+
 ```` Code
 //--------------------------------------------------------------//
 // Definitions and declarations
