@@ -4,7 +4,7 @@
   
   ---
     
-### Required global variable declaration and definition 
+### Required global definitions and declarations:
 *(add outside and above all shaders and functions):*
 ```` Code
 //--------------------------------------------------------------//
