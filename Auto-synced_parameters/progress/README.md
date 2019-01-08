@@ -14,8 +14,7 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
 
 |              [progress_S](progress_S.md)                |             [progress2xS](progress2xS.md)                  |
 |:-------------------------------------------------------:|:----------------------------------------------------------:|
-|            **S-Curve**, 0 to 1                          |             **S-Curve**, 0 to 1                            |
-|                                                         |           Double use of cosine waves.                      |
+|            **S-Curve**, 0 to 1                          |   **S-Curve**, 0 to 1  ,  Double use of cosine waves.      |
 |[![](images/thumbnails/progress_S.png)](progress_S.md)   | [![](images/thumbnails/progress2xS.png)](progress2xS.md)   |
 
 ---
@@ -26,15 +25,13 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
 ## Three-point cosine curves, two directions of movement of the return value
   
 
-### [progressCos0_1_0](progressCos0_1_0.md) 
-Three-point progress: 0 .. 1 .. 0  
-[![](images/thumbnails/progressCos0_1_0.png)](progressCos0_1_0.md)  
+|         [progressCos0_1_0](progressCos0_1_0.md)                   |             [progressCos0_Y_0](progressCos0_Y_0.md)              |
+|:-----------------------------------------------------------------:|:----------------------------------------------------------------:|
+|              Three-point progress: 0 .. 1 .. 0                    |  Three-point progress: 0 ...  adjustable central value  ... 0    |
+|[![](images/thumbnails/progressCos0_1_0.png)](progressCos0_1_0.md) | [![](images/thumbnails/progressCos0_Y_0.png)](progressCos0_Y_0.md)|
 
----
- 
-### [progressCos0_Y_0](progressCos0_Y_0.md)  
-Three-point progress: 0 ...  adjustable central value  ... 0  
-[![](images/thumbnails/progressCos0_Y_0.png)](progressCos0_Y_0.md)  
+
+
 
 ---
    
