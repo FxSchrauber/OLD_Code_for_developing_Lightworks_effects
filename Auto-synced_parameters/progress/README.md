@@ -22,14 +22,17 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
 
   
 ## Three-point cosine curves, two directions of movement of the return value
-  
+
+Fixed value **0.0** at the **start** and at the **end**: 
 
 |       [progressCos0_1_0](progressCos0_1_0.md)               |         [progressCos0_Y_0](progressCos0_Y_0.md)              |
 |:-----------------------------------------------------------:|:------------------------------------------------------------:|
 |        Three-point progress: 0 .. 1 .. 0                    | Three-point progress: 0 ...  adjustable central value  ... 0 |
 | [![](thumbnails/progressCos0_1_0.png)](progressCos0_1_0.md) | [![](thumbnails/progressCos0_Y_0.png)](progressCos0_Y_0.md)  |
 
-   
+---
+
+Fixed value **1.0** at the **start** and at the **end**:
 
 |        [progressCos1_0_1](progressCos1_0_1.md)              |             [progressCos1_Y_1](progressCos1_Y_1.md)           |
 |:-----------------------------------------------------------:|:-------------------------------------------------------------:|
