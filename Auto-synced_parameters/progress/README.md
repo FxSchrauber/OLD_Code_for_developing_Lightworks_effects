@@ -10,7 +10,7 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
   
 # Generation of other characteristics from this ramp
   
-## S_Curves:
+## S_Curves
 
 |              [progress_S](progress_S.md)                |             [progress2xS](progress2xS.md)                  |
 |:-------------------------------------------------------:|:----------------------------------------------------------:|
