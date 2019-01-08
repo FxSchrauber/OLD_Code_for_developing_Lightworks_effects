@@ -5,7 +5,7 @@ and alternative code **[progressCos1_Yb_1](#progresscos1_yb_1)**
   
   ---
     
-### Required global variable declaration and definition 
+### Required global definitions and declarations:
 *(add outside and above all shaders and functions):*
 ```` Code
 //--------------------------------------------------------------//
