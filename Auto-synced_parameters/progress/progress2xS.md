@@ -30,6 +30,7 @@ float progress2xS = cos(progress_S * PI) *-0.5 + 0.5;
 2. `progress_S` (standard cosine S-curve) [Documentation](progress_S.md)
 
 ---
+---
 
 ### Alternative code: 
 
