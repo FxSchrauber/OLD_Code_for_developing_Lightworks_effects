@@ -11,12 +11,13 @@ The **default** ramp from value 0 to 1 over the duration of the effect.
 # Generation of other characteristics from this ramp
   
 ## S_Curves:
-  
-### [progress_S](progress_S.md)  
-**S-Curve**, 0 to 1  
-[![](images/thumbnails/progress_S.png)](progress_S.md)  
 
-  
+|              [progress_S](progress_S.md)                |             [progress2xS](progress2xS.md)                  |
+|:-------------------------------------------------------:|:----------------------------------------------------------:|
+|            **S-Curve**, 0 to 1                          |             **S-Curve**, 0 to 1                            |
+|                                                         |           Double use of cosine waves.                      |
+|[![](images/thumbnails/progress_S.png)](progress_S.md)   | [![](images/thumbnails/progress2xS.png)](progress2xS.md)   |
+
 ---
 ---
 
