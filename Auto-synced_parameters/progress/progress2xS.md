@@ -6,7 +6,7 @@ Double use of cosine waves to speed up the associated effect processes around th
 
 ---
 
-### Required global variable declaration and definition 
+### Required global definitions and declarations:
 *(add outside and above all shaders and functions):*  
 
 ```` Code
