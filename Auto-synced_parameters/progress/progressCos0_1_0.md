@@ -2,7 +2,11 @@
 ![](images/progressCos0_1_0.png)  
 Three-point progress: 0 .. 1 .. 0  
   
-*Required global variable declaration and definition (add outside and above all shaders and functions):*
+---
+
+### Required global variable declaration and definition 
+*(add outside and above all shaders and functions):*  
+
 ```` Code
 //--------------------------------------------------------------//
 // Definitions and declarations
