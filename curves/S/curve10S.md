@@ -1,6 +1,6 @@
-# progressCos0_Y_0  
-![](img/curve10S.png)  
-### Three-point progress: 0 ...  adjustable central value  ... 0  
+# This page is still under construction !!
+# curve10S 
+![](img/curve10S.png)   
   
   ---
     
