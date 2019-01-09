@@ -13,6 +13,8 @@
 
 #define TANH(value)    tanh (clamp ( value , - 9.0 , 9.0))
 ````
+This definition avoids critical values. See the [documentation of tanh.](../../Basics/Functions/Cg_standard_library/tanh/README.md#critical-parameter-values)  
+
 ---
   
 ### Code (Example as a function):  
