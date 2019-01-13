@@ -30,7 +30,7 @@ float fn_curve10S (float x, float steepness)
   
 ### Parameter Description:
     
-1. `x`: The value to apply the S-curve to.
+1. `x`: The value to which the S curve is to be applied.
    - **Type:** `float`, local   
    - **Value range**: Designed for a range of **0.0 to 1.0** , but all other values are allowed.
    - **Center** of the S-curve (return value identical to `x`): **0.5**   
