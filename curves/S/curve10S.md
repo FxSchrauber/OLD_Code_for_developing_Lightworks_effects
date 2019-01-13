@@ -1,6 +1,6 @@
 
 # curve10S 
-S-curve with adjustable steepness based on tanh.  
+S-curve with adjustable slope based on tanh.  
 ![](img/curve10S.png)   
   
   ---
@@ -20,16 +20,16 @@ This definition avoids critical values. See the [documentation of tanh.](../../B
   
 ### Code (Example as a function):  
 ```` Code
-float fn_curve10S (float x, float steepness)
+float fn_curve10S (float x, float slope)
 {
    x = x * 2.0 - 1.0;
-   x = TANH ( x * steepness );
+   x = TANH ( x * slope );
    return x / 2.0 + 0.5;
 }
 ````
 **Description:**  
 `x = x * 2.0 - 1.0;` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
-`x = TANH ( x * steepness );` S-curve, negative and positive values.  Note that TANH is the macro described above.  
+`x = TANH ( x * slope );` S-curve, negative and positive values.  Note that TANH is the macro described above.  
 `return x / 2.0 + 0.5;` Rescaling the range to 0 .. 1
 
 ---
@@ -41,7 +41,7 @@ float fn_curve10S (float x, float steepness)
    - **Value range**: Designed for a range of **0.0 to 1.0** , but all other values are allowed.
    - **Center** of the S-curve (return value identical to `x`): **0.5**   
 
-2. `steepness`: steepness of the S-curve 
+2. `slope`: Slope of the S-curve 
    - **Type:** `float`, local   
    
 ---
