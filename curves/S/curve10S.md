@@ -60,5 +60,5 @@ Under the following conditions, the macro `TANH` can alternatively be replaced b
    - `x` Maximum range 0 to 1  
    - `slope` Maximum range about -9 to +9  
     
-If `TANH` is used, these restrictions do not apply!  
+If the macro`TANH` is used, these restrictions do not apply!  
 
