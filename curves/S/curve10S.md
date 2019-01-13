@@ -55,7 +55,7 @@ float fn_curve10S (float x, float slope)
 
 ### Alternative code:
 
-Under the following conditions, the macro `TANH` can alternatively be replaced by `tanh`:  
+Under the following conditions, the macro `TANH` can alternatively be replaced by `tanh` (Macro not required):  
    The function is called with parameter values within the following range:  
    - `x` Maximum range 0 to 1  
    - `slope` Maximum range about -9 to +9  
