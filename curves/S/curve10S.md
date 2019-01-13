@@ -41,7 +41,7 @@ float fn_curve10S (float x, float slope)
    - **Value range**: Designed for a range of **0.0 to 1.0** , but all other values are allowed.
    - **Center** of the S-curve (return value identical to `x`): **0.5**   
 
-2. `slope`: Slope of the S-curve 
+2. `slope`: Slope in the center of the S-curve
    - **Type:** `float`, local   
    
 ---
