@@ -9,7 +9,7 @@
 
 ---
 
-## More S-Curves:
+### More S-Curves:
  [S curves that use the effect progress as a parameter.](../../Auto-synced_parameters/progress/README.md#s-curves)
 
 
