@@ -21,11 +21,16 @@ This definition avoids critical values. See the [documentation of tanh.](../../B
 ```` Code
 float fn_curve10S (float x, float steepness)
 {
-   x = x * 2.0 - 1.0 ;                                 //  _Progress 0 ... 1  auf progress -1 ... +1
-   x = TANH ( x * steepness );                         //  S-Kurve, positiv und negativ
-   return x / 2.0 + 0.5;                              // skalierung auf  0 zu 1
+   x = x * 2.0 - 1.0;
+   x = TANH ( x * steepness );
+   return x / 2.0 + 0.5;
 }
 ````
+**Description:**  
+`x = x * 2.0 - 1.0;` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
+`x = TANH ( x * steepness );` S-curve, negative and positive values.  Note that TANH is the macro described above.  
+`return x / 2.0 + 0.5;` Rescaling the range to 0 .. 1
+
 ---
   
 ### Parameter Description:
