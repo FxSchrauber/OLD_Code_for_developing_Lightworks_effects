@@ -1,5 +1,6 @@
-# This page is still under construction !!
+
 # curve10S 
+S-curve with adjustable steepness based on tanh.  
 ![](img/curve10S.png)   
   
   ---
@@ -46,7 +47,7 @@ float fn_curve10S (float x, float steepness)
 ---
   
 ## Return value: 
-   - **Value range**: 0 to 1 or narrower 
+   - **Value range**: 0 to 1 or narrower  (see graphics above)
    - **Type:** `float`
 
 
