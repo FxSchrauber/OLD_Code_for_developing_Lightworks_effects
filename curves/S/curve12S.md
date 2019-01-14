@@ -2,7 +2,7 @@
 
 # curve12S 
 - S-curve with adjustable slope based on tanh. 
-- Automatic re-scaling of the TANH return values to ensure that the S-curve starts and ends with saturated levels (0 or 1)
+- Automatic rescaling of the TANH return values to ensure that the S-curve starts and ends with saturated levels (0 or 1)
 
 ![](img/curve12S.png)  
   
