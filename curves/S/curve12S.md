@@ -51,7 +51,7 @@ float fn_curve12S (float x, float slope)
    - `x = x * 2.0 - 1.0;` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
    - `float sCurve  = TANH ( slope * x );` S-curve, negative and positive values.  
       Note that TANH is the macro described above.  
-   - `float refLevel = abs (TANH (slope));` Reference level at the end of the curve (x = + 1.0).  
+   - `float refLevel = abs (TANH (slope));` Reference level at the end of the curve (x = 1.0).  
       Functionally identical, longer code`float refLevel = abs (TANH (slope * 1.0));`
    - `float levelCorrection = 1.0 / max(refLevel, 1E-9);` ......
    - `sCurve *= levelCorrection;`    ......
