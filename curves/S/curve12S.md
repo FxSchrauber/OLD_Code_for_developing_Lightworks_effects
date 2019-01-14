@@ -32,7 +32,7 @@ float fn_curve12S (float x, float slope)
    float refLevel = abs (TANH (slope));
    float levelCorrection = 1.0 / max(refLevel, 1E-9);
    sCurve *= levelCorrection;
-   return sCurve / 2.0 + 0.5;                              // skalierung auf  0 zu 1   
+   return sCurve / 2.0 + 0.5;
 }
 ````
 **Description:**  
@@ -56,7 +56,9 @@ float fn_curve12S (float x, float slope)
    - `float refLevel = abs (TANH (slope));`  
       - Functionally identical, longer code `float refLevel = abs (TANH (slope * 1.0));`
       - Reference level at the end of the curve (x = 1.0). 
-   - `float levelCorrection = 1.0 / max(refLevel, 1E-9);` 
+   - `float levelCorrection = 1.0 / max(refLevel, 1E-9);`  
+      Factor by which the S-curve must be scaled so that the respective ends result in -1 or +1.  
+      `max(refLevel, 1E-9)` prevents a division by zero.
    - `sCurve *= levelCorrection;`  Rescaling the S-curve so that the value at the respective ends of the S-curve is -1 or +1.
    - `return sCurve / 2.0 + 0.5;` Rescaling the range to 0 .. 1
 
