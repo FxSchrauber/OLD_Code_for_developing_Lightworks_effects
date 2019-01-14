@@ -30,7 +30,7 @@ float fn_curve12S (float x, float slope)
 
    float sCurve  = TANH ( slope * x );
    float refLevel = abs (TANH (slope));
-   float levelCorrection = 1.0 / max(refLevel, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewünschen Maximalwert abs 1 am Progress-Ende
+   float levelCorrection = 1.0 / max(refLevel, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewuenschen Maximalwert abs 1 am Progress-Ende
    sCurve *= levelCorrection;
    return sCurve / 2.0 + 0.5;                              // skalierung auf  0 zu 1   
 }
@@ -49,8 +49,9 @@ float fn_curve12S (float x, float slope)
         The waveform is the difference from an ideal linear ramp, and is the side effect in limiting the noise to this low level, by this code.
         
    - `x = x * 2.0 - 1.0;` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
-   - `float sCurve  = TANH ( slope * x );` S-curve, negative and positive values.  Note that TANH is the macro described above.  
-   - `float refLevel = abs (TANH (slope));` Reference level at the end of the curve (x = + 1.0).
+   - `float sCurve  = TANH ( slope * x );` S-curve, negative and positive values.  
+      Note that TANH is the macro described above.  
+   - `float refLevel = abs (TANH (slope));` Reference level at the end of the curve (x = + 1.0).  
       Functionally identical, longer code`float refLevel = abs (TANH (slope * 1.0));`
    - `float levelCorrection = 1.0 / max(refLevel, 1E-9);` ......
    - `sCurve *= levelCorrection;`    ......
