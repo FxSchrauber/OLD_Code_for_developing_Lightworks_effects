@@ -25,20 +25,14 @@ This definition avoids critical values. See the [documentation of tanh.](../../B
 ```` Code
 float fn_curve12S (float x, float slope)
 {
-   slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );             // verhindert zu kleine absolute Werte, welche zu ungenauen bzw. unerwarteten Rueckgabeweterten fuehren koennten.
-   x = x * 2.0 - 1.0 ;                                             //  _Progress 0 ... 1  auf progress -1 ... +1
+   slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );
+   x = x * 2.0 - 1.0 ;
 
-   float sCurve  = TANH ( slope * x );         //  S-Kurve, positiv und negativ
-
-   float refLevelA = abs (TANH (slope * -1.0));                    // Referenzpegel bei progress-Anfang  ,  -1.0 ist progress-Anfang
-   float refLevelB = abs (TANH (slope));                           // Referenzpegel bei progress-Ende
-
-   float levelCorrection1 = 1.0 / max(refLevelA, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewuenschen Maximalwert abs 1 am Progress-Anfang
-   float levelCorrection2 = 1.0 / max(refLevelB, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewuenschen Maximalwert abs 1 am Progress-Ende
-
-   sCurve *=  min (levelCorrection1, levelCorrection2) ;
-
-   return sCurve / 2.0 + 0.5;                              // skalierung auf  0 zu 1
+   float sCurve  = TANH ( slope * x );
+   float refLevel = abs (TANH (slope));                           // Referenzpegel bei progress-Ende
+   float levelCorrection = 1.0 / max(refLevel, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewünschen Maximalwert abs 1 am Progress-Ende
+   sCurve *= levelCorrection;
+   return sCurve / 2.0 + 0.5;                              // skalierung auf  0 zu 1   
 }
 ````
 **Description:**  
@@ -47,11 +41,20 @@ float fn_curve12S (float x, float slope)
       - Background Information: With `slope` values close to zero, the return value range of TANH would be very small. 
         In the subsequent rescaling to a saturated range of 0 to 1 or 1 to 0, 
         even tiny inaccuracies in the TANH calculation are increased. 
-        The absolute values of at least `0.03` used here considerably reduce this problem.
+        The absolute values of at least `0.03` used here considerably reduce this problem.  
+        The side effect is a slight difference of the characteristic curve from the ideal if values > -0.03 and < +0.03 are set. 
+        A linear ramp was assumed as the ideal for `slope` = 0. 
+        This [graph](img/inaccuracies12.png) shows the inaccuracies including a weak noise. (tested with Windows and the GPU "Intel HD Graphics 4600"). 
+        Noise is the mathematical inaccuracy mentioned above that has been amplified by automatic rescaling. 
+        The waveform is the difference from an ideal linear ramp, and is the side effect in limiting the noise to this low level, by this code.
+        
 
    - `x = x * 2.0 - 1.0;` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
-   - `x = TANH ( x * slope );` S-curve, negative and positive values.  Note that TANH is the macro described above.  
-   - `return x / 2.0 + 0.5;` Rescaling the range to 0 .. 1
+   - `float sCurve  = TANH ( slope * x );` S-curve, negative and positive values.  Note that TANH is the macro described above.  
+   - `float refLevelA = abs (TANH (slope * -1.0));` Reference level at the start of the curve. This curve start is at x = -1
+   - `float refLevelB = abs (TANH (slope));`
+
+   - `return sCurve / 2.0 + 0.5;` Rescaling the range to 0 .. 1
 
 ---
   
@@ -64,7 +67,7 @@ float fn_curve12S (float x, float slope)
 
 2. `slope`: Slope in the center of the S-curve  
       - Due to the rescaling functionality, the actual gradient can be much stronger. (see graphics above)  
-        If the value is 0, the return value is almost identical to `x`.
+        If the value is 0, the return value is [almost identical](img/inaccuracies12.png) to `x`.
       - **Type:** `float`, local   
    
 ---
