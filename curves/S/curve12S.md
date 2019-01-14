@@ -30,7 +30,7 @@ float fn_curve12S (float x, float slope)
 
    float sCurve  = TANH ( slope * x );
    float refLevel = abs (TANH (slope));
-   float levelCorrection = 1.0 / max(refLevel, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewuenschen Maximalwert abs 1 am Progress-Ende
+   float levelCorrection = 1.0 / max(refLevel, 1E-9);
    sCurve *= levelCorrection;
    return sCurve / 2.0 + 0.5;                              // skalierung auf  0 zu 1   
 }
@@ -44,17 +44,20 @@ float fn_curve12S (float x, float slope)
         The absolute values of at least `0.03` used here considerably reduce this problem.  
         The side effect is a slight difference of the characteristic curve from the ideal if values > -0.03 and < +0.03 are set. 
         A linear ramp was assumed as the ideal for `slope` = 0. 
-        This [graph](img/inaccuracies12.png) shows the inaccuracies including a weak noise. (tested with Windows and the GPU "Intel HD Graphics 4600"). 
+        This [graph](img/inaccuracies12.png) shows the inaccuracies including a weak noise. 
+        (tested with Windows and the GPU "Intel HD Graphics 4600"). 
         Noise is the mathematical inaccuracy mentioned above that has been amplified by automatic rescaling. 
-        The waveform is the difference from an ideal linear ramp, and is the side effect in limiting the noise to this low level, by this code.
+        The waveform is the difference from an ideal linear ramp, 
+        and is the side effect in limiting the noise to this low level, by this code.
         
    - `x = x * 2.0 - 1.0;` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
    - `float sCurve  = TANH ( slope * x );` S-curve, negative and positive values.  
       Note that TANH is the macro described above.  
-   - `float refLevel = abs (TANH (slope));` Reference level at the end of the curve (x = 1.0).  
-      Functionally identical, longer code`float refLevel = abs (TANH (slope * 1.0));`
-   - `float levelCorrection = 1.0 / max(refLevel, 1E-9);` ......
-   - `sCurve *= levelCorrection;`    ......
+   - `float refLevel = abs (TANH (slope));`  
+      - Functionally identical, longer code `float refLevel = abs (TANH (slope * 1.0));`
+      - Reference level at the end of the curve (x = 1.0). 
+   - `float levelCorrection = 1.0 / max(refLevel, 1E-9);` 
+   - `sCurve *= levelCorrection;`  Rescaling the S-curve so that the value at the respective ends of the S-curve is -1 or +1.
    - `return sCurve / 2.0 + 0.5;` Rescaling the range to 0 .. 1
 
 ---
