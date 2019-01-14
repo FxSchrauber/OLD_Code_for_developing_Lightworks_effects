@@ -42,9 +42,15 @@ float fn_curve12S (float x, float slope)
 }
 ````
 **Description:**  
-`x = x * 2.0 - 1.0;` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
-`x = TANH ( x * slope );` S-curve, negative and positive values.  Note that TANH is the macro described above.  
-`return x / 2.0 + 0.5;` Rescaling the range to 0 .. 1
+   - `slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );`
+   Prevents too small absolute values, which could lead to inaccurate or unexpected return values.
+      - Background Information: With `slope` values close to zero, the return value range of TANH would be very small. 
+        In the subsequent rescaling to a saturated range of 0 to 1 or 1 to 0, even tiny inaccuracies in the TANH calculation are increased. 
+        The absolute values of at least `0.03` used here considerably reduce this problem.
+
+   - `x = x * 2.0 - 1.0;` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
+   - `x = TANH ( x * slope );` S-curve, negative and positive values.  Note that TANH is the macro described above.  
+   - `return x / 2.0 + 0.5;` Rescaling the range to 0 .. 1
 
 ---
   
