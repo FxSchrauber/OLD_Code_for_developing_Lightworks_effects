@@ -63,7 +63,9 @@ float fn_curve12S (float x, float slope)
 ---
   
 ### Return value: 
-   - **Value range**: 0 to 1  (see graphics above)
+   - **Value range**: 0 to 1  
+    In particular, note the abrupt change of the curve as soon as the set value of `slope` 
+    moves into the negative range (see diagrams above).
    - **Type:** `float`
    
 ---
