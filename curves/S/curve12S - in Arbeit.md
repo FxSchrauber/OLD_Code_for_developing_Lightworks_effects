@@ -1,4 +1,3 @@
-
 # This document is currently under construction!
 
 # curve12S 
@@ -25,7 +24,7 @@ This definition avoids critical values. See the [documentation of tanh.](../../B
 ```` Code
 float fn_curve12S (float x, float slope)
 {
-   slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );             // verhindert zu kleine absolute Werte, welche zu ungenauen bzw. unerwarteten Rückgabeweterten führen könnten.
+   slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );             // verhindert zu kleine absolute Werte, welche zu ungenauen bzw. unerwarteten RÃ¼ckgabeweterten fÃ¼hren kÃ¶nnten.
    x = x * 2.0 - 1.0 ;                                             //  _Progress 0 ... 1  auf progress -1 ... +1
 
    float sCurve  = TANH ( slope * x );         //  S-Kurve, positiv und negativ
@@ -33,8 +32,8 @@ float fn_curve12S (float x, float slope)
    float refLevelA = abs (TANH (slope * -1.0));                    // Referenzpegel bei progress-Anfang  ,  -1.0 ist progress-Anfang
    float refLevelB = abs (TANH (slope));                           // Referenzpegel bei progress-Ende
 
-   float levelCorrection1 = 1.0 / max(refLevelA, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewünschen Maximalwert abs 1 am Progress-Anfang
-   float levelCorrection2 = 1.0 / max(refLevelB, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewünschen Maximalwert abs 1 am Progress-Ende
+   float levelCorrection1 = 1.0 / max(refLevelA, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewÃ¼nschen Maximalwert abs 1 am Progress-Anfang
+   float levelCorrection2 = 1.0 / max(refLevelB, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewÃ¼nschen Maximalwert abs 1 am Progress-Ende
 
    sCurve *=  min (levelCorrection1, levelCorrection2) ;
 
