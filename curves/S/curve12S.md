@@ -2,8 +2,9 @@
 
 # curve12S 
 - S-curve with adjustable slope based on tanh. 
-- Automatic re-scaling of the TANH return values to ensure that the S-curve starts and ends with saturated levels (0 or 1).
-![](img/curve12S.png)   
+- Automatic re-scaling of the TANH return values to ensure that the S-curve starts and ends with saturated levels (0 or 1)
+
+![](img/curve12S.png)  
   
   ---
     
@@ -54,8 +55,10 @@ float fn_curve12S (float x, float slope)
    - **Value range**: Designed for a range of **0.0 to 1.0** , but all other values are allowed.
    - **Center** of the S-curve (return value identical to `x`): **0.5**   
 
-2. `slope`: Slope in the center of the S-curve
-   - **Type:** `float`, local   
+2. `slope`: Slope in the center of the S-curve  
+      - Due to the rescaling functionality, the actual gradient can be much stronger. (see graphics above)  
+        If the value is 0, the return value is almost identical to `x`.
+      - **Type:** `float`, local   
    
 ---
   
