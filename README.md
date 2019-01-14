@@ -6,7 +6,10 @@ This repository was built mainly from [Markdown.md files](https://guides.github.
 ## [Basics](Basics/README.md)
 
 ## [Auto-synced parameters](Auto-synced_parameters/README.md)
+
+## [Curves](curves/README.md)
   
 ## [Graphic elements](Graphic_elements/README.md)
 
 ## [Remote control](Remote_control/README.md)
+
