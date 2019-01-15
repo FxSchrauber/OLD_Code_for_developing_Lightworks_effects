@@ -1,4 +1,4 @@
-# S-Curves
+# Curves
 
 - ### [S-Curves](S/README.md)
 
