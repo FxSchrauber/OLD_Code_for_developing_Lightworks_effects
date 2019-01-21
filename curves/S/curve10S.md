@@ -1,5 +1,6 @@
 
-# curve10S 
+# curve10S  
+and alternative code **[curve10bS](#curve10bS)**  
 S-curve with adjustable slope based on tanh.  
 ![](img/curve10S.png)   
   
@@ -52,13 +53,40 @@ float fn_curve10S (float x, float slope)
    
 ---
 ---
+---
 
-### Alternative code:
+## curve10bS
+#### Alternative code:
 
 Under the following conditions, the macro `TANH` can alternatively be replaced by `tanh` (Macro not required):  
    The function is called with parameter values within the following range:  
    - `x` Maximum range 0 to 1  
    - `slope` Maximum range about -9 to +9  
+   
+### Code (Example as a function):  
+```` Code
+float fn_curve10S (float x, float slope)
+{
+   x = x * 2.0 - 1.0;
+   x = tanh ( x * slope );
+   return x / 2.0 + 0.5;
+}
+````
     
-If the macro`TANH` is used, these restrictions do not apply!  
+### Parameter Description:
+    
+1. `x`: The value to which the S curve is to be applied.
+   - **Type:** `float`, local   
+   - **Permissible value range**: **0.0 to 1.0**
+   - **Center** of the S-curve (return value identical to `x`): **0.5**   
+
+2. `slope`: Slope in the center of the S-curve
+   - **Type:** `float`, local  
+   - **Permissible value range**: **-9 to +9**
+   
+---
+  
+### Return value: 
+   - **Value range**: 0 to 1 or narrower  (see graphics above)
+   - **Type:** `float` 
 
