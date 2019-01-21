@@ -51,14 +51,17 @@ float fn_curve10S (float x, float slope)
    - **Value range**: 0 to 1 or narrower  (see graphics above)
    - **Type:** `float`
    
----
----
----
+   
+   
+---  
+---  
+---  
+  
 
-## curve10bS
-#### Alternative code:
+## Alternative code:
+# curve10bS
 
-Under the following conditions, the macro `TANH` can alternatively be replaced by `tanh` (Macro not required):  
+Under the following conditions, the macro `TANH` can alternatively be replaced by `tanh` **(Macro not required)**:  
    The function is called with parameter values within the following range:  
    - `x` Maximum range 0 to 1  
    - `slope` Maximum range about -9 to +9  
