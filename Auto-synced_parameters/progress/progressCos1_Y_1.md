@@ -99,7 +99,7 @@ float progressCos1_Y_1 = 1.0
 ---
 
 ## progressCos1_Yb_1
-#### Alternative control behavior of parameter `centralValue`:
+#### Alternative (inverse) control behavior of parameter `centralValue`:
 
 ```` Code
    float progressCos0_1_0 = cos(_Progress * TWO_PI) *-0.5 + 0.5;
