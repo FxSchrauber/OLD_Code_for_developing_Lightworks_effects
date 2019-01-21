@@ -95,8 +95,13 @@ float progressCos1_Y_1 = 1.0
                        - (cos(_Progress * TWO_PI) *-0.5 + 0.5)
                        * (1.0 - centralValue);
 ````
-
+  
+  
 ---
+---
+---
+
+
 
 ## progressCos1_Yb_1
 #### Alternative (inverse) control behavior of parameter `centralValue`:
