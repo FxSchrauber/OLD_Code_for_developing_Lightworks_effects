@@ -40,3 +40,8 @@ Fixed value **1.0** at the **start** and at the **end**:
 | [![](thumbnails/progressCos1_0_1.png)](progressCos1_0_1.md) | [![](thumbnails/progressCos1_Y_1.png)](progressCos1_Y_1.md)   |
 
 
+|  [progressCos1_Yb_1](progressCos1_Y_1.md#progresscos1_yb_1)   |
+|:-------------------------------------------------------------:|
+|    Similar to progressCos1_Y_1 , but:                         |
+|     Alternative control behavior of parameter centralValue    |
+
