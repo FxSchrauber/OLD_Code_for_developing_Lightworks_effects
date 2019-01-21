@@ -43,5 +43,5 @@ Fixed value **1.0** at the **start** and at the **end**:
 |  [progressCos1_Yb_1](progressCos1_Y_1.md#progresscos1_yb_1)   |
 |:-------------------------------------------------------------:|
 |    Similar to progressCos1_Y_1 , but:                         |
-|     Alternative control behavior of parameter centralValue    |
+|    Inverse control behavior of parameter centralValue         |
 
