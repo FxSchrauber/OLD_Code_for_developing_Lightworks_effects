@@ -69,7 +69,7 @@ Under the following conditions, the macro `TANH` can alternatively be replaced b
    
 ### Code (Example as a function):  
 ```` Code
-float fn_curve10S (float x, float slope)
+float fn_curve10bS (float x, float slope)
 {
    x = x * 2.0 - 1.0;
    x = tanh ( x * slope );
