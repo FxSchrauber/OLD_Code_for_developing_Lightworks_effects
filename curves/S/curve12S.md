@@ -97,10 +97,12 @@ float fn_curve12S (float x, float slope)
 ## Alternative code:
 # curve12bS
 
-Under the following conditions, the macro `TANH` can alternatively be replaced by `tanh` **(Macro not required)**:  
+Under the following conditions, this simplified code can be used without a macro:  
    The function is called with parameter values within the following range:  
    - `x` Maximum range 0 to 1  
-   - `slope` Maximum range about -9 to +9  
+   - `slope` 
+      - Maximum negative range: -9.0 to -0.3  
+      - Maximum positive range: +0.3 to +9.0
  
  ---
  
@@ -108,9 +110,7 @@ Under the following conditions, the macro `TANH` can alternatively be replaced b
 ```` Code
 float fn_curve12bS (float x, float slope)
 {
-   slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );
    x = x * 2.0 - 1.0 ;
-
    float sCurve  = tanh ( slope * x );
    float refLevel = abs (tanh (slope));
    float levelCorrection = 1.0 / max(refLevel, 1E-9);
@@ -130,8 +130,9 @@ float fn_curve12bS (float x, float slope)
 
 2. `slope`: Slope in the center of the S-curve  
       - **Permissible value range**: **-9 to +9**  
-      - Due to the rescaling functionality, the actual gradient can be much stronger. (see graphics above)  
-        If the value is 0, the return value is [almost identical](img/inaccuracies12.png) to `x`.
+      - Maximum negative range: -9.0 to -0.3  
+      - Maximum positive range: +0.3 to +9.0
+      - Invalid range around zero: -0.29 to +0.29
       - **Type:** `float`, local   
    
 ---
