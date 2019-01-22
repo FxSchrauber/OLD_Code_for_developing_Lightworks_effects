@@ -1,10 +1,10 @@
-# curve12S  
-  
-  
+# curve12S
 and alternative code **[curve12bS](#curve12bS)**  
   
- 
-  
+---
+
+### curve12S  
+
 - S-curve with adjustable slope based on tanh. 
 - Automatic rescaling of the TANH return values to ensure that the S-curve starts and ends with saturated levels (0 or 1)
 
