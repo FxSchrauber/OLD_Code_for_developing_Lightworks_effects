@@ -83,19 +83,60 @@ float fn_curve12S (float x, float slope)
     moves into the negative range (see diagrams above).
    - **Type:** `float`
    
----
----
 
-### Alternative code:
 
-Under the following conditions, the macro `TANH` can alternatively be replaced by `tanh` (Macro not required):  
+---  
+---  
+---  
+  
+
+## Alternative code:
+# curve12bS
+
+Under the following conditions, the macro `TANH` can alternatively be replaced by `tanh` **(Macro not required)**:  
    The function is called with parameter values within the following range:  
    - `x` Maximum range 0 to 1  
    - `slope` Maximum range about -9 to +9  
+ 
+ ---
+ 
+### Code (Example as a function):  
+```` Code
+float fn_curve12bS (float x, float slope)
+{
+   slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );
+   x = x * 2.0 - 1.0 ;
+
+   float sCurve  = tanh ( slope * x );
+   float refLevel = abs (tanh (slope));
+   float levelCorrection = 1.0 / max(refLevel, 1E-9);
+   sCurve *= levelCorrection;
+   return sCurve / 2.0 + 0.5;
+}
+````
+
+---
+  
+### Parameter Description:
     
-If the macro`TANH` is used, these restrictions do not apply!  
+1. `x`: The value to which the S curve is to be applied.
+   - **Type:** `float`, local   
+   - **Permissible value range**: **0.0 to 1.0**
+   - **Center** of the S-curve (return value identical to `x`): **0.5**   
 
-
+2. `slope`: Slope in the center of the S-curve  
+      - **Permissible value range**: **-9 to +9**  
+      - Due to the rescaling functionality, the actual gradient can be much stronger. (see graphics above)  
+        If the value is 0, the return value is [almost identical](img/inaccuracies12.png) to `x`.
+      - **Type:** `float`, local   
+   
+---
+  
+### Return value: 
+   - **Value range**: 0 to 1  
+    In particular, note the abrupt change of the curve as soon as the set value of `slope` 
+    moves into the negative range (see diagrams above).
+   - **Type:** `float`
 
 
 
