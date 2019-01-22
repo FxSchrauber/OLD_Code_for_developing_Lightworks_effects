@@ -2,6 +2,10 @@
 # curve10S  
 and alternative code **[curve10bS](#curve10bS)**  
   
+---
+  
+### curve10S  
+
 S-curve with adjustable slope based on tanh.  
 ![](img/curve10S.png)   
   
