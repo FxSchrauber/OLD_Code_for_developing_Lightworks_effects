@@ -154,7 +154,7 @@ float fn_curve12bS (float x, float slope)
 ---  
   
 
-## Alternative code:
+# Alternative code:
 # curve12cS  
   
 Improved precision of the return value when parameter `slope` is 0 .  
