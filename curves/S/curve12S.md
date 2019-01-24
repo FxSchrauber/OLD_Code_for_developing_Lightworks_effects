@@ -183,8 +183,8 @@ float fn_curve12cS (float x, float slope)
 }
 ````
 
-**Description:** Similar to the code of curve12S
-Code differences:
+**Description:** Similar to the code of curve12S  
+Code differences:  
    - It's been removed: `slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );`
    - The variable "x" was not rescaled in the code because the original value is still needed. 
      Instead, the TANH required rescale `x * 2.0 - 1.0` was done right there:
@@ -193,14 +193,14 @@ Code differences:
      With `slope` values of zero, `x` is used as the return value. 
      Input value and return value are therefore identical in this case.  
      With positive `slope` values of >=0.4 , the sCurve is used.  
-     With `slope` 0.2 the values of the sCurve and `x` are mixed in equal proportions. 
-      - `(0.4 - slope) * 2.5)` defines the mixing ratio.
-        If `slope` has the value 0.4, then the formula results in the control value 1.0, 
-       whereby `lerp` is used only the sCurve.
-     - If `slope` has the value 0.0, then the formula results in the control value 1.0, 
+     With `slope` 0.2 the values of the sCurve and `x` are mixed in equal proportions.  
+      - `(0.4 - slope) * 2.5)` defines the mixing ratio.  
+         - If `slope` has the value 0.4, then the formula results in the control value 1.0, 
+       whereby `lerp` is used only the sCurve.  
+        - If `slope` has the value 0.0, then the formula results in the control value 1.0, 
        whereby `lerp` will only use `x`, which is already flattened at this value so 
        that it is very similar to the input value `x`.  
-     - Negative `slope` - values are not allowed.
+        - Negative `slope` - values are not allowed.
 
 ---
   
