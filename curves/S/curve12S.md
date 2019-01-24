@@ -91,14 +91,15 @@ float fn_curve12S (float x, float slope)
 
 
 ---  
-.  
-.  
-.  
-.  
+>  
+>  
+>  
+>  
+  
 ---  
   
 
-## Alternative code:
+# Alternative code:
 # curve12bS
 
 Under the following conditions, this simplified code can be used without a macro:  
