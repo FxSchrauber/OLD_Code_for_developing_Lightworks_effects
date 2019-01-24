@@ -91,11 +91,8 @@ float fn_curve12S (float x, float slope)
 
 
 ---  
->  
->  
->  
->  
-  
+---
+---  
 ---  
   
 
@@ -149,7 +146,10 @@ float fn_curve12bS (float x, float slope)
    - **Type:** `float`
 
 
+
+
 ---  
+---
 ---  
 ---  
   
