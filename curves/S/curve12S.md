@@ -1,5 +1,6 @@
 # curve12S
-and alternative code **[curve12bS](#curve12bS)**  
+and alternative code **[curve12bS](#curve12bS)**  (Simplified code when using limited parameter ranges.)  
+and alternative code **[curve12cS](#curve12cS)**  (Improved precision of the return value when parameter `slope` is 0)
   
 ---
 
@@ -144,9 +145,81 @@ float fn_curve12bS (float x, float slope)
    - **Type:** `float`
 
 
+---  
+---  
+---  
+  
 
+## Alternative code:
+# curve12cS  
+  
+Improved precision of the return value when parameter `slope` is 0 .  
+However, negative `slope` values are not allowed with this code.  
+  
+---
 
+### Required global definitions and declarations:
+*(add outside and above all shaders and functions):*
+```` Code
+//--------------------------------------------------------------//
+// Definitions, declarations und macros
+//--------------------------------------------------------------//
 
+#define TANH(value)    tanh (clamp ( value , - 9.0 , 9.0))
+````  
 
+---
 
+### Code (Example as a function):  
+```` Code
+float fn_curve12cS (float x, float slope)
+{
+   float sCurve  = TANH ( slope * (x * 2.0 - 1.0) );
+   float refLevel = abs (TANH (slope));
+   float levelCorrection = 1.0 / max(refLevel, 1E-9);
+   sCurve *= levelCorrection  ;
+   sCurve = sCurve / 2.0 + 0.5;
+   return slope < 0.4 ? lerp ( sCurve, x , (0.4 - slope) * 2.5) : sCurve;
+}
+````
 
+**Description:** Similar to the code of curve12S
+Code differences:
+   - It's been removed: `slope = (slope < 0.0) ?  min(slope , -0.03) : max(slope , 0.03 );`
+   - The variable "x" was not rescaled in the code because the original value is still needed. 
+     Instead, the TANH required rescale `x * 2.0 - 1.0` was done right there:
+     `float sCurve  = TANH ( slope * (x * 2.0 - 1.0) );`
+   - `return slope < 0.4 ? lerp ( sCurve, x , (0.4 - slope) * 2.5) : sCurve;`  
+     With `slope` values of zero, `x` is used as the return value. 
+     Input value and return value are therefore identical in this case.  
+     With positive `slope` values of >=0.4 , the sCurve is used.  
+     With `slope` 0.2 the values of the sCurve and `x` are mixed in equal proportions. 
+      - `(0.4 - slope) * 2.5)` defines the mixing ratio.
+        If `slope` has the value 0.4, then the formula results in the control value 1.0, 
+       whereby `lerp` is used only the sCurve.
+     - If `slope` has the value 0.0, then the formula results in the control value 1.0, 
+       whereby `lerp` will only use `x`, which is already flattened at this value so 
+       that it is very similar to the input value `x`.  
+     - Negative `slope` - values are not allowed.
+
+---
+  
+### Parameter Description:
+    
+1. `x`: The value to which the S curve is to be applied.
+   - **Type:** `float`, local   
+   - **Value range**: Designed for a range of **0.0 to 1.0** , but all other values are allowed.
+   - **Center** of the S-curve (return value identical to `x`): **0.5**   
+     
+2. `slope`: Slope in the center of the S-curve  
+      - **Permissible value range**: **>= 0** (only positive values allowed)
+      - **Type:** `float`, local   
+   
+---
+
+---
+  
+### Return value: 
+   - **Value range**: 0 to 1  
+   - **Type:** `float`
+   
