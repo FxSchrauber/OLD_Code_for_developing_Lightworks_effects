@@ -91,7 +91,10 @@ float fn_curve12S (float x, float slope)
 
 
 ---  
----  
+.  
+.  
+.  
+.  
 ---  
   
 
@@ -215,8 +218,6 @@ Code differences:
    - Negative values are **not** allowed.
    - **Type:** `float`, local   
    
----
-
 ---
   
 ### Return value: 
