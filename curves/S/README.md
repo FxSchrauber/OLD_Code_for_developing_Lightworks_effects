@@ -9,12 +9,12 @@
 |   [![](thumbnails/curve10S.png)](curve10S.md)           |  [![](thumbnails/curve12S.png)](curve12S.md)      |
 |       ------------------------------------------        |     ------------------------------------------    |
 |        Alternative code:                                |     Alternative code:                             |
-|      [curve10bS](curve10S.md#curve10bs)                 |     [curve12bS](curve12S.md#curve12bs)            |
-
----
+|      [curve10bS](curve10S.md#curve10bS)                 |     [curve12bS](curve12S.md#curve12bS)            |
+| (Simplified code when using limited parameter ranges.)  | (Simplified code when using limited parameter ranges.)|
+|       ------------------------------------------        |     ------------------------------------------    |
+|                                                         |     [curve12cS](curve12S.md#curve12cS)            |    
+|                                                         |    Improved precision of the return value         |
+|                                                         |    (Limited parameter ranges)                     |
 
 ### More S-Curves:
  [S-curves that use the effect progress as a parameter.](../../Auto-synced_parameters/progress/README.md#s-curves)
-
-
-
