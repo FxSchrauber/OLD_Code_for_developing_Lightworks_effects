@@ -194,8 +194,8 @@ Code differences:
      Input value and return value are therefore identical in this case.  
      With positive `slope` values of >=0.4 , the sCurve is used.  
      With `slope` 0.2 the values of the sCurve and `x` are mixed in equal proportions.  
-      - `(0.4 - slope) * 2.5)` defines the mixing ratio.  
-         - If `slope` has the value 0.4, then the formula results in the control value 1.0, 
+     - `(0.4 - slope) * 2.5)` defines the mixing ratio.  
+       - If `slope` has the value 0.4, then the formula results in the control value 1.0, 
        whereby `lerp` is used only the sCurve.  
         - If `slope` has the value 0.0, then the formula results in the control value 1.0, 
        whereby `lerp` will only use `x`, which is already flattened at this value so 
@@ -212,8 +212,8 @@ Code differences:
    - **Center** of the S-curve (return value identical to `x`): **0.5**   
      
 2. `slope`: Slope in the center of the S-curve  
-      - **Permissible value range**: **>= 0** (only positive values allowed)
-      - **Type:** `float`, local   
+   - Negative values are **not** allowed.
+   - **Type:** `float`, local   
    
 ---
 
