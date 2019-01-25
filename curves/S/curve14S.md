@@ -3,9 +3,11 @@
 
 - S-curve with adjustable slope based on tanh. 
 - Adjustable X-position of the S-curve.  
-- In the case of a centred X-position of the S-curve, it is ensured that the curve begins and ends with saturated values (0 and 1).
+- In the case of a centred X-position of the S-curve, it is ensured  
+  that the curve begins and ends with saturated values (0 and 1).
    - For other x-positions this depends on the position, and the steepness of the curve (see images).
 
+## Image has yet to be created!
 ![](img/curve14S.png)  
   
   ---
@@ -30,14 +32,12 @@ float fn_curve14S (float x, float slope, float pan)
    float x2 = (x * 2.0 - 1.0);
    float sCurve  = TANH ( slope * (x2- pan) );
 
-   float refLevelA = abs (TANH (slope * -1.0));                    // Referenzpegel bei progress-Anfang  ,  -1.0 ist progress-Anfang
-   float refLevelB = abs (TANH (slope));                           // Referenzpegel bei progress-Ende
+   float refLevelA = abs (TANH (slope * -1.0)); 
+   float refLevelB = abs (TANH (slope));
 
-   float levelCorrection1 = 1.0 / max(refLevelA, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewünschen Maximalwert abs 1 am Progress-Anfang
-   float levelCorrection2 = 1.0 / max(refLevelB, 1E-9);                   // Erforderliche umskalierung der S-Kurve auf den gewünschen Maximalwert abs 1 am Progress-Ende
-
+   float levelCorrection1 = 1.0 / max(refLevelA, 1E-9); 
+   float levelCorrection2 = 1.0 / max(refLevelB, 1E-9);
    sCurve *= min (levelCorrection1, levelCorrection2) ;
-  
    sCurve = saturate (sCurve / 2.0 + 0.5);
    return slope < 0.4 ? lerp ( sCurve, x , (0.4 - slope) * 2.5) : sCurve;
 }
