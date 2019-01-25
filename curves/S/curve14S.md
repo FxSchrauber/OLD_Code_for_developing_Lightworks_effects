@@ -30,7 +30,7 @@ This definition avoids critical values. See the [documentation of tanh.](../../B
 float fn_curve14S (float x, float slope, float pan)
 {
    float x2 = (x * 2.0 - 1.0);
-   float sCurve  = TANH ( slope * (x2- pan) );
+   float sCurve  = TANH ( slope * (x2 - pan) );
 
    float refLevelA = abs (TANH (slope * -1.0)); 
    float refLevelB = abs (TANH (slope));
