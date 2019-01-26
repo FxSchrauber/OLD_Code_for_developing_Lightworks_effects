@@ -44,8 +44,10 @@ float fn_curve14S (float x, float slope, float pan)
 
 **Description:**  
       
-   - `float x2 = (x * 2.0 - 1.0) - pan` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1); and `- pan` 
-   - `float sCurve  = TANH ( slope * x2 );` S-curve, negative and positive values. Note that TANH is the macro described above.  
+   - `float x2 = (x * 2.0 - 1.0) - pan`  
+      Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1); and `- pan` 
+   - `float sCurve  = TANH ( slope * x2 );`  
+      S-curve, negative and positive values. Note that TANH is the macro described above.  
    - `float refLevel = abs (TANH (slope));`  
       - Functionally identical, longer code `float refLevel = abs (TANH (slope * 1.0));`
       - Reference level at the end of the curve (x = 1.0). 
