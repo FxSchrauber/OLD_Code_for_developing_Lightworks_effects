@@ -29,56 +29,49 @@ This definition avoids critical values. See the [documentation of tanh.](../../B
 ```` Code
 float fn_curve14S (float x, float slope, float pan)
 {
-   float x2 = (x * 2.0 - 1.0);
-   float sCurve  = TANH ( slope * (x2 - pan) );
+   float x2 = (x * 2.0 - 1.0) - pan;
+   float sCurve  = TANH ( slope * x2 );
 
-   float refLevelA = abs (TANH (slope * -1.0)); 
-   float refLevelB = abs (TANH (slope));
+   float refLevel = abs (TANH (slope));
+   float levelCorrection = 1.0 / max(refLevel, 1E-9);
+   sCurve *= levelCorrection  ;
 
-   float levelCorrection1 = 1.0 / max(refLevelA, 1E-9); 
-   float levelCorrection2 = 1.0 / max(refLevelB, 1E-9);
-   sCurve *= min (levelCorrection1, levelCorrection2) ;
-   sCurve = saturate (sCurve / 2.0 + 0.5);
-   return slope < 0.4 ? lerp ( sCurve, x , (0.4 - slope) * 2.5) : sCurve;
+   sCurve = slope < 0.4 ? lerp ( sCurve, x2 , (0.4 - slope) * 2.5) : sCurve;
+   return saturate (sCurve / 2.0 + 0.5);
 }
 
 ````
 
 **Description:**  
       
-   - `float x2 = (x * 2.0 - 1.0);` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1)  
-   - `float sCurve  = TANH ( slope * (x2- pan) );` S-curve, negative and positive values.  
-      Note that TANH is the macro described above.  
-   -  `float refLevelA = abs (TANH (slope * -1.0));`  Reference level at the start of the centered curve (x = -1.0).  
-   -  `float refLevelB = abs (TANH (slope));`  
-      - Functionally identical to the longer code: `float refLevelB  = abs (TANH (slope * 1.0));`  
-      - Reference level at the end of the curve (x = 1.0).  
-  - `float levelCorrection1 = 1.0 / max(refLevelA, 1E-9);`  
-      Factor by which the S-curve must be scaled so that the centered S-curve starts with the value -1.   
-      `max(refLevel, 1E-9)` prevents a division by zero.  
-  - `float levelCorrection2 = 1.0 / max(refLevelB, 1E-9);`  
-    Factor by which the S-curve must be scaled so that the centered S-curve ends with the value 1.  
-  - `sCurve *= min (levelCorrection1, levelCorrection2) ;`  
-    Rescaling the S-curve so that the value at the centered S-curve starts with the value 0, and with the value 1.  
-  - `sCurve = saturate (sCurve / 2.0 + 0.5);` Rescaling the range to 0 .. 1  
-    `saturate` prevents the start or end of a flat curve leaving the range from 0 to 1 at `pan` <> 0.  
-  - `return slope < 0.4 ? lerp ( sCurve, x , (0.4 - slope) * 2.5) : sCurve;`  
+   - `float x2 = (x * 2.0 - 1.0) - pan` Rescaling of the presupposed value range (0 .. 1) to the range required for tanh from (-1 ... +1); and `- pan` 
+   - `float sCurve  = TANH ( slope * x2 );` S-curve, negative and positive values. Note that TANH is the macro described above.  
+   - `float refLevel = abs (TANH (slope));`  
+      - Functionally identical, longer code `float refLevel = abs (TANH (slope * 1.0));`
+      - Reference level at the end of the curve (x = 1.0). 
+   - `float levelCorrection = 1.0 / max(refLevel, 1E-9);`  
+      Factor by which the S-curve must be scaled so that the respective ends result in -1 or +1.  
+      `max(refLevel, 1E-9)` prevents a division by zero.
+   - `sCurve *= levelCorrection;`  Rescaling the S-curve so that the value at the respective ends of the S-curve is -1 or +1.
+  - `return slope < 0.4 ? lerp ( sCurve, x2 , (0.4 - slope) * 2.5) : sCurve;`  
     This code reduces mathematical inaccuracies when `slope` values are set close to 0.  
     At `slope` 0, the values of the variable `sCurve`, before rescaling, are a horizontal line with the value 0.  
     However, the previous code `sCurve *= min (levelCorrection1, levelCorrection2)`  
     tries to multiply the value 0 extremely to produce a curve (ramp) from -1 to +1.  
-    Because this is impossible, the input value `x` is used instead:  
-    With `slope` values of zero, `x` is used as the return value. 
+    Because this is impossible, the value `x2` is used instead:  
+    With `slope` values of zero, `x2` is used as the return value. 
     Input value and return value are therefore identical in this case.  
     With positive `slope` values of >=0.4 , the sCurve is used.  
-    With `slope` 0.2 the values of the sCurve and `x` are mixed in equal proportions.  
+    With `slope` 0.2 the values of the sCurve and `x2` are mixed in equal proportions.  
     - `(0.4 - slope) * 2.5)` defines the mixing ratio.  
       - If `slope` has the value 0.4, then the formula results in the control value 1.0, 
       whereby `lerp` is used only the sCurve.  
        - If `slope` has the value 0.0, then the formula results in the control value 1.0, 
-      whereby `lerp` will only use `x`, which is already flattened at this value so 
-      that it is very similar to the input value `x`.  
-       - Negative `slope` - values are not allowed.
+      whereby `lerp` will only use `x2`, which is already flattened at this value so 
+      that it is very similar to the value `x2`.  
+       - Negative `slope` - values are not allowed. (negative values only generated a simple ramp with higher slope than the S-curve for the GPU used for the test)
+  - `return saturate (sCurve / 2.0 + 0.5)` Rescaling the range to 0 .. 1  
+    `saturate` prevents the start or end of a flat curve leaving the range from 0 to 1 at `pan` <> 0.
 
 
 ---
