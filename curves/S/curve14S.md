@@ -59,13 +59,12 @@ float fn_curve14S (float x, float slope, float pan)
     However, the previous code `sCurve *= min (levelCorrection1, levelCorrection2)`  
     tries to multiply the value 0 extremely to produce a curve (ramp) from -1 to +1.  
     Because this is impossible, the value `x2` is used instead:  
-    With `slope` values of zero, `x2` is used as the return value. 
-    Input value and return value are therefore identical in this case.  
-    With positive `slope` values of >=0.4 , the sCurve is used.  
+    With `slope` values of zero, `x2` is used as the `sCurve` value.  
+    With positive `slope` values of >=0.4 , the previously calculated sCurve value is used.  
     With `slope` 0.2 the values of the sCurve and `x2` are mixed in equal proportions.  
     - `(0.4 - slope) * 2.5)` defines the mixing ratio.  
       - If `slope` has the value 0.4, then the formula results in the control value 1.0, 
-      whereby `lerp` is used only the sCurve.  
+      whereby `lerp` is used only the previously calculated sCurve value.  
        - If `slope` has the value 0.0, then the formula results in the control value 1.0, 
       whereby `lerp` will only use `x2`, which is already flattened at this value so 
       that it is very similar to the value `x2`.  
