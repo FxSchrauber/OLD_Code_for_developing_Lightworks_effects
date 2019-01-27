@@ -16,7 +16,9 @@
 |                                                         |    Improved precision of the return value         |
 |                                                         |    (Limited parameter ranges)                     |
 
-
+  
+---
+       
 
 |              [curve14S](curve14S.md)                    |        |
 |:-------------------------------------------------------:|:-------------------------------------------------:|
@@ -25,6 +27,7 @@
 |      Adjustable X-position of the S-curve.              |        |
 |   [![](thumbnails/curve14S.png)](curve14S.md)           |        |
 
+---
 
   
 ### More S-Curves:
