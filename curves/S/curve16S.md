@@ -6,7 +6,7 @@
    - It is ensured that the curve begins and ends with saturated values (0 and 1).
    - This automatic correction may make the curve steeper than originally set. 
      If the curve position is shifted, this automatic correction can also bring the original S-curve closer to a ramp shape. 
-     This can be seen in the [video](video/curve16S.mp4).  
+     This can be seen in the [video](video/curve16S.mp4?raw=true).
 
 ## Image has yet to be created!
 ![](img/curve16S.png)  
