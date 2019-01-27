@@ -73,7 +73,7 @@ float fn_curve16S (float x, float slope, float pan)
    - `sCurve *= min (levelCorrection1, levelCorrection2) ;`  
      Rescaling the S-curve so that the value at the S-curve starts with the value -1, and ends with the value +1.  
 
-   - `float x3 = x2 * (1.0 / max ( (1.0 - abs(pan)), 1E-9) );`
+   - `float x3 = x2 * (1.0 / max ( (1.0 - abs(pan)), 1E-9) );`  
      `x3` is an automatically variable ramp which is used in the following code line 
      to increase the precision of the curve values at very low `slope` values.
      - `(1.0 - abs(pan))` Rescaled absolute `pan` value
