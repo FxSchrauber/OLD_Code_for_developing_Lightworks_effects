@@ -1,4 +1,4 @@
- curve16S
+# curve16S
 
 - S-curve with adjustable slope based on tanh. 
 - Adjustable X-position of the S-curve.
