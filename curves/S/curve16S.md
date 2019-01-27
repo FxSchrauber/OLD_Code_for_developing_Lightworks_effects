@@ -1,11 +1,11 @@
-# curve16S
+ curve16S
 
 - S-curve with adjustable slope based on tanh. 
 - Adjustable X-position of the S-curve.
 - Similar functionality as curve14S, but:  
    - It is ensured that the curve begins and ends with saturated values (0 and 1).
    - This automatic correction may make the curve steeper than originally set. 
-     If the curve position is shifted, this automatic correction can also cause the original S curve to approach a ramp shape. 
+     If the curve position is shifted, this automatic correction can also bring the original S-curve closer to a ramp shape. 
      This can be seen in the [video](video/curve16S.mp4).  
 
 ## Image has yet to be created!
@@ -85,7 +85,7 @@ float fn_curve16S (float x, float slope, float pan)
         - results in the value 2 for `pan` = 0.5
         - results in the value 1E9 for `pan` = 1
      - `x2` is the base ramp from -1 to +1
-     - `x2 * (1.0 / max ( (1.0 - abs(pan)), 1E-9) );` 
+     - `x2 * (1.0 / max ( (1.0 - abs(pan)), 1E-9) );`  
        Changes the ramp slope depending on the set position of the S-curve.
         - Unchanged with centered curve (`pan` = 0).
         - Double slope at `pan` = 0.5
@@ -106,7 +106,8 @@ float fn_curve16S (float x, float slope, float pan)
        - If `slope` has the value 0.0, then the formula results in the control value 1.0, 
       whereby `lerp` will only use `x2`, which is already flattened at this value so 
       that it is very similar to the value `x2`.  
-       - Negative `slope` - values are not allowed. (negative values only generated a simple ramp with higher slope than the S-curve for the GPU used for the test)
+       - Negative `slope` - values are not allowed. 
+       (negative values only generated a simple ramp with higher slope than the S-curve for the GPU used for the test)
   - `return saturate (sCurve / 2.0 + 0.5)` Rescaling the range to 0 .. 1  
     `saturate` prevents the start or end of a flat curve leaving the range from 0 to 1 at `pan` <> 0.
 
