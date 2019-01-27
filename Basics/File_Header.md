@@ -1,25 +1,28 @@
 ## Example of a file header:
 
 ``` Code
-// @Maintainer jwrl
-// @Released 2018-05-25
-// @Author khaver
-// @Author Daniel Taylor
-// @Created 2018-05-24
-// @see https://www.lwks.com/media/kunena/attachments/6375/PencilSketch_640.png
+// @Maintainer [Optional]
+// @Released [Required]
+// @Author [Required - repeat if more than one author]
+// @Created [Required]
+// @see [PNG or JPEG screen grab - repeat for more images or MP4 examples of use]
+
+/**
+ PLACE DESCRIPTION HERE USING AS MANY LINES AS NECESSARY
+*/
+
 //-----------------------------------------------------------------------------------------//
-// Lightworks user effect PencilSketch.fx
-// Effect Description ...
-// ......................
-// ......................
+// Lightworks user effect MyEffect.fx
+//
+// PLACE REVISION HISTORY HERE
 //-----------------------------------------------------------------------------------------//
 
 int _LwksEffectInfo
 <
    string EffectGroup = "GenericPixelShader";
-   string Description = "Pencil Sketch";
-   string Category    = "Stylize";
-   string SubCategory = "Art Effects";
-   string Notes = "Pencil sketch effect with sat/gama/cont/bright/gain/overlay/alpha controls";
+   string Description = "...";
+   string Category    = "...";
+   string SubCategory = "...";
+   string Notes       = "...";
 > = 0;
 ```
