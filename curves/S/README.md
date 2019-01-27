@@ -15,7 +15,17 @@
 |                                                         |     [curve12cS](curve12S.md#curve12cS)            |    
 |                                                         |    Improved precision of the return value         |
 |                                                         |    (Limited parameter ranges)                     |
-  
+
+
+
+|              [curve14S](curve14S.md)                    |        |
+|:-------------------------------------------------------:|:-------------------------------------------------:|
+|            **S-Curve**, 0 to 1 or 1 to 0                |        |
+|      Adjustable slope based on tanh.                    |        |
+|      Adjustable X-position of the S-curve.              |        |
+|   [![](thumbnails/curve14S.png)](curve14S.md)           |        |
+
+
   
 ### More S-Curves:
  [S-curves that use the effect progress as a parameter.](../../Auto-synced_parameters/progress/README.md#s-curves)
