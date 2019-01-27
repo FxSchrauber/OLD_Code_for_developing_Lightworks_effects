@@ -20,15 +20,17 @@
 ---
        
 
-|              [curve14S](curve14S.md)                    |        |
+|              [curve14S](curve14S.md)                    |          [curve16S](curve16S.md)                  |
 |:-------------------------------------------------------:|:-------------------------------------------------:|
-|            **S-Curve**, 0 to 1 or 1 to 0                |        |
-|      Adjustable slope based on tanh.                    |        |
-|      Adjustable X-position of the S-curve.              |        |
-|   [![](thumbnails/curve14S.png)](curve14S.md)           |        |
+|            **S-Curve**, 0 to 1 or 1 to 0                |       **S-Curve**, 0 to 1 or 1 to 0               |
+|      Adjustable slope based on tanh.                    |      Adjustable slope based on tanh.              |
+|      Adjustable X-position of the S-curve.              |      Adjustable X-position of the S-curve.        |
+|                                                         |   Starts and ends with saturated levels. (0 or 1) |
+|   [![](thumbnails/curve14S.png)](curve14S.md)           |   [![](thumbnails/curve16S.png)](curve16S.md)     |
 
 ---
 
   
 ### More S-Curves:
+#### Based on cos
  [S-curves that use the effect progress as a parameter.](../../Auto-synced_parameters/progress/README.md#s-curves)
