@@ -1,8 +1,8 @@
 # Version14_5_check
 
-### This code checks whether the Lightworks version used supports all the auto-synced parameters 
-    and definitions supported by version 14.5. 
-    If the incompatibility is detected, then a meaningful compiler warning is generated.
+**This code checks whether the Lightworks version used supports all the auto-synced parameters and definitions 
+supported by version 14.5.  
+If the incompatibility is detected, then a meaningful compiler warning is generated.**
 
 ---
   
@@ -26,7 +26,7 @@
   An overview of what is supported from which version can be found in the 
   [Basics](../Basics/Variables_etc/Auto_synced/README.md).
     
-- `Bad_LW_version`  Forces a compiler error if the Lightworks version is bad.
+- `Bad_LW_version`  Forces a compiler error if the Lightworks version is bad.  
   Error message `error X3000: unrecognised identifier 'Bad_LW_version'` 
 
 
