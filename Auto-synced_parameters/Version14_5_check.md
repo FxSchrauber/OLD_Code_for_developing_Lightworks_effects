@@ -10,7 +10,7 @@ If the incompatibility is detected, then a meaningful compiler warning is genera
 
 ```` Code
 //--------------------------------------------------------------//
-// Compatibility check, and build a meaningful compiler warning ;
+// Compatibility check, and build a meaningful compiler warning
 //--------------------------------------------------------------//
 // Code ID: Version14_5_check 
 
