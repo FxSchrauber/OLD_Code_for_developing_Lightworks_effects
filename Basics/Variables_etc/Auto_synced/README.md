@@ -37,7 +37,7 @@ float _LengthFrames;
 ---
 ---
 
-## Preprocessor, predefined:
+## Preprocessor, predefined (starting with Lightworks 14.5):
 
 To avoid unexpected results when using older versions of Lightworks,  
 the availability of variables can now be checked (LW 14.5).  
@@ -79,5 +79,7 @@ Example of a platform analysis:
 #endif
 ```
 
-Discussions and ideas:  
+[Example Code](../../Auto-synced_parameters/README.md)
+
+More ideas and Discussions:  
 [www.lwks.com start from page 8](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=105&Itemid=81#ftop) below of this thread and continue on the following pages.
