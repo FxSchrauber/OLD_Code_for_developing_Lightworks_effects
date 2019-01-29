@@ -79,7 +79,7 @@ Example of a platform analysis:
 #endif
 ```
 
-[Example Code](../../Auto-synced_parameters/README.md)
+[Example Code](../../../Auto-synced_parameters/README.md)
 
 More ideas and Discussions:  
 [www.lwks.com start from page 8](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=105&Itemid=81#ftop) below of this thread and continue on the following pages.
