@@ -29,8 +29,8 @@ Not all of the features listed there are available in Lightworks or across platf
 
    - **`abs`**     returns absolute value of scalars and vectors.  
    - **`ceil`**    Round up
-   - **`floor`**   Returns a floating-point type where all digits to the right of the decimal point are 0. 
-   - **`fmod`**    Round off
+   - **`floor`**   Round off (Returns a floating-point type where all digits to the right of the decimal point are 0.) 
+   - **`fmod`**    Returns the remainder of a division.
    - **`frac`**    returns the fractional portion of a scalar or each vector component. 
    - **`modf`**    decompose a ﬂoat into integer and fractional parts.
    - **`round`**   [Issues were reported regarding threshold  x.5. ; see lwks.com post#172865](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=255&Itemid=81#172865)
