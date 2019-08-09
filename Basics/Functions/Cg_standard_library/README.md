@@ -29,7 +29,7 @@ Not all of the features listed there are available in Lightworks or across platf
 
    - **`abs`**     returns absolute value of scalars and vectors.  
    - **`ceil`**    Round up
-   - **`floor`**   Round off (Returns a floating-point type where all digits to the right of the decimal point are 0.) 
+   - **`floor`**   Round off
    - **`fmod`**    Returns the remainder of a division.
    - **`frac`**    returns the fractional portion of a scalar or each vector component. 
    - **`modf`**    decompose a ﬂoat into integer and fractional parts.
