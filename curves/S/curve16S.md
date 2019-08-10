@@ -126,7 +126,7 @@ float fn_curve16S (float x, float slope, float pan)
    - **Type:** `float`, local   
 
 3. `pan`: Changing the x-position of the S-curve
-   - **Value range**: 0 to <1
+   - **Value range**: -1 to +1
       - Centered when `pan` is set to 0
       - If `pan` = -0.5 is used, the center of the S-curve is shifted 25% to the left on the x-axis.
       - If `pan` = +0.5 is used, the center of the S-curve is shifted 25% to the right on the x-axis.
