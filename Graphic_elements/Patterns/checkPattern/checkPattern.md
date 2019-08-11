@@ -1,9 +1,9 @@
-# checkPattern  [![](images/checkPattern-thumb.png)](images/checkPattern.png)
+# checkPattern  [![](../images/checkPattern-thumb.png)](../images/checkPattern.png)
 
 **Function call:** `fn_checkPattern (uv, color1, color2, numberH);`  
 
 Example with values: `fn_checkPattern (uv, 0.0.xxx, 1.0.xxx, 20.0);`
-(Result [see image](images/checkPattern.png))
+(Result [see image](../images/checkPattern.png))
   
 --- 
   
@@ -89,4 +89,4 @@ the images linked below show these values as grayscale (for illustration purpose
 
 
 ### Screenshot  
-![](images/checkPattern.png)
+![](../images/checkPattern.png)
