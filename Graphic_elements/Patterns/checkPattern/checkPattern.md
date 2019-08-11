@@ -31,8 +31,8 @@ When making code changes, note that `color1` and `color2` must have the same flo
 the images linked below show these values as grayscale (for illustration purposes only).
 
 `round (frac (uv.x * numberH ))` [creates vertical lines](img/03.pmg)  
-   - `frac (uv.x)` [creates these](01.png)  
-   - `frac (uv.x * numberH )`if `numberH` = 5.0, [this is the result](02.png)
+   - `frac (uv.x)` [creates these](img/01.png)  
+   - `frac (uv.x * numberH )`if `numberH` = 5.0, [this is the result](img/02.png)
 
 
 ---
