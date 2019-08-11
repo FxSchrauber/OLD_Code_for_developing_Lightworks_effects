@@ -8,7 +8,7 @@ Example with values: `fn_checkPattern (uv, 0.0.xxx, 1.0.xxx, 20.0);`
 --- 
   
 ***Purpose:***  
-Generating a selectable number of of squares with changing color or brightness or other RGB source.    
+Generating a selectable number of squares with changing color or brightness or other RGB source.    
 This can be a color, or a texture from a sampler.    
 More details see the parameter descriptions.  
 
