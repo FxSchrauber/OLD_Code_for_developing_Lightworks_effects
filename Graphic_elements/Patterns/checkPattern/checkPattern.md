@@ -32,7 +32,7 @@ the images linked below show these values as grayscale (for illustration purpose
 
 `round (frac (uv.x * numberH ))` [creates vertical lines](img/03.png)  
    - `frac (uv.x)` [creates these](img/01.png)  
-   - `frac (uv.x * numberH )`if `numberH` = 5.0, [this is the result](img/02.png)
+   - `frac (uv.x * numberH )` [this is the result](img/02.png) (if `numberH` = 5.0)
 
 
 ---
