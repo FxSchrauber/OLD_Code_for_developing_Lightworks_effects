@@ -1,4 +1,4 @@
-# Pattern
+# Patterns
 
 ### Check Pattern
   - [checkPattern](checkPattern.md)  
