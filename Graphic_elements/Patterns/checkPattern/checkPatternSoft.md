@@ -91,7 +91,7 @@ When making code changes, note that `color1` and `color2` must have the same flo
 
 ---
 
- ### Return value:
+### Return value:
    - The value of the parameter `color1` or `color2` (in the change of squares) 
    - **Type: float3** (same type as `color1` and `color2`)    
    - Value range: 0.0 to 1.0  
