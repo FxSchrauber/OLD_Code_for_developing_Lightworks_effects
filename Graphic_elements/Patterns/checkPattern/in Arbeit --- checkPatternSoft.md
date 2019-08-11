@@ -113,8 +113,17 @@ float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float numb
    return lerp (color1, color2, mix);
 }
 ````
-`float x =  sin (uv.x * PI * numberH );`
-
+`float x =  sin (uv.x * PI * numberH );` [this is the result](img/51.png) *(if `numberH` = 5.0)*  
+The following two lines of code increase the sharpness:
+```` Code
+x *=  edgeSharpness / numberH;
+x =  clamp( x, -0.5, 0.5);        // -0.5 +0.5`
+````
+``
+``
+``
+``
+``
 
 
 ---
