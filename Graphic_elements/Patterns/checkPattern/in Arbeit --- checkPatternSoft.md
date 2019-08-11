@@ -113,8 +113,8 @@ float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float numb
 { 
    float x =  sin (uv.x * PI * numberH );
    x *=  edgeSharpness / numberH;
-   x =  clamp( x, -0.5, 0.5);        // -0.5 +0.5
-   x += 0.5 ;                        //  0 to 1
+   x =  clamp( x, -0.5, 0.5);        // range -0.5 +0.5
+   x += 0.5 ;                        // range 0 to 1
 
  float y =  sin (uv.y * ((numberH * PI) / _OutputAspectRatio));
    y *=  edgeSharpness/ numberH;
@@ -126,13 +126,13 @@ float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float numb
 }
 ````
 `float x =  sin (uv.x * PI * numberH );` [this is the result](img/51.png) *(if `numberH` = 5.0)*  
+
 The following two lines of code increase the sharpness:
 ```` Code
 x *=  edgeSharpness / numberH;
-x =  clamp( x, -0.5, 0.5);        // -0.5 +0.5`
+x =  clamp( x, -0.5, 0.5);   // range -0.5 +0.5`
 ````
-``
-``
+` x += 0.5 ; ` [Move to the normal range from 0 to 1](img/54.png)
 ``
 ``
 ``
