@@ -1,5 +1,3 @@
-# ´´´´´´´in Arbeit --------------
-
 # checkPatternSoft  [![](../images/checkPatternSoft-thumb.png)](../images/checkPatternSoft.png)
 
 **Function call:** `fn_checkPatternSoft (uv, color1, color2, numberH, edgeSharpness);`  
@@ -29,7 +27,7 @@ float _OutputAspectRatio;
 ````
 ---
 
-#### Code (Example as a float3 RGB function without alpha):
+### Code (Example as a float3 RGB function without alpha):
 ```` Code
 float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float2 numberH, float edgeSharpness)
 { 
@@ -48,7 +46,7 @@ Code description at the bottom of this page.
 ---
 ---
 
-#### Parameter Description  
+### Parameter Description  
   
    1. `uv`:  
      Enter the name of the used texture coordinate variable.  
@@ -81,7 +79,7 @@ Code description at the bottom of this page.
 
 ---
 
- #### Return value:
+ ### Return value:
    - The value of the parameter `color1` or `color2` (in the change of squares) 
    - **Type: float3** (same type as `color1` and `color2`)    
    - Value range: 0.0 to 1.0  
@@ -90,10 +88,13 @@ Code description at the bottom of this page.
 ---
 ---
 
+### Code description
 
 **Code description in illustrated form:**  
 (Where one-dimensional float values are created in the code, 
 the images linked below show these values as grayscale (for illustration purposes only).
+
+
 
 
 
