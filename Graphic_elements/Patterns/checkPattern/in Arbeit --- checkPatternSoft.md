@@ -40,7 +40,7 @@ float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float2 num
 ````   
 When making code changes, note that `color1` and `color2` must have the same float type.
 
-Code description at the bottom of this page.
+[Code description at the bottom of this page.](#code-description)
 
 
 ---
