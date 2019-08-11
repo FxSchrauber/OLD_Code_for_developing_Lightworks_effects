@@ -100,12 +100,8 @@ When making code changes, note that `color1` and `color2` must have the same flo
 ---
 ---
 
-### Code description
+### Code description  
 
-**Code description in illustrated form:**  
-(Where one-dimensional float values are created in the code, 
-the images linked below show these values as grayscale (for illustration purposes only).  
-  
 The code at the top of this page is compressed.  
 For a better understanding, the uncompressed code is described here:
 ```` Code
@@ -125,6 +121,11 @@ float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float numb
    return lerp (color1, color2, mix);
 }
 ````
+**Code description in illustrated form:**  
+(Where one-dimensional float values are created in the code, 
+the images linked below show these values as grayscale (for illustration purposes only).  
+
+Vertical lines:  
 `float x =  sin (uv.x * PI * numberH );` [this is the result](img/51.png) *(if `numberH` = 5.0)*  
 
 The following two lines of code increase the sharpness:
@@ -132,10 +133,17 @@ The following two lines of code increase the sharpness:
 x *=  edgeSharpness / numberH;
 x =  clamp( x, -0.5, 0.5);   // range -0.5 +0.5`
 ````
-` x += 0.5 ; ` [Move to the normal range from 0 to 1](img/54.png)
-``
-``
-``
+` x += 0.5 ; ` [Move to the normal range from 0 to 1](img/54.png)  
+
+[Horizontal lines:](img/61.png)
+```` Code
+ float y =  sin (uv.y * ((numberH * PI) / _OutputAspectRatio));
+   y *=  edgeSharpness/ numberH;
+   y =  clamp( y, -0.5, 0.5);
+   y+= 0.5 ; 
+````
+`float mix = lerp( y , 1.0 - y, x);`
+
 
 
 ---
