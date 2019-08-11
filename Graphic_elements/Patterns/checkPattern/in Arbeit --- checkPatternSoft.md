@@ -142,7 +142,10 @@ x =  clamp( x, -0.5, 0.5);   // range -0.5 +0.5`
    y =  clamp( y, -0.5, 0.5);
    y+= 0.5 ; 
 ````
-`float mix = lerp( y , 1.0 - y, x);`
+
+`float mix = lerp( y , 1.0 - y, x);` [Pattern generation from the vertical and horizotal lines.](img/71.png)  
+
+`return lerp (color1, color2, mix);` Assignment to the set colors.  
 
 
 
