@@ -35,7 +35,7 @@ the images linked below show these values as grayscale (for illustration purpose
    - `frac (uv.x * numberH )` [this is the result](img/02.png) *(if `numberH` = 5.0)*  
    
 `float y =  frac (uv.y * (numberH / _OutputAspectRatio) );` [creates these](img/11.png)  
-`x = (y >= 0.5) ? x : 1.0 - x;` [combines `x` and `y` to a pattern](img/21.png)  
+`x = (y >= 0.5) ? x : 1.0 - x;` combines `x` and `y` to a [pattern](img/21.png)  
  return lerp (color2, color1, x); Assigns the value of `x` to one of the two colors.
 
 
