@@ -24,10 +24,16 @@ float3 fn_checkPattern  (float2 uv, float3 color1, float3 color2, float numberH)
    return lerp (color2, color1, x);
 }
 ````   
-
-
-
 When making code changes, note that `color1` and `color2` must have the same float type.
+
+**Description in illustrated form:**
+(Where one-dimensional float values are created in the code, 
+the images linked below show these values as grayscale (for illustration purposes only).
+
+`round (frac (uv.x * numberH ))` [creates vertical lines](img/03.pmg)  
+   - `frac (uv.x)` [creates these](01.png)  
+   - `frac (uv.x * numberH )`if `numberH` = 5.0, [this is the result](02.png)
+
 
 ---
 ---
