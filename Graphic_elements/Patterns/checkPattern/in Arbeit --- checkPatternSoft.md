@@ -1,27 +1,43 @@
-# checkPattern  [![](../images/checkPattern-thumb.png)](../images/checkPattern.png)
+# ´´´´´´´in Arbeit --------------
 
-**Function call:** `fn_checkPattern (uv, color1, color2, numberH);`  
+# checkPatternSoft  [![](../images/checkPatternSoft-thumb.png)](../images/checkPatternSoft.png)
 
-Example with values: `fn_checkPattern (uv, 0.0.xxx, 1.0.xxx, 20.0);`
-(Result [see image](../images/checkPattern.png))
+**Function call:** `fn_checkPatternSoft (uv, color1, color2, numberH, edgeSharpness);`  
+
+Example with values: `fn_checkPatternSoft (uv, 0.0.xxx, 1.0.xxx, 20.0, 1000.0);`
+(Result [see image]../images/checkPatternSoft.png))
   
 --- 
   
 ***Purpose:***  
 Generating a selectable number of of squares with changing color or brightness or other RGB source.    
-This can be a color, or a texture from a sampler.    
+This can be a color, or a texture from a sampler. 
+Adjustable edge softness of the squares.   
 More details see the parameter descriptions.  
 
+---
+    
+### Required global definitions and declarations:
+*(add outside and above all shaders and functions):*
+```` Code
+//-----------------------------------------------------------------------------------------//
+// Definitions and declarations
+//-----------------------------------------------------------------------------------------//
+
+float _OutputAspectRatio;
+#define PI  3.141592654
+````
 ---
 
 #### Code (Example as a float3 RGB function without alpha):
 ```` Code
-float3 fn_checkPattern  (float2 uv, float3 color1, float3 color2, float numberH)
+float3 fn_checkPatternSoft (float2 uv, float3 color, float3 bgVariable, float2 numberH, float edgeSharpness)
 { 
-   float x =  round (frac (uv.x * numberH ));
-   float y =  frac (uv.y * (numberH / _OutputAspectRatio) );
-   x = (y >= 0.5) ? x : 1.0 - x;
-   return lerp (color2, color1, x);
+   numberH.y /= _OutputAspectRatio;
+   float2 mix =  sin (uv * PI * numberH ) * edgeSharpness / numberH;
+   mix =  clamp( mix, -0.5, 0.5) + 0.5; 
+   mix.x = lerp( mix.y , 1.0 - mix.y, mix.x);
+   return lerp (bgVariable, color, mix.x);
 }
 ````   
 When making code changes, note that `color1` and `color2` must have the same float type.
@@ -47,13 +63,6 @@ the images linked below show these values as grayscale (for illustration purpose
    1. `uv`:  
      Enter the name of the used texture coordinate variable.  
      **Type: `float2`**  
-     When using uncleaned texture coordinates based on TEXCOORD0, 
-     there may be small dots on the edges of the squares (Windows based operating systems).  
-     This is not the case when using texture coordinates which refer to an input, 
-     but this requires that something is always connected to this input.
-     Alternatively you can use the code [checkPatternSoft](checkPatternSoft.md).
-     Due to the integrated edge softness, 
-     the alternative code also gives you clean edges with TEXCOORD0 based coordinates.
       
 
 ---
@@ -76,7 +85,7 @@ the images linked below show these values as grayscale (for illustration purpose
 ---
 
    4. `numberH`:  
-     Number of squares of the same color in a horizontal line.  
+     Number of squares in a horizontal line.  
      **Type: `float`**  
 
 
