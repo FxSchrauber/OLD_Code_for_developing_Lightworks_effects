@@ -31,22 +31,18 @@ float _OutputAspectRatio;
 
 #### Code (Example as a float3 RGB function without alpha):
 ```` Code
-float3 fn_checkPatternSoft (float2 uv, float3 color, float3 bgVariable, float2 numberH, float edgeSharpness)
+float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float2 numberH, float edgeSharpness)
 { 
    numberH.y /= _OutputAspectRatio;
    float2 mix =  sin (uv * PI * numberH ) * edgeSharpness / numberH;
    mix =  clamp( mix, -0.5, 0.5) + 0.5; 
    mix.x = lerp( mix.y , 1.0 - mix.y, mix.x);
-   return lerp (bgVariable, color, mix.x);
+   return lerp (color1, color2, mix.x);
 }
 ````   
 When making code changes, note that `color1` and `color2` must have the same float type.
 
-**Description in illustrated form:**  
-(Where one-dimensional float values are created in the code, 
-the images linked below show these values as grayscale (for illustration purposes only).
-
-... in Arbeit ...
+Code description at the bottom of this page.
 
 
 ---
@@ -95,5 +91,13 @@ the images linked below show these values as grayscale (for illustration purpose
 ---
 
 
+**Code description in illustrated form:**  
+(Where one-dimensional float values are created in the code, 
+the images linked below show these values as grayscale (for illustration purposes only).
+
+
+
+---
+---
 ### Screenshot  
 ![](../images/checkPatternSoft.png)
