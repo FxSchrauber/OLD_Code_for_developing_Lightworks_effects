@@ -92,9 +92,28 @@ When making code changes, note that `color1` and `color2` must have the same flo
 
 **Code description in illustrated form:**  
 (Where one-dimensional float values are created in the code, 
-the images linked below show these values as grayscale (for illustration purposes only).
+the images linked below show these values as grayscale (for illustration purposes only).  
+  
+The code at the top of this page is compressed.  
+For a better understanding, the uncompressed code is described here:
+```` Code
+float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float numberH, float edgeSharpness)
+{ 
+   float x =  sin (uv.x * PI * numberH );
+   x *=  edgeSharpness / numberH;
+   x =  clamp( x, -0.5, 0.5);        // -0.5 +0.5
+   x += 0.5 ;                        //  0 to 1
 
+ float y =  sin (uv.y * ((numberH * PI) / _OutputAspectRatio));
+   y *=  edgeSharpness/ numberH;
+   y =  clamp( y, -0.5, 0.5);
+   y+= 0.5 ; 
 
+   float mix = lerp( y , 1.0 - y, x);
+   return lerp (color1, color2, mix);
+}
+````
+`float x =  sin (uv.x * PI * numberH );`
 
 
 
