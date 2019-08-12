@@ -2,7 +2,7 @@
 
 **Function call:** `fn_linePatternD01 (uv, color1, color2, numberH, edgeSharpness);`  
 
-Example with values: `fn_linePatternD01 (uv, float3(0.1, 0.1, 0.4), float3(0.9, 0.3, 0.0), 20.0, 1000.0);`
+Example with values: `fn_linePatternD01 (uv, float3(0.1, 0.1, 0.4), float3(0.9, 0.3, 0.0), 20.0, 1000.0);`  
 (Result [see image](../images/linePatternD01.png))
   
 --- 
