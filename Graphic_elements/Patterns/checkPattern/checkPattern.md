@@ -14,7 +14,7 @@ More details see the parameter descriptions.
 
 ---
     
-### Required global definitions and declarations:
+#### Required global definitions and declarations:
 *(add outside and above all shaders and functions):*
 ```` Code
 //-----------------------------------------------------------------------------------------//
