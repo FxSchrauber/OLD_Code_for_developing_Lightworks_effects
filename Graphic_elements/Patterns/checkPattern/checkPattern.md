@@ -2,8 +2,10 @@
 
 **Function call:** `fn_checkPattern (uv, color1, color2, numberH);`  
 
-Example with values: `fn_checkPattern (uv, 0.0.xxx, 1.0.xxx, 20.0);`
-(Result [see image](../images/checkPattern.png))
+Example with values: `fn_checkPattern (uv, 0.0.xxx, 1.0.xxx, 20.0);`  
+(Result [see image](../images/checkPattern.png))  Note that the quality may depend on the texture coordinates used.  
+In this screenshot this problem has been made visible for demonstration purposes.  
+For further details see parameter description `uv` . 
   
 --- 
   
