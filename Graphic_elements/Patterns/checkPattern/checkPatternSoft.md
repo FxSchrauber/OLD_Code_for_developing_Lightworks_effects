@@ -75,8 +75,8 @@ When making code changes, note that `color1` and `color2` must have the same flo
    4. `numberH`:  
      Number of squares in a horizontal line.  
      **Type: `float`**  
-     Value range: > +1   or < -1
-     **Illegal value is 0** (leads to division by 0)
+     Value range: > +1   or < -1  
+     **Illegal value is 0** (leads to division by 0)  
 
 
 ---
@@ -84,15 +84,15 @@ When making code changes, note that `color1` and `color2` must have the same flo
    5. `edgeSharpness`:  
      Edge sharpness of the squares  
      **Type: `float`**  
-     Value range: > +1   or < -1 
+     Value range: > +1   or < -1  
      Values around 1000 and above result in relatively sharp edges for HD formats.  
-     At 200 and below, the edge smoothness is clearly visible.
+     At 200 and below, the edge smoothness is clearly visible.  
 
 
 ---
 
 ### Return value:
-   - The value of the parameter `color1` or `color2` (in the change of squares) 
+   - The value of the parameter `color1` or `color2` (in the change of squares)  
    - **Type: float3** (same type as `color1` and `color2`)    
    - Value range: 0.0 to 1.0  
 
