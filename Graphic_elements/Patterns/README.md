@@ -7,7 +7,9 @@
      
   - [linePatternD02](linePatterns/linePatternD02.md)  
      Generating a selectable number of squares with changing color or brightness or other RGB source.    
-     [![](images/linePatternD02-thumb.png)](linePatterns/linePatternD02.md)
+     [![](images/linePatternD02-thumb.png)](linePatterns/linePatternD02.md)  
+     
+*[Click here for more graphic line code.](../Lines/README.md)*
 
 ### Check Patterns
   - [checkPattern](checkPattern/checkPattern.md)  
