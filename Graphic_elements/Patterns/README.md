@@ -1,6 +1,15 @@
 # Patterns
 
-### Check Pattern
+### Line Patterns
+  - [linePatternD01](checkPattern/linePatternD01.md)  
+     Generating a selectable number of squares with changing color or brightness or other RGB source.    
+     [![](images/linePatternD01-thumb.png)](checkPattern/linePatternD01.md)  
+     
+  - [linePatternD02](checkPattern/linePatternD02.md)  
+     Generating a selectable number of squares with changing color or brightness or other RGB source.    
+     [![](images/linePatternD02-thumb.png)](checkPattern/linePatternD02.md)
+
+### Check Patterns
   - [checkPattern](checkPattern/checkPattern.md)  
      Generating a selectable number of squares with changing color or brightness or other RGB source.    
      [![](images/checkPattern-thumb.png)](checkPattern/checkPattern.md)  
