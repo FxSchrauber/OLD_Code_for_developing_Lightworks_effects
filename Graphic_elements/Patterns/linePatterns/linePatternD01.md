@@ -8,8 +8,9 @@ Example with values: `fn_linePatternD01 (uv, float3(0.1, 0.1, 0.4), float3(0.9, 
 --- 
   
 ***Purpose:***  
-Creates a pattern of a selectable number of symmetrical diagonal lines of alternating color or brightness or another RGB source.     
-This can be a color, or a texture from a sampler. 
+Creates a pattern of a selectable number of symmetrical diagonal 45° lines  
+of alternating color or brightness or another RGB source.     
+This can be a color, or a texture from a sampler.  
 Adjustable edge softness of the squares.   
 More details see the parameter descriptions.  
 
@@ -115,8 +116,8 @@ float3 fn_linePatternD01 (float2 uv, float3 color1, float3 color2, float numberH
 ````
 **Code description:**  
  
-`float mix = uv.x + (uv.y / _OutputAspectRatio);` This manipulating the x-coordinates  
-relative to the y-coordinates (with compensation of the frame aspect ratio).  
+`float mix = uv.x + (uv.y / _OutputAspectRatio);` This produces a value that is constant in the diagonal direction, 
+from bottom left to top right, at a 45 ° angle.
 This makes the lines created in the following lines of code diagonal.  
 
 `mix =  sin (mix * PI * numberH );` Creates a diagonal wave pattern ( value range from -1 to +1).
