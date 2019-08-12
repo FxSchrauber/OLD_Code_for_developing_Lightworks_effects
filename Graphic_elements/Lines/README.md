@@ -25,3 +25,5 @@
      Generating a selectable number of horizontal or diagonal lines of equal distance across the entire frame.  
      Edge softness of the lines and much more are adjustable.  
      [![](images/multilines_total_H02-thumbnail.png)](multilines_total_H02.md)
+
+*[Click here for line code optimized for pattern generation.](../Patterns/README.md)*
