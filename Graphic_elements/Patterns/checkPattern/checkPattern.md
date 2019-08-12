@@ -13,6 +13,19 @@ This can be a color, or a texture from a sampler.
 More details see the parameter descriptions.  
 
 ---
+    
+### Required global definitions and declarations:
+*(add outside and above all shaders and functions):*
+```` Code
+//-----------------------------------------------------------------------------------------//
+// Definitions and declarations
+//-----------------------------------------------------------------------------------------//
+
+float _OutputAspectRatio;
+````
+
+---
+
 
 #### Code (Example as a float3 RGB function without alpha):
 ```` Code
