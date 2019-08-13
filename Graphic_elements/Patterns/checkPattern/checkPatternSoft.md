@@ -2,7 +2,7 @@
 
 **Function call:** `fn_checkPatternSoft (uv, color1, color2, numberH, edgeSharpness);`  
 
-Example with values: `fn_checkPatternSoft (uv, 0.0.xxx, 1.0.xxx, 20.0, 1000.0);`
+Example with values: `fn_checkPatternSoft (uv, 0.0.xxx, 1.0.xxx, 20.0, 1000.0);`  
 (Result [see image](../images/checkPatternSoft.png))
   
 --- 
