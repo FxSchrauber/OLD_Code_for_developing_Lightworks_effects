@@ -2,11 +2,13 @@
 
 ### Line Patterns
   - [linePatternD01](linePatterns/linePatternD01.md)  
-     Generating a selectable number of squares with changing color or brightness or other RGB source.    
+     Creates a pattern of a selectable number of symmetrical diagonal 45° lines  
+     of alternating color or brightness or another RGB source.    
      [![](images/linePatternD01-thumb.png)](linePatterns/linePatternD01.md)  
      
   - [linePatternD02](linePatterns/linePatternD02.md)  
-     Generating a selectable number of squares with changing color or brightness or other RGB source.    
+     Creates a pattern of a selectable number of symmetrical diagonal 45° lines  
+     of alternating color or brightness or another RGB source.   
      [![](images/linePatternD02-thumb.png)](linePatterns/linePatternD02.md)  
      
 *[Click here for more graphic line code.](../Lines/README.md)*
