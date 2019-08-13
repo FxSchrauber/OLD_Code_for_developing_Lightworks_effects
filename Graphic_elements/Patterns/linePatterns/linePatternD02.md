@@ -117,7 +117,7 @@ float3 fn_linePatternD02 (float2 uv, float3 color1, float3 color2, float numberH
 **Code description:**  
  
 `float mix = uv.x - (uv.y / _OutputAspectRatio);` This produces a value that is constant in the diagonal direction, 
-from bottom left to top right, at a 45 ° angle.
+from bottom right to top left, at a 45 ° angle.
 This makes the lines created in the following lines of code diagonal.  
 
 `mix =  sin (mix * PI * numberH );` Creates a diagonal wave pattern ( value range from -1 to +1).
