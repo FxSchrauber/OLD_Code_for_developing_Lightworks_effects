@@ -4,7 +4,7 @@
   - [linePattern](linePatterns/linePattern.md)  
      Creates a pattern of a selectable number of symmetrical horizontal or vertical lines
      of alternating color or brightness or another RGB source.    
-      [![](images/linePattern-thumb.png)](images/linePattern.md) [![](images/linePattern__b-thumb.png)](images/linePattern.md)  
+      [![](images/linePattern-thumb.png)](linePatterns/linePattern.md) [![](images/linePattern__b-thumb.png)](linePatterns/linePattern.md)  
 
   - [linePatternD01](linePatterns/linePatternD01.md)  
      Creates a pattern of a selectable number of symmetrical diagonal 45° lines  
