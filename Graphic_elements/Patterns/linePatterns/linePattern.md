@@ -1,4 +1,4 @@
-# linePattern  [![](../images/linePattern-thumb.png)](../images/linePattern.png) ![](../images/linePattern__b-thumb.png)
+# linePattern  [![](../images/linePattern-thumb.png)](../images/linePattern.png) [![](../images/linePattern__b-thumb.png)](../images/linePattern__b.png)
 
 **Function call:** `fn_linePattern (orientation, color1, color2, number, edgeSharpness);`  
 
