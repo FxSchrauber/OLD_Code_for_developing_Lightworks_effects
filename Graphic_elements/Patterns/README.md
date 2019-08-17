@@ -1,10 +1,10 @@
-# Patterns
+﻿# Patterns
 
 ### Line Patterns
-  - [linePatternD01](linePatterns/linePatternD01.md)  
-     Creates a pattern of a selectable number of symmetrical diagonal 45° lines  
+  - [linePattern](linePatterns/linePattern.md)  
+     Creates a pattern of a selectable number of symmetrical horizontal or vertical lines
      of alternating color or brightness or another RGB source.    
-     [![](images/linePatternD01-thumb.png)](linePatterns/linePatternD01.md)  
+      [![](images/linePattern-thumb.png)](images/linePattern.md) [![](images/linePattern__b-thumb.png)](images/linePattern.md)  
      
   - [linePatternD02](linePatterns/linePatternD02.md)  
      Creates a pattern of a selectable number of symmetrical diagonal 45° lines  
