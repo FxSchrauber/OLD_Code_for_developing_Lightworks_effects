@@ -29,7 +29,7 @@ More details see the parameter descriptions.
 
 ### Code (Example as a float3 RGB function without alpha):
 ```` Code
-float3 fn_linePatternV (float orientation, float3 color1, float3 color2, float number, float edgeSharpness)
+float3 fn_linePattern (float orientation, float3 color1, float3 color2, float number, float edgeSharpness)
 { 
    orientation =  sin (orientation * PI * number ) * edgeSharpness / number;
    return lerp (color1, color2, clamp( orientation, -0.5, 0.5) + 0.5);
@@ -105,7 +105,7 @@ When making code changes, note that `color1` and `color2` must have the same flo
 The code at the top of this page is compressed.  
 For a better understanding, the uncompressed code is described here:
 ```` Code
-float3 fn_linePatternV (float orientation, float3 color1, float3 color2, float number, float edgeSharpness)
+float3 fn_linePattern (float orientation, float3 color1, float3 color2, float number, float edgeSharpness)
 { 
    float mix =  sin (orientation * PI * number );
    mix *=  edgeSharpness / number;
