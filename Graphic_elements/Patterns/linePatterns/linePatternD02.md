@@ -1,6 +1,6 @@
 ﻿# linePatternD02  [![](../images/linePatternD02-thumb.png)](../images/linePatternD02.png)
 
-**Function call:** `fn_linePatternD02 (uv, color1, color2, numberH, edgeSharpness);`  
+**Function call:** `fn_linePatternD02 (uv, color1, color2, number, edgeSharpness);`  
 
 Example with values: `fn_linePatternD02 (uv, float3(0.1, 0.1, 0.4), float3(0.9, 0.3, 0.0), 20.0, 1000.0);`  
 (Result [see image](../images/linePatternD02.png))
@@ -30,10 +30,10 @@ float _OutputAspectRatio;
 
 ### Code (Example as a float3 RGB function without alpha):
 ```` Code
-float3 fn_linePatternD02 (float2 uv, float3 color1, float3 color2, float numberH, float edgeSharpness)
+float3 fn_linePatternD02 (float2 uv, float3 color1, float3 color2, float number, float edgeSharpness)
 { 
    float mix = uv.x - (uv.y / _OutputAspectRatio);
-   mix =  sin (mix * PI * numberH ) * edgeSharpness / numberH;
+   mix =  sin (mix * PI * number ) * edgeSharpness / number;
    return lerp (color1, color2, clamp( mix, -0.5, 0.5) + 0.5);
 }
 ````   
@@ -71,7 +71,7 @@ When making code changes, note that `color1` and `color2` must have the same flo
        
 ---
 
-   4. `numberH`:  
+   4. `number`:  
      The number of lines of both colors, counted only at the top or bottom edge of the frame.    
      **Type: `float`**  
      Value range: > +1   or < -1  
@@ -104,11 +104,11 @@ When making code changes, note that `color1` and `color2` must have the same flo
 The code at the top of this page is compressed.  
 For a better understanding, the uncompressed code is described here:
 ```` Code
-float3 fn_linePatternD02 (float2 uv, float3 color1, float3 color2, float numberH, float edgeSharpness)
+float3 fn_linePatternD02 (float2 uv, float3 color1, float3 color2, float number, float edgeSharpness)
 { 
    float mix = uv.x - (uv.y / _OutputAspectRatio);
-   mix =  sin (mix * PI * numberH );
-   mix *=  edgeSharpness / numberH;
+   mix =  sin (mix * PI * number );
+   mix *=  edgeSharpness / number;
    mix =  clamp( mix, -0.5, 0.5);      // range -0.5 +0.5
    mix += 0.5 ;                        // range 0 to 1
    return lerp (color1, color2, mix);
@@ -120,11 +120,11 @@ float3 fn_linePatternD02 (float2 uv, float3 color1, float3 color2, float numberH
 from bottom right to top left, at a 45 ° angle.
 This makes the lines created in the following lines of code diagonal.  
 
-`mix =  sin (mix * PI * numberH );` Creates a diagonal wave pattern ( value range from -1 to +1).
+`mix =  sin (mix * PI * number );` Creates a diagonal wave pattern ( value range from -1 to +1).
 
 The following two lines of code increase the sharpness:
 ```` Code
-x *=  edgeSharpness / numberH;
+x *=  edgeSharpness / number;
 x =  clamp( x, -0.5, 0.5);   // range -0.5 +0.5`
 ````
 ` x += 0.5 ; ` Move to the normal range from 0 to 1  
