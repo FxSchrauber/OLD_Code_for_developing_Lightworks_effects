@@ -1,4 +1,5 @@
-﻿# linePattern  [![](../images/linePattern-thumb.png)](../images/linePattern.png)
+﻿# linePattern  [![](../images/linePattern-thumb.png)](../images/linePattern.png) 
+               [![](../images/linePattern__b-thumb)]()
 
 **Function call:** `fn_linePattern (orientation, color1, color2, number, edgeSharpness);`  
 
@@ -46,7 +47,7 @@ When making code changes, note that `color1` and `color2` must have the same flo
 ### Parameter Description  
   
    1. `orientation`:  
-     Enter only one component of the texture coordinate variables used..  
+     Enter only one component of the texture coordinate variables used.  
      **Type: `float`**  
      Examples in case your texture coordinates are assigned to the variable `float2 uv`:
        - uv.y creates horizontal lines (thus vice versa, as it suggests y)  
