@@ -130,7 +130,7 @@ x =  clamp( x, -0.5, 0.5);   // range -0.5 +0.5`
 ` x += 0.5 ; ` Move to the normal range from 0 to 1  
 
 `return lerp (color1, color2, mix);` Assignment to the set colors.  
-If you only need black and white lines then you can simplify the code by returning the `Mix` variable.  
+If you only need black and white lines then you can simplify the code by returning the `mix` variable.  
 
 
 
