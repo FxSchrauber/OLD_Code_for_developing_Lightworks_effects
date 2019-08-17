@@ -1,6 +1,6 @@
 ﻿# linePattern  [![](../images/linePattern-thumb.png)](../images/linePattern.png)
 
-**Function call:** `fn_linePattern (orientation, color1, color2, numberH, edgeSharpness);`  
+**Function call:** `fn_linePattern (orientation, color1, color2, number, edgeSharpness);`  
 
 Example with values: `fn_linePattern (uv.y, float3(0.1, 0.1, 0.4), float3(0.9, 0.3, 0.0), 20.0, 1000.0);`  
 (Result [see image](../images/linePattern.png))
@@ -29,9 +29,9 @@ More details see the parameter descriptions.
 
 ### Code (Example as a float3 RGB function without alpha):
 ```` Code
-float3 fn_linePatternV (float orientation, float3 color1, float3 color2, float numberH, float edgeSharpness)
+float3 fn_linePatternV (float orientation, float3 color1, float3 color2, float number, float edgeSharpness)
 { 
-   orientation =  sin (orientation * PI * numberH ) * edgeSharpness / numberH;
+   orientation =  sin (orientation * PI * number ) * edgeSharpness / number;
    return lerp (color1, color2, clamp( orientation, -0.5, 0.5) + 0.5);
 }
 ````   
@@ -72,7 +72,7 @@ When making code changes, note that `color1` and `color2` must have the same flo
        
 ---
 
-   4. `numberH`:  
+   4. `number`:  
      The number of lines of both colors.    
      **Type: `float`**  
      Value range: > +1   or < -1  
@@ -105,10 +105,10 @@ When making code changes, note that `color1` and `color2` must have the same flo
 The code at the top of this page is compressed.  
 For a better understanding, the uncompressed code is described here:
 ```` Code
-float3 fn_linePatternV (float orientation, float3 color1, float3 color2, float numberH, float edgeSharpness)
+float3 fn_linePatternV (float orientation, float3 color1, float3 color2, float number, float edgeSharpness)
 { 
-   float mix =  sin (orientation * PI * numberH );
-   mix *=  edgeSharpness / numberH;
+   float mix =  sin (orientation * PI * number );
+   mix *=  edgeSharpness / number;
    mix =  clamp( mix, -0.5, 0.5);      // range -0.5 +0.5
    mix += 0.5 ;                        // range 0 to 1
    return lerp (color1, color2, mix);
@@ -116,11 +116,11 @@ float3 fn_linePatternV (float orientation, float3 color1, float3 color2, float n
 ````
 **Code description:**  
  
-`mix =  sin (orientation * PI * numberH );` Creates a wave pattern ( value range from -1 to +1).
+`mix =  sin (orientation * PI * number );` Creates a wave pattern ( value range from -1 to +1).
 
 The following two lines of code increase the sharpness:
 ```` Code
-x *=  edgeSharpness / numberH;
+x *=  edgeSharpness / number;
 x =  clamp( x, -0.5, 0.5);   // range -0.5 +0.5`
 ````
 ` x += 0.5 ; ` Move to the normal range from 0 to 1  
