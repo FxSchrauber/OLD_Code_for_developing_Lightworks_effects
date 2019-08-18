@@ -18,9 +18,9 @@
      
 *[Click here for more graphic line code.](../Lines/README.md)*
 
-### Check Patterns
+### Pattern of angular elements
   - [checkPatternSoft](checkPattern/checkPatternSoft.md)  
-     Generating a selectable number of of squares with changing color or brightness or other RGB source.     
+     Generating a selectable number of squares with changing color or brightness or other RGB source.     
      Adjustable edge softness of the squares.   
      [![](images/checkPatternSoft-thumb.png)](checkPattern/checkPatternSoft.md)  
 
@@ -28,3 +28,9 @@
      Generating a selectable number of squares with changing color or brightness or other RGB source.  
      This is a variant with **simplified code** (excessively sharp edges of squares) that is **not suitable for all purposes!**  
      [![](images/checkPattern-thumb.png)](checkPattern/checkPattern.md)  
+
+  - [diamondPattern](checkPattern/diamondPattern.md)  
+     Generating a selectable number of diamonds with changing color or brightness or other RGB source.     
+     Adjustable edge softness of the squares.   
+     [![](images/diamondPattern-thumb.png)](checkPattern/diamondPattern.md)
+
