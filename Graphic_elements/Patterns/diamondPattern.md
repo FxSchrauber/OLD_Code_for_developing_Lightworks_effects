@@ -142,7 +142,7 @@ Diagonal 45° lines, turned 90° to previous code ( [Details and code descriptio
    x += 0.5 ;
 ```` 
 
-`float mix = lerp( y , 1.0 - y, x);` Pattern generation from the Diagonal 45° lines.img/71.png  
+`float mix = lerp( y , 1.0 - y, x);` Pattern generation from the Diagonal 45° lines.  
 
 `return lerp (color1, color2, mix);` Assignment to the set colors.  
 
