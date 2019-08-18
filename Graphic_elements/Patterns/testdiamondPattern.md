@@ -125,7 +125,7 @@ float3 fn_diamondPattern (float2 uv, float3 color1, float3 color2, float numberH
 ````
 **Code description:**    
 
-Diagonal 45° lines ( [Details and code description](linePatterns/linePatternD01.md) )  
+Diagonal 45 lines ( [Details and code description](linePatterns/linePatternD01.md) )  
 ```` Code
    float x = uv.x + (uv.y / _OutputAspectRatio);
    x =  sin (x * PI * numberH );
@@ -133,7 +133,7 @@ Diagonal 45° lines ( [Details and code description](linePatterns/linePatternD01.
    x =  clamp( x, -0.5, 0.5);
    x += 0.5 ;
 ```` 
-Diagonal 45° lines, turned 90° to previous code ( [Details and code description](linePatterns/linePatternD02.md) )  
+Diagonal 45 lines, turned 90 to previous code ( [Details and code description](linePatterns/linePatternD02.md) )  
 ```` Code
    float x = uv.x + (uv.y / _OutputAspectRatio);
    x =  sin (x * PI * numberH );
@@ -147,3 +147,8 @@ Diagonal 45° lines, turned 90° to previous code ( [Details and code description]
 `return lerp (color1, color2, mix);` Assignment to the set colors.  
 
 
+---
+---
+
+### Screenshot  
+![](images/diamondPattern.png)
