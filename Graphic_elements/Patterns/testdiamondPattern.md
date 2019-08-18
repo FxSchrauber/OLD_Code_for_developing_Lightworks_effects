@@ -100,3 +100,55 @@ When making code changes, note that `color1` and `color2` must have the same flo
 ---
 ---
 
+### Code description  
+
+The code at the top of this page is compressed.  
+For a better understanding, the uncompressed code is described here:
+```` Code
+float3 fn_diamondPattern (float2 uv, float3 color1, float3 color2, float numberH, float edgeSharpness)
+{ 
+   float x = uv.x + (uv.y / _OutputAspectRatio);
+   x =  sin (x * PI * numberH );
+   x *=  edgeSharpness / numberH;
+   x =  clamp( x, -0.5, 0.5);
+   x += 0.5 ;
+
+   float y = uv.x - (uv.y / _OutputAspectRatio);
+   y =  sin (y * PI * numberH );
+   y *=  edgeSharpness / numberH;
+   y =  clamp( y, -0.5, 0.5);
+   y+= 0.5 ; 
+
+   float mix = lerp( y , 1.0 - y, x);
+   return lerp (color1, color2, mix);
+}
+````
+**Code description:**    
+
+Diagonal 45° lines ( [Details and code description](linePatterns/linePatternD01.md) )  
+```` Code
+   float x = uv.x + (uv.y / _OutputAspectRatio);
+   x =  sin (x * PI * numberH );
+   x *=  edgeSharpness / numberH;
+   x =  clamp( x, -0.5, 0.5);
+   x += 0.5 ;
+```` 
+Diagonal 45° lines, turned 90° to previous code ( [Details and code description](linePatterns/linePatternD02.md) )  
+```` Code
+   float x = uv.x + (uv.y / _OutputAspectRatio);
+   x =  sin (x * PI * numberH );
+   x *=  edgeSharpness / numberH;
+   x =  clamp( x, -0.5, 0.5);
+   x += 0.5 ;
+```` 
+
+`float mix = lerp( y , 1.0 - y, x);` Pattern generation from the Diagonal 45° lines.img/71.png  
+
+`return lerp (color1, color2, mix);` Assignment to the set colors.  
+
+
+---
+---
+
+### Screenshot  
+![](images/diamondPattern.png)
