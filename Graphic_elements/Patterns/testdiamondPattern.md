@@ -1,4 +1,4 @@
-﻿# fn_diamondPattern  [![](images/diamondPattern-thumb.png)](images/diamondPattern.png)
+# fn_diamondPattern  [![](images/diamondPattern-thumb.png)](images/diamondPattern.png)
 
 **Function call:** `fn_diamondPattern (uv, color1, color2, numberH, edgeSharpness);`  
 
