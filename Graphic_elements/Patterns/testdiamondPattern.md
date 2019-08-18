@@ -147,8 +147,3 @@ Diagonal 45° lines, turned 90° to previous code ( [Details and code description]
 `return lerp (color1, color2, mix);` Assignment to the set colors.  
 
 
----
----
-
-### Screenshot  
-![](images/diamondPattern.png)
