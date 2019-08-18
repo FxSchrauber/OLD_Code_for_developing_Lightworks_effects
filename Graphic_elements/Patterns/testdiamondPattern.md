@@ -1,11 +1,4 @@
-# fn_diamondPattern  [![](images/diamondPattern-thumb.png)](images/diamondPattern.png)
 
-**Function call:** `fn_diamondPattern (uv, color1, color2, numberH, edgeSharpness);`  
-
-Example with values: `fn_diamondPattern (uv, 0.0.xxx, 1.0.xxx, 20.0, 1000.0);`  
-(Result [see image](images/diamondPattern.png))
-  
---- 
   
 ***Purpose:***  
 Generating a selectable number of diamonds with changing color or brightness or other RGB source.    
