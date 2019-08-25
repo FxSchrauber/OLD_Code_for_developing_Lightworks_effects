@@ -56,7 +56,7 @@ When making code changes, note that `color1` and `color2` must have the same flo
 
   
    2. `color1`:  
-     Color of the first square at the top left. 
+     Color of the first square at the top left.  
      **Type: `float3` (RGB)**  
        - This can be a color, or a texture from a sampler.
 
@@ -64,7 +64,7 @@ When making code changes, note that `color1` and `color2` must have the same flo
 ---
 
    3. `color2`:  
-     Color of the squares next to `color1` squares. 
+     Color of the squares next to `color1` squares.  
      **Type: `float3` (RGB)**  
        - This can be a color, or a texture from a sampler.  
 
