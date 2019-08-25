@@ -65,7 +65,7 @@ When making code changes, note that `color1` and `color2` must have the same flo
 ---
 
    3. `color2`:  
-     Color of the other diamonds. 
+     Color of the other diamonds.  
      **Type: `float3` (RGB)**  
        - This can be a color, or a texture from a sampler.  
 
