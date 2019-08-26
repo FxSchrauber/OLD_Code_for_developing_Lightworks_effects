@@ -7,7 +7,7 @@ Example:
 // Definitions and declarations
 //--------------------------------------------------------------//
 
-#define BLACK   float4(0.0.xxx, 1.0.y)
+#define BLACK   float4(0.0.xxx, 1.0)
 
 #define HALF_PI 1.5707963
 #define PI      3.1415927
