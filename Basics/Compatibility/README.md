@@ -64,11 +64,11 @@
 
 
 8. *Great White wrote:*  > **Avoid** using sqrt in a **constant definition**  
-Example:  
-Something like that you should **avoid**:  `float _rt3 = 1.0 / sqrt( 3.0 );`  
-This can lead to wrong results on Linux and OSX systems.  
+   Example:  
+   Something like that you should **avoid**:  `float _rt3 = 1.0 / sqrt( 3.0 );`  
+   This can lead to wrong results on Linux and OSX systems.  
 
-Use the result of the calculation instead: `float _rt3 = 0.57735;`  
-Or if you don't need a variable: `#define RT3  0.57735`  
+   Use the result of the calculation instead: `float _rt3 = 0.57735;`  
+   Or if you don't need a variable: `#define RT3  0.57735`  
 
 
