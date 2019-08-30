@@ -63,7 +63,7 @@
 --- 
 
 
-8. Avoid function calls outside of shaders.
+8. Avoid function calls outside of shaders.  
    Example:  
   **Avoid** defining global variables in this way:  `float _rt3 = 1.0 / sqrt( 3.0 );`    
 
