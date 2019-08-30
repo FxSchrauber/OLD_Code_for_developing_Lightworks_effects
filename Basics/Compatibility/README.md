@@ -32,8 +32,8 @@
 4. Avoid nested and incomplete comment delimiters.  
    The following erroneous example contains 3 opening comment delimiters, but only 2 closing comment delimiters:  
    `/* Comment 1 /* Comment 2 */ /* Comment 3 */`  
-   In Windows because of a compiler bug this may compile. It will not on Linux or Mac systems.  
-   However the following versions will fail on all systems.  
+   This is not compiled on Linux and OSX systems. On Windows systems, the second, superfluous delimiter is simply ignored.  
+   The following versions will fail on all systems.  
    `/* Comment 1 */ /* Comment 2 */ /* Comment 3`  
    `/* Comment 1 */ /* Comment 2 */ Comment 3 */`  
    
@@ -63,10 +63,9 @@
 --- 
 
 
-8. *Great White wrote:*  > **Avoid** using sqrt in a **constant definition**  
+8. Avoid function calls outside of shaders.
    Example:  
-   Something like that you should **avoid**:  `float _rt3 = 1.0 / sqrt( 3.0 );`  
-   This can lead to wrong results on Linux and OSX systems.  
+  **Avoid** defining global variables in this way:  `float _rt3 = 1.0 / sqrt( 3.0 );`    
 
    Use the result of the calculation instead: `float _rt3 = 0.57735;`  
    Or if you don't need a variable: `#define RT3  0.57735`  
