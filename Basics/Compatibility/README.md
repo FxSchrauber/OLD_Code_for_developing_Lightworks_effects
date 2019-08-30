@@ -56,7 +56,10 @@
    
 ---
 
-7. You cannot assign a value to a sampler inside a function or shader in Linux/Mac code.  
+7. Sampler selection by `if(`.... `else`:  
+   You cannot assign a value to a sampler inside a function or shader in Linux/Mac code.  
+   This refers to the selection of the sampler to be used, not the parameters.  
+   Instead, use separate `tex2D(`... calls for the relevant samper.  
    For details, see  [lwks.com post # 152430](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=75&Itemid=81#152430).
    
    
