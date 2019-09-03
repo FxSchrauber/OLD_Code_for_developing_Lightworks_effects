@@ -1,10 +1,10 @@
-# multilines_total_H02  [![](images/multilines_total_H02-thumbnail.png)](images/multilines_total_H02.png)
+﻿# multilines_total_H02  [![](images/multilines_total_H02-thumbnail.png)](images/multilines_total_H02.png)
 
-**Function call:** `fn_multilines_total_H02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
+**Function call:** `fn_multilines_total_H02 (uv, color, bgVariable, lines, linewidth, soft, angle, roll)`  
 Example with values: `fn_multilines_total_H02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 9E-4, 1.0, 0.0);`  
 (Result [see image](images/multilines_total_H02.png))  
 
-*or* **Macro call:** `MULTILINES_TOTAL_H02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
+*or* **Macro call:** `MULTILINES_TOTAL_H02 (uv, color, bgVariable, lines, linewidth, soft, angle, roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
 
 ---
@@ -26,12 +26,12 @@ More functions and details see the parameter descriptions.
 #### Code (Example as a function):
 ```` Code
 float4 fn_multilines_total_H02 (float2 uv, float4 color, float4 bgVariable, float lines,
-                                float lineweight, float soft, float angle, float roll)
+                                float linewidth, float soft, float angle, float roll)
 { 
    float mix = saturate (
       (abs( (uv.y  - (roll + uv.x  * angle))
           - (round( (uv.y - (roll + uv.x * angle ))  * lines)  / lines )
-          ) - lineweight
+          ) - linewidth
       ) / soft
    );
   
@@ -89,7 +89,7 @@ of the lines in interlaced projects.
 
 ---
 
-   5. `lineweight`:  
+   5. `linewidth`:  
      - Line width  
      - **Type:scalar `float`**  
      - Usable value range 0.0 to 0.5  
@@ -176,11 +176,11 @@ of the lines in interlaced projects.
 ### Macro code:
 
 ```` Code
-#define MULTILINES_TOTAL_H02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)        \
+#define MULTILINES_TOTAL_H02(uv,color,bgVariable,lines,linewidth,soft,angle,roll)        \
    lerp (color, bgVariable, saturate  (                                                   \
          (abs( ((uv).y - ((roll) + (uv).x * (angle)))                                     \
              - (round( ((uv).y  - ((roll) + (uv).x * (angle) ))  * (lines))  / (lines) )  \
-             ) - (lineweight)                                                             \
+             ) - (linewidth)                                                             \
          ) / (soft)                                                                       \
    ))
 ````  

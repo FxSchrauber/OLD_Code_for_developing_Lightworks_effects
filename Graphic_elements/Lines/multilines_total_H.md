@@ -1,11 +1,11 @@
 # multilines_total_H  [![](images/multilines_total_H-thumbnail.png)](images/multilines_total_H.png)
 
-**Function call:** `fn_multilines_total_H (uv, color, bgVariable, lines, half_Lineweight, roll)`  
+**Function call:** `fn_multilines_total_H (uv, color, bgVariable, lines, half_Linewidth, roll)`  
 
 Example with values: `fn_multilines_total_H (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 0.0)`
 (Result [see image](images/multilines_total_H.png))
 
-*or* **Macro call:** `MULTILINES_TOTAL_H (uv, color, bgVariable, lines, half_Lineweight, roll)`  
+*or* **Macro call:** `MULTILINES_TOTAL_H (uv, color, bgVariable, lines, half_Linewidth, roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
   
 --- 
@@ -27,11 +27,11 @@ More functions and details see the parameter descriptions.
 #### Code (Example as a function):
 ```` Code
 float4 fn_multilines_total_H (float2 uv, float4 color, float4 bgVariable, 
-                              float lines, float half_Lineweight, float roll)
+                              float lines, float half_Linewidth, float roll)
 { 
    float mix = saturate (
       (abs( (uv.y - roll) - (round( (uv.y - roll)  * lines)  / lines ))
-      - half_Lineweight
+      - half_Linewidth
       ) /  (1.0 / _OutputHeight)
    );
   
@@ -85,7 +85,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
 
 ---
 
-   5. `half_Lineweight`:  
+   5. `half_Linewidth`:  
      Half line width  
      **Type: scalar `float`**  
        - Usable value range 0.0 to 0.5  
@@ -126,10 +126,10 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
 ### Macro code:
 
 ```` Code
-#define MULTILINES_TOTAL_H(uv,color,bgVariable,lines,half_Lineweight,roll)              \
+#define MULTILINES_TOTAL_H(uv,color,bgVariable,lines,half_Linewidth,roll)              \
    lerp ((color), (bgVariable), saturate (                                              \
          (abs( ((uv).y - (roll)) - (round( ((uv).y - (roll))  * (lines))  / (lines) ))  \
-         - (half_Lineweight)                                                            \
+         - (half_Linewidth)                                                            \
          ) /  (1.0 / _OutputHeight)                                                     \
    ))
 ````  

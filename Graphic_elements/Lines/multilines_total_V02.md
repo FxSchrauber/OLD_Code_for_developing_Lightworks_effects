@@ -1,10 +1,10 @@
-# multilines_total_V02  [![](images/multilines_total_V02-thumbnail.png)](images/multilines_total_V02.png)
+﻿# multilines_total_V02  [![](images/multilines_total_V02-thumbnail.png)](images/multilines_total_V02.png)
 
-**Function call:** `fn_multilines_total_V02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
+**Function call:** `fn_multilines_total_V02 (uv, color, bgVariable, lines, linewidth, soft, angle, roll)`  
 Example with values: `fn_multilines_total_V02 (uv0, float4(0.4.xxx, 1.0), 1.0.xxxx, 20.0, 0.005, 5E-4, -1.0, 0.0)`
 (Result [see image](images/multilines_total_V02.png))  
 
-*or* **Macro call:** `MULTILINES_TOTAL_V02 (uv, color, bgVariable, lines, lineweight, soft, angle, roll)`  
+*or* **Macro call:** `MULTILINES_TOTAL_V02 (uv, color, bgVariable, lines, linewidth, soft, angle, roll)`  
   ([Macro code](#macro-code) can be found at the bottom of this page)
 
 ---
@@ -26,12 +26,12 @@ More functions and details see the parameter descriptions.
 #### Code (Example as a function):
 ```` Code
 float4 fn_multilines_total_V02 (float2 uv, float4 color, float4 bgVariable, float lines,
-                                float lineweight, float soft, float angle, float roll)
+                                float linewidth, float soft, float angle, float roll)
 { 
    float mix = saturate (
       (abs( (uv.x - (roll + uv.y  * angle))
           - (round( (uv.x  - (roll + uv.y * angle ))  * lines)  / lines )
-          ) - lineweight
+          ) - linewidth
       ) / soft
    );
   
@@ -81,7 +81,7 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 
 ---
 
-   5. `lineweight`:  
+   5. `linewidth`:  
      - Line width  
      - **Type:scalar `float`**  
      - Usable value range 0.0 to 0.5  
@@ -167,11 +167,11 @@ This creates the necessary edge softness of the lines to minimize pixel jumps an
 ### Macro code:
 
 ```` Code
-#define MULTILINES_TOTAL_V02(uv,color,bgVariable,lines,lineweight,soft,angle,roll)       \
+#define MULTILINES_TOTAL_V02(uv,color,bgVariable,lines,linewidth,soft,angle,roll)       \
    lerp (color, bgVariable, saturate  (                                                  \
          (abs( ((uv).x - ((roll) + (uv).y * (angle)))                                    \
              - (round( ((uv).x  - ((roll) + (uv).y * (angle) ))  * (lines))  / (lines) ) \
-             ) - (lineweight)                                                            \
+             ) - (linewidth)                                                            \
          ) / (soft)                                                                      \
    ))
 ````  
