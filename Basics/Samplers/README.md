@@ -4,7 +4,7 @@
 - [Info: lwks.com starting on page 12.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=165&Itemid=81#ftop)  
 - [Info: lwks.com starting on page 20.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=285&Itemid=81#ftop)
 - Linux and Mac: Only one sampler should be created per texture.  
-- **Address Border:**  Unfortunately, no details are documented yet.
+- **Address Border:**  Unfortunately, no details are documented yet.  
 Quote from jwrl:  
 >  ..  it behaves differently in Windows and Linux.
 
