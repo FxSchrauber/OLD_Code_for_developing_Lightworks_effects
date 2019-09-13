@@ -1,5 +1,13 @@
 ## Sampler setting: Horizontal Border and vertical ClampToEdge 
-**>= Lightworks 14.5**
+
+
+**Compatibility**: 
+- **ClampToEdge:** >= Lightworks 14.5
+- **Address Border:**  Unfortunately, no details are documented yet.  
+Quote from jwrl:  
+>  ..  it behaves differently in Windows and Linux.
+
+----
 
 ``` Code
 sampler Border_U_Clamp_V_Sampler = sampler_state
