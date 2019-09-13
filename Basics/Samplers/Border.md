@@ -4,6 +4,8 @@
 Quote from jwrl:  
 >  ..  it behaves differently in Windows and Linux.
 
+--- 
+
 ### Example:
 ``` Code
 sampler BorderSampler = sampler_state
