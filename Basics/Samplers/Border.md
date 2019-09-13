@@ -1,5 +1,8 @@
-
 # Border sampler setting
+
+**Compatibility**:  Unfortunately, no details are documented yet.  
+Quote from jwrl:  
+>  ..  it behaves differently in Windows and Linux.
 
 ### Example:
 ``` Code
