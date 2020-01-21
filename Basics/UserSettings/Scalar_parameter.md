@@ -83,6 +83,7 @@ float Amount
   - ### New optional fags starting from Lightworks 2020.1
      #### Define whether the slider values should be displayed in percent:  
       `string Flags = "DisplayAsPercentage";`  
+      [**Example** code see developer's post.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=169103&Itemid=81#189225)  
       
     If the value should not be displayed in percent:  
       `string Flags = "DisplayAsLiteral";` 
@@ -91,10 +92,12 @@ float Amount
       If these flags are not used, Lightworks will automatically decide, based on the setting range, 
       whether the values are displayed as percentage.  
       Lightworks 14 ignores these two flags.  
-      In order for these two flags to be taken into account, the effect must be installed with Lightworks versions starting from 2020,         and must also be adjusted with these versions.
+      In order for these two flags to be taken into account, the effect must be installed with Lightworks versions starting from 2020,         and must also be adjusted with these versions.  
       
 
-
+- ### [General notes from the developer:](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=169103&Itemid=81#189225)
+  > If your parameter already has other flags, you can concatenate them like so :
+  > `string Flags = "SpecifiesPointY|DisplayAsPercentage";`
 
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
