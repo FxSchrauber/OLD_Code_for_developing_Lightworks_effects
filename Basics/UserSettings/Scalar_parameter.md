@@ -87,7 +87,11 @@ float Amount
     If the value should not be displayed in percent:  
       `string Flags = "DisplayAsLiteral";` 
       
-    **Additional information:** 
+    **Additional information:**  
+      If these flags are not used, Lightworks will automatically decide, based on the setting range, 
+      whether the values are displayed as percentage.  
+      Lightworks 14 ignores these two flags.  
+      In order for these two flags to be taken into account, the effect must be installed with Lightworks versions starting from 2020,         and must also be adjusted with these versions.
       
 
 
@@ -109,7 +113,9 @@ string Description = "Flip edge";
 ![](images/bool.png)
   
   
----
+
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 
 
 ### Example with integer variables for program control:
