@@ -96,7 +96,7 @@ float Amount
       
 
 - ### [General notes from the developer:](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=169103&Itemid=81#189225)
-  > If your parameter already has other flags, you can concatenate them like so :
+  > If your parameter already has other flags, you can concatenate them like so :  
   > `string Flags = "SpecifiesPointY|DisplayAsPercentage";`
 
 ---------------------------------------------------------------------------------------------------------------------------
