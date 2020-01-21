@@ -23,7 +23,10 @@ float Softness
 ### The result:
 ![](images/negative.png)
 
----
+
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+
 
 ### Automatic keyframes at the start and end position of the effect (`KF0`and `KF1`):
 
@@ -38,7 +41,10 @@ float Amount
 > = 0.5;
 ``` 
 
----
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+
+
 ### Flags
 
   - ### Parameter influence via moving mouse position on the viewer:
@@ -66,7 +72,7 @@ float Amount
      
      **Additional information:** when using "SpecifiesPointY" it may be necessary to invert the sense of the value returned.
        In the example above float Centre_Y = 1.0 - CentreY will do that.
-       You then use Centre_Y in your code instead of CentreY.
+       You then use Centre_Y in your code instead of CentreY.  
        There's also a third parameter in this group, "SpecifiesPointZ". 
        To see that being used look at the position parameters in the 3D DVE effect.  
        
@@ -75,15 +81,26 @@ float Amount
 
 
   - ### New optional fags starting from Lightworks 2020.1
-     #### Define whether the slider values should be displayed in percent:
-    `string Flags = "DisplayAsPercentage";`
+     #### Define whether the slider values should be displayed in percent:  
+      `string Flags = "DisplayAsPercentage";`  
+      
+    If the value should not be displayed in percent:  
+      `string Flags = "DisplayAsLiteral";` 
+      
+    **Additional information:** 
+      
 
----  
+
+
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
   
   
-  ### Example with boolean variable for program control (true / false):
   
-  ``` Code
+  
+### Example with boolean variable for program control (true / false):
+  
+``` Code
 bool Flip_edge
 <
 string Description = "Flip edge";
