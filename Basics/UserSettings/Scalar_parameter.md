@@ -81,6 +81,7 @@ float Amount
 
 
   - ### New optional fags starting from Lightworks 2020
+    # WARNING, [global issues](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=143678&limit=15&limitstart=375&Itemid=81#211505) have been detected when using these flags!
      #### Define whether the slider values should be displayed in percent:  
       `string Flags = "DisplayAsPercentage";`  
       [**Example** code see developer's post.](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=7&id=169103&Itemid=81#189225)  
