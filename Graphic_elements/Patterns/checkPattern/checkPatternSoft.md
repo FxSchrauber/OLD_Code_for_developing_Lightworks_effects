@@ -1,8 +1,8 @@
 # checkPatternSoft  [![](../images/checkPatternSoft-thumb.png)](../images/checkPatternSoft.png)
 
-**Function call:** `fn_checkPatternSoft (uv, color1, color2, numberH, edgeSharpness);`  
+**Function call:** `fn_checkPatternSoft (uv, color1, color2, number, edgeSharpness);`  
 
-Example with values: `fn_checkPatternSoft (uv, 0.0.xxx, 1.0.xxx, 20.0, 1000.0);`  
+Example with values: `fn_checkPatternSoft (uv, 0.0.xxx, 1.0.xxx, 20.0.xx, 1000.0);`  
 (Result [see image](../images/checkPatternSoft.png))
   
 --- 
@@ -29,10 +29,10 @@ float _OutputAspectRatio;
 
 ### Code (Example as a float3 RGB function without alpha):
 ```` Code
-float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float2 numberH, float edgeSharpness)
+float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float2 number, float edgeSharpness)
 { 
-   numberH.y /= _OutputAspectRatio;
-   float2 mix =  sin (uv * PI * numberH ) * edgeSharpness / numberH;
+   number.y /= _OutputAspectRatio;
+   float2 mix =  sin (uv * PI * number ) * edgeSharpness / number;
    mix =  clamp( mix, -0.5, 0.5) + 0.5; 
    mix.x = lerp( mix.y , 1.0 - mix.y, mix.x);
    return lerp (color1, color2, mix.x);
@@ -72,9 +72,10 @@ When making code changes, note that `color1` and `color2` must have the same flo
        
 ---
 
-   4. `numberH`:  
+   4. `number`:  
      Number of squares in a horizontal line.  
-     **Type: `float`**  
+     **Type: `float2`**  
+     To create equal edge lengths (squares), the x and y parameters must be identical.  
      Value range: > +1   or < -1  
      **Illegal value is 0** (leads to division by 0)  
 
@@ -105,15 +106,15 @@ When making code changes, note that `color1` and `color2` must have the same flo
 The code at the top of this page is compressed.  
 For a better understanding, the uncompressed code is described here:
 ```` Code
-float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float numberH, float edgeSharpness)
+float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float2 number, float edgeSharpness)
 { 
-   float x =  sin (uv.x * PI * numberH );
-   x *=  edgeSharpness / numberH;
+   float x =  sin (uv.x * PI * number.x );
+   x *=  edgeSharpness / number.x;
    x =  clamp( x, -0.5, 0.5);        // range -0.5 +0.5
    x += 0.5 ;                        // range 0 to 1
 
- float y =  sin (uv.y * ((numberH * PI) / _OutputAspectRatio));
-   y *=  edgeSharpness/ numberH;
+ float y =  sin (uv.y * ((number.y * PI) / _OutputAspectRatio));
+   y *=  edgeSharpness/ number.y;
    y =  clamp( y, -0.5, 0.5);
    y+= 0.5 ; 
 
@@ -126,19 +127,19 @@ float3 fn_checkPatternSoft  (float2 uv, float3 color1, float3 color2, float numb
 the images linked below show these values as grayscale (for illustration purposes only).  
 
 Vertical lines:  
-`float x =  sin (uv.x * PI * numberH );` [this is the result](img/51.png) *(if `numberH` = 5.0)*  
+`float x =  sin (uv.x * PI * number.x );` [this is the result](img/51.png) *(if `number.x` = 5.0)*  
 
 The following two lines of code increase the sharpness:
 ```` Code
-x *=  edgeSharpness / numberH;
+x *=  edgeSharpness / number.x;
 x =  clamp( x, -0.5, 0.5);   // range -0.5 +0.5`
 ````
 ` x += 0.5 ; ` [Move to the normal range from 0 to 1](img/54.png)  
 
 [Horizontal lines:](img/61.png)
 ```` Code
- float y =  sin (uv.y * ((numberH * PI) / _OutputAspectRatio));
-   y *=  edgeSharpness/ numberH;
+ float y =  sin (uv.y * ((number.y * PI) / _OutputAspectRatio));
+   y *=  edgeSharpness/ number.y;
    y =  clamp( y, -0.5, 0.5);
    y+= 0.5 ; 
 ````
