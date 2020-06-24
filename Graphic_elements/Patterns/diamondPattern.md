@@ -1,8 +1,8 @@
 ﻿# fn_diamondPattern  [![](images/diamondPattern-thumb.png)](images/diamondPattern.png)
 
-**Function call:** `fn_diamondPattern (uv, color1, color2, numberH, edgeSharpness);`  
+**Function call:** `fn_diamondPattern (uv, color1, color2, number, edgeSharpness);`  
 
-Example with values: `fn_diamondPattern (uv, 0.0.xxx, 1.0.xxx, 20.0, 1000.0);`  
+Example with values: `fn_diamondPattern (uv, 0.0.xxx, 1.0.xxx, 20.0.xx, 1000.0);`  
 (Result [see image](images/diamondPattern.png))
   
 --- 
@@ -29,11 +29,11 @@ float _OutputAspectRatio;
 
 ### Code (Example as a float3 RGB function without alpha):
 ```` Code
-float3 fn_diamondPattern (float2 uv, float3 color1, float3 color2, float numberH, float edgeSharpness)
+float3 fn_diamondPattern (float2 uv, float3 color1, float3 color2, float2 number, float edgeSharpness)
 { 
   float2 mix = float2 (uv.x + (uv.y / _OutputAspectRatio) , 0.0);
    mix.y = uv.x - (uv.y / _OutputAspectRatio);
-   mix = sin (mix * PI * numberH ) * edgeSharpness / numberH;
+   mix = sin (mix * PI * number ) * edgeSharpness / number;
    mix =  clamp( mix, -0.5, 0.5) + 0.5;
    return lerp (color1, color2, lerp( mix.y , 1.0 - mix.y, mix.x));
 }
@@ -72,11 +72,12 @@ When making code changes, note that `color1` and `color2` must have the same flo
        
 ---
 
-   4. `numberH`:  
+   4. `number`:  
      Number of squares in a horizontal line.  
-     **Type: `float`**  
+     **Type: `float2`**  
+     To create equal edge lengths (squares), the x and y parameters must be identical.  
      Value range: > +1   or < -1  
-     **Illegal value is 0** (leads to division by 0)  
+     **Illegal value is 0** (leads to division by 0)   
 
 
 ---
@@ -105,17 +106,17 @@ When making code changes, note that `color1` and `color2` must have the same flo
 The code at the top of this page is compressed.  
 For a better understanding, the uncompressed code is described here:
 ```` Code
-float3 fn_diamondPattern (float2 uv, float3 color1, float3 color2, float numberH, float edgeSharpness)
+float3 fn_diamondPattern (float2 uv, float3 color1, float3 color2, float2 number, float edgeSharpness)
 { 
    float x = uv.x + (uv.y / _OutputAspectRatio);
-   x =  sin (x * PI * numberH );
-   x *=  edgeSharpness / numberH;
+   x =  sin (x * PI * number.x );
+   x *=  edgeSharpness / number.x;
    x =  clamp( x, -0.5, 0.5);
    x += 0.5 ;
 
    float y = uv.x - (uv.y / _OutputAspectRatio);
-   y =  sin (y * PI * numberH );
-   y *=  edgeSharpness / numberH;
+   y =  sin (y * PI * number.y );
+   y *=  edgeSharpness / number.y;
    y =  clamp( y, -0.5, 0.5);
    y+= 0.5 ; 
 
@@ -128,18 +129,18 @@ float3 fn_diamondPattern (float2 uv, float3 color1, float3 color2, float numberH
 Diagonal 45° lines ( [Details and code description](linePatterns/linePatternD01.md) )  
 ```` Code
    float x = uv.x + (uv.y / _OutputAspectRatio);
-   x =  sin (x * PI * numberH );
-   x *=  edgeSharpness / numberH;
+   x =  sin (x * PI * number.x );
+   x *=  edgeSharpness / number.x;
    x =  clamp( x, -0.5, 0.5);
    x += 0.5 ;
 ```` 
 Diagonal 45° lines, turned 90° to previous code ( [Details and code description](linePatterns/linePatternD02.md) )  
 ```` Code
-   float x = uv.x + (uv.y / _OutputAspectRatio);
-   x =  sin (x * PI * numberH );
-   x *=  edgeSharpness / numberH;
-   x =  clamp( x, -0.5, 0.5);
-   x += 0.5 ;
+   float y = uv.x - (uv.y / _OutputAspectRatio);
+   y =  sin (y * PI * number.y );
+   y *=  edgeSharpness / number.y;
+   y =  clamp( y, -0.5, 0.5);
+   y+= 0.5 ;
 ```` 
 
 `float mix = lerp( y , 1.0 - y, x);` Pattern generation from the Diagonal 45° lines.  
