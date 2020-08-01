@@ -92,16 +92,16 @@ of the lines in interlaced projects.
    5. `linewidth`:  
      - Line width  
      - **Type:scalar `float`**  
-     - Usable value range 0.0 to 0.5  
+     - Usable value range 0.0 to 0.5   
+     - If the angle of the lines is not horizontal, then the lines move closer together, 
+       because additional lines on the top or bottom edge of the frame fill the vacant areas.
+       When changing angles, the ratio of the line width to the width of the background in between remains approximately constant.
+       As a result, if the angle parameter is other than 0°, the line width becomes narrower than the set value.  
+     - A set edge softness increases the line width.  
      - Examples (horizontal lines without edge softness):  
        0.000:  Line width 0 pixels  
        0.005: Line width 1% of the frame hight  
        0.500: Line width over the entire frame height 
-     - If the angle of the lines is not horizontal, then the lines move closer together,  
-       because additional lines on the top or bottom edge of the frame fill the vacant areas.  
-       The ratio of the line width to the width of the intervening background remains approximately constant. 
-       As a result, the line width becomes narrower than the set value.
-     - A set edge softness increases the line width.
          
 ---
 
