@@ -108,7 +108,7 @@ of the lines in interlaced projects.
    6. `soft`:
      - Edge softness of the lines.  
      - **Type:scalar `float`**  
-     - Usable value range >0.0 to ~0.5
+     - Usable value range >0.0 to ~0.5  
      - **Impermissible values:** 0 (would be a division by zero within the code)  
      - Examples (horizontal lines):  
        1E-6 : No softness  
@@ -150,8 +150,8 @@ of the lines in interlaced projects.
 ---
    
    6. `roll`:  
-     - This rolls the lines in the 90 ° direction to the line. 
-     - Rising values of `roll` roll all lines to thr right, sinking values to the left (if an angle of 0° is set).
+     - This rolls the lines in the 90 ° direction to the line.  
+     - Rising values of `roll` roll all lines to thr right, sinking values to the left (if an angle of 0° is set).  
      - **Type: scalar** `float`**  
      - Usable value ranges:  
        - To position the first line within the texture (which is the only one independent of the number of lines): from 0 to 1  
