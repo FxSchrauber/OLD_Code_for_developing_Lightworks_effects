@@ -144,7 +144,7 @@ of the lines in interlaced projects.
       angle = -1.0: Diagonal line from the lower left corner to the upper right corner.  
     - The angle is not proportional to the set value.  
     - There are no 90 ° adjustable  
-    - For values well above 45 ° another code is recommended: [multilines_total_V02](multilines_total_V02.md)
+    - For values well above 45 ° another code is recommended: [multilines_total_V02](multilines_total_V02.md)  
     - This angle parameter also affects the line width.  
 
 ---
