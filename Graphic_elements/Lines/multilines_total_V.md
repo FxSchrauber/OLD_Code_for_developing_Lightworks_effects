@@ -87,8 +87,8 @@ This creates the necessary edge softness of the lines.
 ---
    
    6. `roll`:  
-     - Rolls the lines along the X axi.
-     - Rising values rolls all lines to the right, sinking values to the left.
+     - Rolls the lines along the X axi.  
+     - Rising values rolls all lines to the right, sinking values to the left.  
      - **Type: scalar `float`**  
      - Usable value ranges:  
        - To position the first line within the texture: from 0 to 1  
