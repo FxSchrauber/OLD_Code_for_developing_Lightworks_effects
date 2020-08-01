@@ -98,7 +98,7 @@ If you do not want more edge smoothness of the lines in interlaced projects, the
    
    6. `roll`:  
      - Roll the lines along the Y axi.  
-     - Rising values of `roll` roll all lines down, sinking values up.
+     - Rising values of `roll` roll all lines down, sinking values up.  
      - **Type: scalar `float`**  
      - Usable value ranges:  
        - To position the first line within the texture: from 0 to 1  
