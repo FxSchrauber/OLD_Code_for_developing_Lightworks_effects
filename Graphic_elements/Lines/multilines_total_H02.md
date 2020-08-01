@@ -150,8 +150,8 @@ of the lines in interlaced projects.
 ---
    
    6. `roll`:  
-     - This rolls the lines in the 90 ° direction to the line.  
-     - Rising values of `roll` roll all lines to thr right, sinking values to the left (if an angle of 0° is set).  
+     - This rolls the lines in the 90 ° direction to the line.   
+     - If an angle of 0° is set: Rising values of `roll` roll all lines down, sinking values up.  
      - **Type: scalar** `float`**  
      - Usable value ranges:  
        - To position the first line within the texture (which is the only one independent of the number of lines): from 0 to 1  
