@@ -1,6 +1,6 @@
 # Special auto-synced parameters and definitions
 Lightworks provides the following variables, automatically updated by the CPU, for use in effects (GPU).
-To use these variables, they must be declared outside and above all shaders and functions. Then these variables with the autumatic values are available globally for the whole effect.
+To use these variables, they must be declared outside and above all shaders and functions. Then these variables are globally available with the automatic values for the entire effect.
 ``` Code
 //--------------------------------------------------------------//
 // Definitions and declarations
