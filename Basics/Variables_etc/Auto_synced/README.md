@@ -13,12 +13,12 @@ float _OutputAspectRatio;
 float _OutputFPS;
 float _Length;
 float _LengthFrames;
-float FgWidthNormalised;  
-float FgHeightNormalised;  
-float FgWidth;  
-float FgHeight;  
-float FgXScale;  
-float FgYScale;  
+float _FgWidthNormalised;  
+float _FgHeightNormalised;  
+float _FgWidth;  
+float _FgHeight;  
+float _FgXScale;  
+float _FgYScale;  
 ```
   
 ---
@@ -46,12 +46,12 @@ float FgYScale;
 
 > If you have an input called 'Fg', then Lightworks will attempt to supply:
 
-`float FgWidthNormalised;`   // width of image divided by width of node output format  
-`float FgHeightNormalised;`  // height of image divided by width of node output format  
-`float FgWidth;`             // width of image in pixels  
-`float FgHeight;`            // height of image in pixels  
-`float FgXScale;`            // scaling factor (eg. due to wide/narrow settings)  
-`float FgYScale;`            // "  
+`float _FgWidthNormalised;`   // width of image divided by width of node output format  
+`float _FgHeightNormalised;`  // height of image divided by width of node output format  
+`float _FgWidth;`             // width of image in pixels  
+`float _FgHeight;`            // height of image in pixels  
+`float _FgXScale;`            // scaling factor (eg. due to wide/narrow settings)  
+`float _FgYScale;`            // scaling factor 
 
 
 ---
