@@ -3,7 +3,7 @@ Lightworks provides the following variables, automatically updated by the CPU, f
 To use these variables, they must be declared outside and above all shaders and functions. Then these variables with the autumatic values are available globally for the whole effect.
 ``` Code
 //--------------------------------------------------------------//
-// Definitions, declarations und macros
+// Definitions and declarations
 //--------------------------------------------------------------//
 
 float _Progress;
@@ -13,6 +13,12 @@ float _OutputAspectRatio;
 float _OutputFPS;
 float _Length;
 float _LengthFrames;
+float FgWidthNormalised;  
+float FgHeightNormalised;  
+float FgWidth;  
+float FgHeight;  
+float FgXScale;  
+float FgYScale;  
 ```
   
 ---
@@ -36,7 +42,7 @@ float _LengthFrames;
   
 ### Starting with Lightworks 2021.1 is also available: 
 
-[Great White reported](https://www.lwks.com/index.php?option=com_kunena&func=post&do=quote&catid=12&id=229128&Itemid=81)
+[Great White reported](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=12&id=228948&Itemid=81#229128)
 
 > If you have an input called 'Fg', then Lightworks will attempt to supply:
 
