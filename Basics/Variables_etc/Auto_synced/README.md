@@ -32,6 +32,20 @@ float _LengthFrames;
 `float _OutputFPS;`     //  eg. 24.0, 25.0, 29.97, etc  
 `float _Length;`        // Length of the effect in sec. Please note some peculiarities: [Details](_Length.md)  
 `float _LengthFrames;`  // Length of the effect in frames. Please note some peculiarities: [Details](_Length.md)  
+  
+  
+### Starting with Lightworks 2021.1 is also available: 
+
+[Great White reported](https://www.lwks.com/index.php?option=com_kunena&func=post&do=quote&catid=12&id=229128&Itemid=81)
+
+> If you have an input called 'Fg', then Lightworks will attempt to supply:
+
+`float FgWidthNormalised;`   // width of image divided by width of node output format  
+`float FgHeightNormalised;`  // height of image divided by width of node output format  
+`float FgWidth;`             // width of image in pixels  
+`float FgHeight;`            // height of image in pixels  
+`float FgXScale;`            // scaling factor (eg. due to wide/narrow settings)  
+`float FgYScale;`            // "  
 
 
 ---
