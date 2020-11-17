@@ -6,13 +6,15 @@ To use these variables, they must be declared outside and above all shaders and 
 // Definitions and declarations
 //--------------------------------------------------------------//
 
-float _Progress;
-float _OutputWidth;
-float _OutputHeight;
-float _OutputAspectRatio;
-float _OutputFPS;
+float _Progress;  
+float _OutputAspectRatio;  
+float _OutputHeight;  
+float _OutputWidth;  
+
 float _Length;
 float _LengthFrames;
+float _OutputFPS;
+
 float _FgWidthNormalised;    // "Fg" stands as an example for the name of the input (replace if different). 
 float _FgHeightNormalised;   // Replace "Fg" if different.
 float _FgWidth;              // Replace "Fg" if different.
@@ -28,16 +30,16 @@ float _FgYScale;             // Replace "Fg" if different.
 ### Basic variables:
 
 `float _Progress;`          // Relative position in effect progress 0 to 1. Please note some peculiarities: [Details](_Progress.md)  
-`float _OutputWidth;`       // The width of the current output format in pixels  
+`float _OutputAspectRatio;` // The aspect-ratio of the current output format  
 `float _OutputHeight;`      // Please note some peculiarities: [Details](_OutputHeight.md)  
-`float _OutputAspectRatio;` //The aspect-ratio of the current output format  
-
+`float _OutputWidth;`       // The width of the current output format in pixels  
+ 
 
 ### Starting with Lightworks 14.5 is also available: 
 
-`float _OutputFPS;`     //  eg. 24.0, 25.0, 29.97, etc  
 `float _Length;`        // Length of the effect in sec. Please note some peculiarities: [Details](_Length.md)  
 `float _LengthFrames;`  // Length of the effect in frames. Please note some peculiarities: [Details](_Length.md)  
+`float _OutputFPS;`     //  eg. 24.0, 25.0, 29.97, etc  
   
   
 ### Starting with Lightworks 2021.1 is also available: 
@@ -64,16 +66,15 @@ To avoid unexpected results when using older versions of Lightworks,
 the availability of variables can now be checked (LW 14.5).  
 Each definition shares the same name as its associated parameter, but is in upper case:  
 ``` Code
-_OUTPUTFPS
+_PROGRESS
 _OUTPUTASPECTRATIO
 _LENGTH
 _LENGTHFRAMES
+_OUTPUTFPS
 _OUTPUTWIDTH
 _OUTPUTHEIGHT
-_PROGRESS
 ```
-In general, only one of the new variables need to be checked.  
-If, for example, _LENGTH is defined, then all variables are available, otherwise only the basic variables. 
+For example, if _LENGTH is not defined, then only the basic variables are available.
 ``` Code
 #ifdef _LENGTH
    // Insert code
