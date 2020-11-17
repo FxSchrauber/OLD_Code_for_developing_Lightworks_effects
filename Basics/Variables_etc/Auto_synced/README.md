@@ -68,11 +68,13 @@ Each definition shares the same name as its associated parameter, but is in uppe
 ``` Code
 _PROGRESS
 _OUTPUTASPECTRATIO
+_OUTPUTHEIGHT
+_OUTPUTWIDTH
+
 _LENGTH
 _LENGTHFRAMES
 _OUTPUTFPS
-_OUTPUTWIDTH
-_OUTPUTHEIGHT
+
 ```
 For example, if _LENGTH is not defined, then only the basic variables are available.
 ``` Code
