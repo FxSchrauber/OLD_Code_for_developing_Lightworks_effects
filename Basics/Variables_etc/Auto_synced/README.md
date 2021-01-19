@@ -71,7 +71,7 @@ For effects with more than one input, these scale parameters are influenced by:
 `float _FgHeightNormalised;`  // height of image of the "Fg" input divided by width of node output format  
 **Important:** For inputs with other names, replace "**Fg**" with the name of the input.  
 This applies to effect nodes of the type `CanSize = true` which have more than one input. Such effects extend the output shader texture to the sequence aspect ratio with transparent black or other background. If there is a texture with larger dimensions at another input, the shader output texture is expanded accordingly under certain conditions.
-For effects with more than one input, these scale parameters are influenced by:
+  For effects with more than one input, these scale parameters are influenced by:
 - Sequence dimensions (if sequence dimensions are greater than input dimensions). Or export dimensions
 - Sequence aspect ratio  or export aspect ratio
 - The Dimensions of the input relevant for the parameter (without Project settings wide / narrow because this works differently). 
