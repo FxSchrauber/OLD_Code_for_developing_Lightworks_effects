@@ -63,8 +63,8 @@ These variables have something to do with different aspect ratios of the input t
 The absolute texture dimensions are irrelevant for these variables.  
 For effects with more than one input, these scale parameters are influenced by:
 - Project settings wide / narrow
-- Sequence aspect ratio
-- The aspect ratio of the input whose name is contained in the variable name.  
+- Sequence aspect ratio or export aspect ratio
+- The aspect ratio of the input relevant for the parameter.  
 
 **Automatic scaling parameters:**  
 `float _FgWidthNormalised;`   // width of image of the "Fg" input divided by width of node output format  
