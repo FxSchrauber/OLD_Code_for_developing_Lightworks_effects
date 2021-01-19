@@ -50,10 +50,10 @@ In the following, "**Fg**" was only used in the code to represent the name of th
 
 > If you have an input called 'Fg', then Lightworks will attempt to supply:
 
-`float _`Fg`WidthNormalised;`   // width of image of the "Fg" input divided by width of node output format  
+`float _FgWidthNormalised;`   // width of image of the "Fg" input divided by width of node output format  
 `float _FgHeightNormalised;`  // height of image of the "Fg" input divided by width of node output format  
 `float _FgWidth;`             // width of image of the "Fg" input in pixels  
-`float _FgHeight;`            // height of image of the "Fg" input in pixels  
+`float _FgHeight;`            // height of image of the "Fg" input in pixels
 `float _FgXScale;`            // scaling factor of the "Fg" input (eg. due to wide/narrow settings)  
 `float _FgYScale;`            // scaling factor of the "Fg" input  
 **Important:** For inputs with other names, replace "**Fg**" with the name of the input.
