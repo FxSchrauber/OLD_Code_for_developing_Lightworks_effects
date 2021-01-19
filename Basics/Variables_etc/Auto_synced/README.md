@@ -50,7 +50,7 @@ In the following, "**Fg**" was only used in the code to represent the name of th
 
 > If you have an input called 'Fg', then Lightworks will attempt to supply:
 
-**Absolute input dimensions:** 
+**Absolute input dimensions:**  
 `float _FgWidth;`             // width of image of the "Fg" input in pixels  
 `float _FgHeight;`            // height of image of the "Fg" input in pixels  
 **Important:** For inputs with other names, replace "**Fg**" with the name of the input.
@@ -58,7 +58,7 @@ In the following, "**Fg**" was only used in the code to represent the name of th
 **Automatic aspect ratio scaling parameters:**  
 `float _FgXScale;`            // scaling factor of the "Fg" input (eg. due to wide/narrow settings)  
 `float _FgYScale;`            // scaling factor of the "Fg" input  
-**Important:** For inputs with other names, replace "**Fg**" with the name of the input.
+**Important:** For inputs with other names, replace "**Fg**" with the name of the input.  
 These variables have something to do with different aspect ratios of the input texture compared to the aspect ratio of the shader output texture. This applies to effect nodes of the type `CanSize = true` which have more than one input. Such effects extend the output texture (and internal Reder texture) to the sequence aspect ratio (or export) with transparent black or another background. Otherwise the values are 1 (as with effects with only one input).  
 The absolute texture dimensions are irrelevant for these variables.  
 For effects with more than one input, these scale parameters are influenced by:
