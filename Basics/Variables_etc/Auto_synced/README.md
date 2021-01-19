@@ -56,7 +56,7 @@ In the following, "**Fg**" was only used in the code to represent the name of th
 **Important:** For inputs with other names, replace "**Fg**" with the name of the input.
 
 **Automatic aspect ratio scaling parameters:**  
-`float _FgXScale;`            // scaling factor of the "Fg" input (eg. due to wide/narrow settings)  
+`float _FgXScale;`            // scaling factor of the "Fg" input  
 `float _FgYScale;`            // scaling factor of the "Fg" input  
 **Important:** For inputs with other names, replace "**Fg**" with the name of the input.  
 These variables have something to do with different aspect ratios of the input texture compared to the aspect ratio of the shader output texture. This applies to effect nodes of the type `CanSize = true` which have more than one input. Such effects extend the output texture (and internal Reder texture) to the sequence aspect ratio (or export) with transparent black or another background. Otherwise the values are 1 (as with effects with only one input).  
@@ -69,7 +69,7 @@ For effects with more than one input, these scale parameters are influenced by:
 **Automatic scaling parameters:**  
 `float _FgWidthNormalised;`   // width of image of the "Fg" input divided by width of node output format  
 `float _FgHeightNormalised;`  // height of image of the "Fg" input divided by width of node output format  
-**Important:** For inputs with other names, replace "**Fg**" with the name of the input.
+**Important:** For inputs with other names, replace "**Fg**" with the name of the input.  
 This applies to effect nodes of the type `CanSize = true` which have more than one input. Such effects extend the output shader texture to the sequence aspect ratio with transparent black or other background. If there is a texture with larger dimensions at another input, the shader output texture is expanded accordingly under certain conditions.
 For effects with more than one input, these scale parameters are influenced by:
 - Sequence dimensions (if sequence dimensions are greater than input dimensions). Or export dimensions
