@@ -44,17 +44,19 @@ float _FgYScale;             // Replace "Fg" if different.
   
 ### Starting with Lightworks 2021.1 is also available: 
 
+In the following, "**Fg**" was only used in the code to represent the name of the respective input (**replace if different**).
+
 [Great White reported](https://www.lwks.com/index.php?option=com_kunena&func=view&catid=12&id=228948&Itemid=81#229128)
 
 > If you have an input called 'Fg', then Lightworks will attempt to supply:
 
-`float _FgWidthNormalised;`   // width of image of the "Fg" input divided by width of node output format  
+`float _`Fg`WidthNormalised;`   // width of image of the "Fg" input divided by width of node output format  
 `float _FgHeightNormalised;`  // height of image of the "Fg" input divided by width of node output format  
 `float _FgWidth;`             // width of image of the "Fg" input in pixels  
 `float _FgHeight;`            // height of image of the "Fg" input in pixels  
 `float _FgXScale;`            // scaling factor of the "Fg" input (eg. due to wide/narrow settings)  
 `float _FgYScale;`            // scaling factor of the "Fg" input  
-For inputs with other names, replace "**Fg**" with the name of the input.
+**Important:** For inputs with other names, replace "**Fg**" with the name of the input.
 
 
 ---
