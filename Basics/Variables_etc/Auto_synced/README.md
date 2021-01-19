@@ -75,7 +75,7 @@ For effects with more than one input, these scale parameters are influenced by:
 - Sequence dimensions (if sequence dimensions are greater than input dimensions). Or export dimensions
 - Sequence aspect ratio  or export aspect ratio
 - The Dimensions of the input relevant for the parameter (without Project settings wide / narrow because this works differently). 
-- Dimensions at other inputs because they can extend the output dimensions.
+- Dimensions at other inputs because this can extend the output dimensions.
 
 ---
 ---
