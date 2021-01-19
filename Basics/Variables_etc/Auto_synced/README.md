@@ -63,7 +63,7 @@ These variables have something to do with different aspect ratios of the input t
 The absolute texture dimensions are irrelevant for these variables.  
 For effects with more than one input, these scale parameters are influenced by:
 - Project settings wide / narrow
-- Sequence time ratio
+- Sequence aspect ratio
 - The aspect ratio of the input whose name is contained in the variable name.  
 
 **Automatic scaling parameters:**  
