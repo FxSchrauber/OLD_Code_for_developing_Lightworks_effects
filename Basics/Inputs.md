@@ -23,13 +23,18 @@ The result for the effect "Sampler test2" then looks as follows:
   - In order for the pixel shader to read the pixel colors of the three textures, we have to create the corresponding samplers (see the "Samplers" section).
 
 
-### Texture coordinates:
+### Texture coordinates (Update versions from 2021) :
   - The effect inputs also provide texture coordinates needed by the pixel shader to determine the position of the pixels:
-    - **TEXCOORD1** 
-    - **TEXCOORD2**
-    - usw.
+    - **TEXCOORD1** (1st input)
+    - **TEXCOORD2** (from the 2nd input, or in case of 1 input, the coordinates of an internally rendered texture if available)
+    - **TEXCOORD3** (from the 3nd input, or in case of 2 input, the coordinates of an internally rendered texture if available)
+    - **TEXCOORD4** (from the 4nd input, or in case of 3 input, the coordinates of an internally rendered texture if available)
+    - **TEXCOORD5** (from the 5nd input, or in case of 4 input, the coordinates of an internally rendered texture if available)
+    - **TEXCOORD6** (from the 6nd input, or in case of 5 input, the coordinates of an internally rendered texture if available)
+    - **TEXCOORD7** (In case of 6 input, the coordinates of an internally rendered texture if available)  
+More texture coordinates are not supported.
 
- Note: Only textures that are visible as input in video routing are considered. Internal textures that are rendered only within the effect and sent to a sampler can not be used as a source for texture coordinates. Example:
+Note: Regarding the order of numbering the texture coordinates, the order of the real inputs is relevant.  Example:
 
 ``` Code
 //--------------------------------------------------------------//
@@ -37,10 +42,14 @@ The result for the effect "Sampler test2" then looks as follows:
 //--------------------------------------------------------------//
 
 texture In1;                                    // Imput1 (TEXCOORD1)
-texture OutputFromPassOne : RenderColorTarget;
+texture OutputFromPassOne : RenderColorTarget;  // internally rendered texture (TEXCOORD3)
 texture In2;                                    // Imput2 (TEXCOORD2)
 ```
-[(see the "Samplers" section)](README.md#details).
+
+Note: Texture coordinates coming directly from internally rendered textures are not available in Lightworks versions prior to 2021.
+
+
+
 
 
 
