@@ -1,4 +1,7 @@
 # Code for developing Lightworks effects
+
+# Attention: This documentation is not up to date! This repository refers to the **old Lightworks version 2021**.
+
 Here we collect code to create Lightworks effects.  
 
 This repository was built mainly from [Markdown.md files](https://guides.github.com/features/mastering-markdown/).  
